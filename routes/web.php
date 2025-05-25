@@ -10,9 +10,12 @@ Route::get('/land-bookings', function () {
     return view('land-bookings');
 })->name('land.booking');
 
-Route::get('/share-application', function () {
-    return view('share-application');
-})->name('share.application');
+Route::get('/about-us', function () {
+    return view('about-us');
+})->name('about-us');
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
 
 Route::get('/right-share', function () {
     return view('right-share');

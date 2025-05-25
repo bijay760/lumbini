@@ -2,70 +2,52 @@
     <div class="container">
         <div class="row">
             <!-- Company Info -->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <div class="d-flex align-items-center mb-3">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center text-md-start">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-3">
                     <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
                          class="img-fluid me-2"
                          style="height: 40px;"
                          alt="Company Logo">
-                    <!-- <h5 class="mb-0 fw-bold">Your Brand</h5> -->
                 </div>
-                <p class="text-white">Providing quality land booking services with transparency and efficiency.</p>
-                <div class="social-icons mt-4">
-                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5 text-white"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5 text-white"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-5 text-white"></i></a>
-                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5 text-white"></i></a>
+                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">Providing quality land booking services with transparency and efficiency.</p>
+                <div class="social-icons mt-4 text-md-start justify-content-md-start justify-content-lg-start">
+                    <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-5"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
                 </div>
-
             </div>
 
-            <!-- Quick Links -->
-            <!-- <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase fw-bold mb-4">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></li>
-                    <li class="mb-2"><a href="{{ route('land.booking') }}" class="text-white text-decoration-none">Land Booking</a></li>
-                    <li class="mb-2"><a href="{{ route('reports') }}" class="text-white text-decoration-none">Reports</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
-                </ul>
-            </div> -->
-
-            <!-- Contact Info -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center text-lg-left">
                 <h5 class="text-uppercase fw-bold mb-4">Contact Us</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2">
                         <i class="bi bi-geo-alt-fill me-2"></i>
-                         Chandragiri-13, Kathmandu, Nepal
+                        Chandragiri-13, Kathmandu, Nepal
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>
-                          +977-9801104064
+                        +977-9801104064
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-geo-alt-fill me-2"></i>
-                         Karkado, Nepalgunj, Nepal
+                        Karkado, Nepalgunj, Nepal
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>
-                          +977-9848023023
+                        +977-9848023023
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-envelope-fill me-2"></i>
                         lumbiniinnovate@gmail.com
                     </li>
-                    
                 </ul>
             </div>
-
-            <!-- Newsletter -->
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-uppercase fw-bold mb-4">Connect With Us</h5>
-                <p class="text-white">Subscribe to our mail for the latest updates.</p>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="text-uppercase fw-bold mb-4 text-center text-lg-left">Connect With Us</h5>
+                <p class="text-white text-center text-lg-left">Subscribe to our mail for the latest updates.</p>
                 <form class="mb-3">
-                    <div class="input-group">
+                    <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
                         <button class="btn btn-primary" type="submit">
                             <i class="bi bi-send-fill"></i>
@@ -74,9 +56,9 @@
                 </form>
                 <div class="payment-methods mt-3">
                     <p class="small text-white mb-2">We accept:</p>
-                    <div class="flex gap-4 items-center">
-                        <img src="https://esewa.com.np/common/images/esewa_logo.png" alt="eSewa" class="h-6 mb-3">
-                        <img src="https://fonepay.com/images/logo.png" alt="Fonepay" class="h-6">
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                        <img src="https://esewa.com.np/common/images/esewa_logo.png" alt="eSewa" style="height: 24px;">
+                        <img src="https://fonepay.com/images/logo.png" alt="Fonepay" style="height: 24px;">
                     </div>
                 </div>
             </div>

@@ -41,7 +41,7 @@
 
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('land.booking') ? 'active' : '' }}"
-                       href="{{ route('land.booking') }}">
+                       href="{{ route('about-us') }}">
                         <i class="bi bi-map me-1 d-lg-none"></i>
                         About Us
                         <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
@@ -50,7 +50,7 @@
                 </li>
             </ul>
 
-           
+
             <!-- <div class="d-flex ms-lg-3">
                 <a href="#" class="btn btn-outline-light rounded-pill px-3">
                     <i class="bi bi-person-circle me-1"></i> Login
