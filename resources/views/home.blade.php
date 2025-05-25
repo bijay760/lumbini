@@ -12,11 +12,14 @@
             <div class="row align-items-center">
                 <div class="col">
                     <div class="text-left text-white">
-                        <h1 class="mb-2 ">Lumbini Innovate Ltd. is a subsidiary company of Lumbini Innovate Ltd.</h1>
-                        <p class= "col-md-7 col-lg-6">
-                           Established by aiming
-                            to invest in share market, derivative market, real estate and other innovative means of investment.
-                            Its authorized capital is NPR. 1 Billion.
+                        <h1 class="mb-3 ">Lumbini Innovate Pvt. Ltd.</h1>
+                        
+                        <p class= "">
+                            Your journey to the perfect home starts here.<br>
+                           At Lumbini Innovate Pvt. Ltd.  we believe that every home has a story — 
+                           and we’re here to help you write yours. Whether you're looking to buy your dream house, 
+                           sell your current property, or rent a space that fits your lifestyle, our dedicated team 
+                           of experts is with you at every step.
                         </p>
                         <form class="form-subscribe" id="contactForm">
                             <div class="row">
@@ -39,29 +42,49 @@
                      style="background-image: url('https://www.bflexion.com/themes/custom/bflexion/images/background-home.png')">
                 </div>
                 <div class="col-lg-7 ms-auto order-1 order-lg- my-auto showcase-text">
-                    <h2>About Us</h2>
+                    <h2>🧭 Your Trusted Real Estate Partner</h2>
                     <p class="lead mb-4 text-justify">
-                        <b>Lumbini Innovate Ltd.</b> is a subsidiary company of Lumbini Innovate Ltd. established by aiming
-                        to invest in share market, derivative market, real estate and other innovative means of investment. Its
-                        authorized capital is NPR. 1 Billion.
-                        Being a subsidiary company of Lumbini Innovate Ltd. we have provided opportunity to the shareholders
-                        of Lumbini Innovate Ltd. to take share ownership at first instance. We will open the opportunities
-                        for others as well fulfilling the legal requirements.
+                        Navigating the real estate market can feel overwhelming. That's why we’ve built our reputation on trust,
+                         transparency, and a deep understanding of the local market. With years of experience and a customer-first
+                          approach, we ensure that your experience is not only successful — but enjoyable too.
                     </p>
 
                     <!-- <div class="abt-img"><img src="{{ asset('backend/assets/images/abt.jpg') }}"></div> -->
                     <img src="{{ asset('backend/assets/images/abt.jpg') }}" class="img-fluid d-block m-auto" alt="">
 
-                    <h2 class= "mt-4">Our Projects</h2>
+                    <h2 class= "mt-4"> Why Choose umbini Innovate Pvt. Ltd.</h2>
                     <p class="lead mb-0 text-justify">
-                        Our <b>first project</b> has been developed with a real estate project in Nepalgunj. It is a 44
-                        kattha land development project situated in Nepalgunj-Kohalpur road. We are planning to develop 6000 Square feet
-                        for vehicle showrooms which can accommodate 4 large showrooms consisting spare parts and servicing
-                        areas for the four wheel or two wheeler automobile brands. Then 16,000 square feet area for the godam. All
-                        these developed commercial properties will be rented out.
-                        From the day of incorporation, we have already started investing into share market. Since the market
-                        gone down, it is good time of entry in the share market.
-                    </p>
+                       <p class="mb-2">
+                        ✔️ Verified Listings <br>
+                        <span class= "pl-3">
+                            We ensure that every property listed on our platform is thoroughly verified for authenticity and legal compliance — no surprises, 
+                        just peace of mind.<br>
+                        </span>
+                            </p>
+                       <p class="mb-2">
+
+                        ✔️ Local Market Expertise <br>
+                        <span class= "pl-3">
+                        Our agents know the neighborhoods, the trends, and the opportunities. We provide insights that go beyond square footage — like school zones, 
+                        commute times, and lifestyle fit.<br>
+                        </span>
+                        </p>
+                       <p class="mb-2">
+
+                        ✔️ Trusted by Thousands <br>
+                        <span class= "pl-3">
+                        With hundreds of successful transactions and glowing client testimonials, we’ve built a community that speaks for itself. Join the thousands who 
+                        have found their perfect property with us. <br>
+                        </span>
+                        </p>
+                       <p class="mb-2">
+
+                        ✔️ Hassle-Free Transactions <br>
+                        <span class= "pl-3">
+                        From property visits to paperwork, we handle everything. Our end-to-end service means fewer headaches and more confidence in every decision.
+                        </span>
+                        </p>
+                                            </p>
                 </div>
             </div>
             <div class="row g-0">
