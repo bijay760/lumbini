@@ -46,7 +46,7 @@
                     <div class="col-md-6 mb-4 mb-md-0">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body p-4">
-                                <h3 class="fw-bold text-primary mb-4">🎯 Our Mission</h3>
+                                <h3 class="fw-bold primary mb-4">🎯 Our Mission</h3>
                                 <p>Our mission is simple: To simplify the real estate process by delivering exceptional service, expert guidance, and unmatched integrity.</p>
                                 <p>We aim to take the stress out of property decisions by handling everything with professionalism and care. From the first showing to the final signature, we're here to make your real estate experience seamless and rewarding.</p>
                             </div>
@@ -55,7 +55,7 @@
                     <div class="col-md-6">
                         <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body p-4">
-                                <h3 class="fw-bold text-primary mb-4">👁️ Our Vision</h3>
+                                <h3 class="fw-bold mb-4 primary">👁️ Our Vision</h3>
                                 <p>We envision a world where finding a home — or selling one — is no longer complicated or stressful.</p>
                                 <p>Our goal is to become the most trusted and innovative real estate brand in the region, known for delivering quality, value, and genuine care.</p>
                                 <p>By combining cutting-edge technology with personalized service, we're setting a new standard for what clients should expect from a real estate agency.</p>
@@ -73,7 +73,7 @@
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="text-center p-4">
-                            <div class="icon-box bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                            <div class="icon-box text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; background:#20254d;">
                                 <i class="bi bi-geo-alt fs-4"></i>
                             </div>
                             <h4>Locally Rooted, Globally Connected</h4>
@@ -82,7 +82,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="text-center p-4">
-                            <div class="icon-box bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                            <div class="icon-box text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; background:#20254d;">
                                 <i class="bi bi-graph-up fs-4"></i>
                             </div>
                             <h4>Market Expertise</h4>
@@ -91,7 +91,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="text-center p-4">
-                            <div class="icon-box bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px;">
+                            <div class="icon-box text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 70px; height: 70px; background:#20254d;">
                                 <i class="bi bi-headset fs-4"></i>
                             </div>
                             <h4>End-to-End Support</h4>
@@ -110,14 +110,14 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="bg-primary text-white py-5">
-            <div class="container text-center py-4">
-                <h2 class="fw-bold mb-4">📞 Let's Connect</h2>
-                <p class="lead mb-4">Got questions? Want to learn more about our team or services?</p>
-                <p class="mb-4">Reach out to us anytime — we're here to help.</p>
-                <a href="{{ route('contact') }}" class="btn btn-light btn-lg px-4">Contact Us</a>
-            </div>
-        </section>
+{{--        <section class=" text-white py-5" style="background:#20254d ">--}}
+{{--            <div class="container text-center py-4">--}}
+{{--                <h2 class="fw-bold mb-4">📞 Let's Connect</h2>--}}
+{{--                <p class="lead mb-4">Got questions? Want to learn more about our team or services?</p>--}}
+{{--                <p class="mb-4">Reach out to us anytime — we're here to help.</p>--}}
+{{--                <a href="{{ route('contact') }}" class="btn btn-light btn-lg px-4">Contact Us</a>--}}
+{{--            </div>--}}
+{{--        </section>--}}
     </div>
 @endsection
 

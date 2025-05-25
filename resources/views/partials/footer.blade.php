@@ -1,4 +1,4 @@
-<footer class="bg-dark text-white pt-5 pb-4">
+<footer class="text-white pt-5 pb-4" style="background: #20254d;">
     <div class="container">
         <div class="row">
             <!-- Company Info -->
