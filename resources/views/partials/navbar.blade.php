@@ -1,38 +1,61 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('home') }}">
-            <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}" class="img-fluid" style="height:50px" alt="">
+        <!-- Brand logo with better sizing control -->
+        <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+            <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
+                 class="img-fluid me-2"
+                 style="height: 40px; width: auto;"
+                 alt="Company Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+
+        <!-- Mobile toggle button with animation -->
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false"
+                aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('home') ? 'active' : '' }}" href="{{ route('home') }}">Home</a>
+
+        <!-- Navbar content with improved structure -->
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item mx-1">
+                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('home') ? 'active' : '' }}"
+                       href="{{ route('home') }}">
+                        <i class="bi bi-house-door me-1 d-lg-none"></i>
+                        Home
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
+                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('land.booking') ? 'active' : '' }}" href="{{ route('land.booking') }}">Land Booking</a>
+
+                <li class="nav-item mx-1">
+                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('land.booking') ? 'active' : '' }}"
+                       href="{{ route('land.booking') }}">
+                        <i class="bi bi-map me-1 d-lg-none"></i>
+                        Land Booking
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
+                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                    </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('share.application') ? 'active' : '' }}" href="{{ route('share.application') }}">Share Application</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('right.share') ? 'active' : '' }}" href="{{ route('right.share') }}">Right Share</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('reports') ? 'active' : '' }}" href="{{ route('reports') }}">Reports</a>
+
+                <li class="nav-item mx-1">
+                    <a class="nav-link position-relative py-3 px-2 {{ request()->routeIs('reports') ? 'active' : '' }}"
+                       href="{{ route('reports') }}">
+                        <i class="bi bi-file-earmark-bar-graph me-1 d-lg-none"></i>
+                        Reports
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
+                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                    </a>
                 </li>
             </ul>
-            <form class="d-flex mb-0 search-form" action="{{ route('holder.searchToken') }}" method="POST" id="search_app_id_form">
-                @csrf
-                <input class="form-control rounded-0 me-2" type="search" name="oldtoken" id="old_auth_token"
-                       placeholder="Enter your 13-digits Application ID" aria-label="Search" style="width:275px">
-                <button onclick="search_appID()" class="btn btn-info rounded-0 text-white" type="button"
-                        style="background: #0578B4" id="search_token">Search
-                </button>
-            </form>
+
+            <!-- Optional: User dropdown or CTA button -->
+            <div class="d-flex ms-lg-3">
+                <a href="#" class="btn btn-outline-light rounded-pill px-3">
+                    <i class="bi bi-person-circle me-1"></i> Login
+                </a>
+            </div>
         </div>
     </div>
 </nav>
