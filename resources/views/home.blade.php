@@ -10,9 +10,14 @@
     <header class="masthead">
         <div class="container position-relative">
             <div class="row align-items-center">
-                <div class="col-md-7 col-lg-6">
+                <div class="col">
                     <div class="text-left text-white">
-                        <h1 class="mb-5">Our first project - a real estate project in Nepalgunj-Kohalpur road.</h1>
+                        <h1 class="mb-2 ">Lumbini Innovate Ltd. is a subsidiary company of Lumbini Innovate Ltd.</h1>
+                        <p class= "col-md-7 col-lg-6">
+                           Established by aiming
+                            to invest in share market, derivative market, real estate and other innovative means of investment.
+                            Its authorized capital is NPR. 1 Billion.
+                        </p>
                         <form class="form-subscribe" id="contactForm">
                             <div class="row">
                                 <div class="col-auto">
@@ -23,14 +28,6 @@
                     </div>
                 </div>
 
-                <div class="col-md-7 col-lg-6">
-                    <div class="my-3">
-                        <a href="{{ asset('backend/assets/images/land%20(1).jpg') }}" data-lightbox="land">
-                            <img src="{{ asset('backend/assets/images/landimg.png') }}" class="img-fluid" alt="">
-                        </a>
-                        <a href="{{ asset('backend/assets/images/land%20(2).jpg') }}" data-lightbox="land"></a>
-                    </div>
-                </div>
             </div>
         </div>
     </header>
@@ -44,11 +41,11 @@
                 <div class="col-lg-7 ms-auto order-1 order-lg- my-auto showcase-text">
                     <h2>About Us</h2>
                     <p class="lead mb-0">
-                        <b>Lakshya Capital Ltd.</b> is a subsidiary company of Lakshya Holdings Ltd. established by aiming
+                        <b>Lumbini Innovate Ltd.</b> is a subsidiary company of Lumbini Innovate Ltd. established by aiming
                         to invest in share market, derivative market, real estate and other innovative means of investment. Its
                         authorized capital is NPR. 1 Billion.
-                        Being a subsidiary company of Lakshya Holdings Ltd. we have provided opportunity to the shareholders
-                        of Lakshya Holdings Ltd. to take share ownership at first instance. We will open the opportunities
+                        Being a subsidiary company of Lumbini Innovate Ltd. we have provided opportunity to the shareholders
+                        of Lumbini Innovate Ltd. to take share ownership at first instance. We will open the opportunities
                         for others as well fulfilling the legal requirements.
                     </p>
 
@@ -130,7 +127,7 @@
                         </div>
                         <div class="col-lg-12">
                             <div class="bod-item">
-                                <h5>www.lakshyashare.com</h5>
+                                <h5>www.Lumbiniinnovate.com</h5>
                             </div>
                         </div>
                     </div>
@@ -231,7 +228,7 @@
                                         data-mbx="tcatnoc"
                                         data-www="erahsayhskal"
                                         data-ext="moc" style="cursor:pointer;" onclick="sendMail(this)"></span> <br>
-                            Link: <a href="{{ route('home') }}">www.lakshyashare.com</a>
+                            Link: <a href="{{ route('home') }}">www.lumbiniinnovate.com</a>
                         </p>
                     </span>
                 </div>
