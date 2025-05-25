@@ -38,15 +38,6 @@
 </head>
 
 <body>
-<!-- Loading Screen -->
-<div class="position-fixed" style="top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; margin: auto;"
-     id="loading">
-    <div style="top: 0; left: 0; right: 0; bottom: 0; margin: auto; z-index: 1000"
-         class="spinner-border position-absolute text-white" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <div style="height: 100%; width: 100%; background: black;opacity: 0.7;"></div>
-</div>
 
 @include('partials.top-bar')
 
