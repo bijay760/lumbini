@@ -4,36 +4,6 @@
 
 
 @section('content')
-    <header class="masthead">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-md-7 col-lg-6">
-                    <div class="text-left text-white">
-                        <h1 class="mb-5">Our first project - a real estate project in Nepalgunj-Kohalpur road.</h1>
-                        <form class="form-subscribe" id="contactForm">
-                            <div class="row">
-                                <div class="col-auto">
-                                    <a href="{{ route('land.booking') }}" class="btn btn-lg" id="submitButton"
-                                       type="submit">Book Now</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="col-md-7 col-lg-6">
-                    <div class="my-3">
-                        <a href="{{ asset('backend/assets/images/land%20(1).jpg') }}" data-lightbox="land">
-                            <img src="{{ asset('backend/assets/images/landimg.png') }}" class="img-fluid" alt="">
-                        </a>
-                        <a href="{{ asset('backend/assets/images/land%20(2).jpg') }}" data-lightbox="land"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
     <div class="page">
         <div class="container">
             <div class="alert alert-dismissible fade show p-0" role="alert">
