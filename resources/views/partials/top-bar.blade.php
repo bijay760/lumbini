@@ -1,6 +1,6 @@
 <div class="top-bar">
     <div class="container">
-        <div class="d-flex flex-wrap justify-content-end ">
+        <div class="d-flex justify-content-between">
             <!-- <a href="notice.html" style="text-decoration: none">
                 <i class='bx bxs-notification'></i>
                 सूचनाहरु
