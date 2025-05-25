@@ -6,30 +6,26 @@
 @section('content')
     <div class="page">
         <div class="container">
-            <div class="alert alert-dismissible fade show p-0" role="alert">
-                <div class="popover position-relative rounded-0 w-100 popover-1"
-                     style="max-width: 100% ; z-index:999 !important" role="tooltip">
-                    <div class="popover-arrow"></div>
-                    <h3 class="popover-header d-flex align-items-center"><i
-                            class="bx bx-burst-hover bxs-info-square bx-sm  me-2 "></i> Notice <small>
-                            <button type="button"
-                                    class="btn-close p-2 mt-1 me-2" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </small>
-                    </h3>
-                    <div class="popover-body"><b>10% Discount</b> to Lakshya Holdings'/Capital's Shareholders</div>
-                </div>
-            </div>
+{{--            <div class="alert alert-dismissible fade show p-0" role="alert">--}}
+{{--                <div class="popover position-relative rounded-0 w-100 popover-1"--}}
+{{--                     style="max-width: 100% ; z-index:999 !important" role="tooltip">--}}
+{{--                    <div class="popover-arrow"></div>--}}
+{{--                    <h3 class="popover-header d-flex align-items-center"><i--}}
+{{--                            class="bx bx-burst-hover bxs-info-square bx-sm  me-2 "></i> Notice <small>--}}
+{{--                            <button type="button"--}}
+{{--                                    class="btn-close p-2 mt-1 me-2" data-bs-dismiss="alert" aria-label="Close"></button>--}}
+{{--                        </small>--}}
+{{--                    </h3>--}}
+{{--                    <div class="popover-body"><b>10% Discount</b> to Lakshya Holdings'/Capital's Shareholders</div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
             <form action="https://www.lakshyashare.com/landbookings/store" method="POST" enctype="multipart/form-data"
                   class="formdes shadow-sm" id="application-form">
 
-
-                <h1 class="form-title">Lakshya Capital Land Booking Form</h1>
-                <input type="hidden" name="_token" value="whq95bZipqwPHroDWdFzMZyhfvQLuHYA1Pu1RZ3p">
+                <h1 class="form-title">Lumbani Capital Land Booking Form</h1>
+                <input type="hidden" name="_token" value="">
                 <div class="form-group">
-
-
-                    <div> Are you shareholder of Lakshya Holdings/Capital Ltd?</div>
                     <div class="input-group mb-3">
                         <div class="form-check mr-3">
                             <!-- <div class="input-group-text"> -->
