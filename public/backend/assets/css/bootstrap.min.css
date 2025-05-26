@@ -18,14 +18,14 @@
   --white: #fff;
   --gray: #5a7684;
   --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #5a7684;
+  --primary: #20254d;
+  --secondary: #1c345c;
   --success: #32ab13;
   --info: #198fed;
   --warning: #ffc107;
   --danger: #f02769;
-  --light: #f8f9fa;
-  --dark: #343a40;
+  --light: #1c345c;
+  --dark: #20254d;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -4385,6 +4385,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
+  color: #000000;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem;
@@ -4400,6 +4401,7 @@ input[type="button"].btn-block {
   height: 1.5em;
   vertical-align: middle;
   content: "";
+  color: black;
   background: no-repeat center center;
   background-size: 100% 100%;
 }
@@ -4692,16 +4694,17 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   border-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+
 .navbar-dark .navbar-text {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-dark .navbar-text a {

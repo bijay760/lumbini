@@ -16,3 +16,8 @@ Route::get('/about-us', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+
+Route::fallback(function () {
+    return view('404');
+});

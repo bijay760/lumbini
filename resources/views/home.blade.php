@@ -8,8 +8,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <header class="masthead" style="background: img-url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
-     background-size: cover; background-position: center;">
+    <header class="masthead" style="background-size: cover; background-position: center;">
         <div class="container position-relative">
             <div class="row align-items-center">
                 <div class="col-lg-7">
@@ -25,7 +24,7 @@
                         </p>
                         <div class="d-flex flex-wrap gap-3 mt-4">
                             <a href="{{ route('land.booking') }}" class="btn btn-light btn-lg px-4 py-3 fw-bold" style="background-color: #fff; color: #20254D;">Book Now</a>
-                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Us</a>
+                            <a href="{{ route('about-us') }}" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">About Us</a>
                         </div>
                     </div>
                 </div>

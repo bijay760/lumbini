@@ -171,8 +171,7 @@ input[type="number"] {
     right: 0;
     left: 0;
     bottom: 0;
-    background: url("https://media.istockphoto.com/photos/business-network-concept-customer-support-shaking-hands-picture-id1256603011?b=1&amp;k=20&amp;m=1256603011&amp;s=170667a&amp;w=0&amp;h=qAWHyHa53OtejTsSOx-xEPoVWA9p-uG2jpxEkzAK7Wg=")
-        no-repeat;
+   
     background-size: cover;
     opacity: 0.5;
     z-index: -1;
