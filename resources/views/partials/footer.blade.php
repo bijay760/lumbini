@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center text-lg-left">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 justify- text-lg-left">
                 <h5 class="text-uppercase fw-bold mb-4">Contact Us</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2">
@@ -43,9 +43,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <h5 class="text-uppercase fw-bold mb-4 text-center text-lg-left">Connect With Us</h5>
-                <p class="text-white text-center text-lg-left">Subscribe to our mail for the latest updates.</p>
+            <div class="col-lg-4 col-md-6 justify-start">
+                <h5 class="text-uppercase fw-bold mb-4  text-lg-left">Connect With Us</h5>
+                <p class="text-white = text-lg-left">Subscribe to our mail for the latest updates.</p>
                 <form class="mb-3">
                     <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
@@ -68,7 +68,7 @@
 
         <!-- Copyright -->
         <div class="row align-items-center">
-            <div class="text-center text-md-start">
+            <div class="text-center text-md-center">
                 <p class="small mb-0">&copy; {{ date('Y') }} Lumbini Innovate Ltd.  All rights reserved.</p>
             </div>
         </div>

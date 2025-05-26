@@ -114,26 +114,6 @@
                                     </p>
                                 </div>
                             </div>
-
-{{--                            <div class="d-flex">--}}
-{{--                                <div class="me-4">--}}
-{{--                                    <div class="me-4">--}}
-{{--                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">--}}
-{{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">--}}
-{{--                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>--}}
-{{--                                    </svg>--}}
-{{--                                        <div>--}}
-{{--                                            <h4 class="h5 fw-bold" style="color: #1C345C;">Hassle-Free Transactions</h4>--}}
-{{--                                            <p class="mb-0 text-muted">--}}
-{{--                                                From property visits to paperwork, we handle everything. Our end-to-end service means fewer headaches and more confidence in every decision.--}}
-{{--                                            </p>--}}
-{{--                                        </div>--}}
-{{--                                </div>--}}
-
-{{--                                </div>--}}
-
-{{--                            </div>--}}
-{{--                        </div>--}}
                     </div>
                 </div>
             </div>
@@ -151,7 +131,7 @@
 
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
                         <a href="{{ route('land.booking') }}" class="btn btn-light btn-lg px-4 py-3 fw-bold" style="color: #20254D;">Get Started</a>
-                        <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Our Team</a>
+                        <a href="{{ route('contact') }}" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Our Team</a>
                     </div>
                 </div>
             </div>
