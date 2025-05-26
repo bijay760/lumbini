@@ -14,7 +14,8 @@
             <form>
                 <!-- Name input -->
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="formName">Name</label>
+                    <label class="form-label" 
+                    for="formName">Name</label>
                     <input type="text" 
                     id="formName" 
                     placeholder="Enter your name"
@@ -23,7 +24,9 @@
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="formEmail">Email address</label>
+                    <label class="form-label" 
+                    for="formEmail">Email address</label>
+
                     <input type="email" 
                     id="formEmail" 
                     placeholder="Enter your email"
@@ -32,14 +35,17 @@
 
                 <!-- Message input -->
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="formMessage">Message</label>
+                    <label class="form-label"
+                     for="formMessage">Message</label>
+
                     <textarea class="form-control" 
                     id="formMessage"
                     placeholder="Write your message here ..."
                      rows="4"></textarea>
                 </div>
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4 w-100">Send</button>
+                <button type="submit" 
+                class="btn btn-primary btn-block mb-4 w-100">Send</button>
             </form>
         </div>
 
@@ -54,7 +60,9 @@
                     <li><strong>Karkado, Nepalgunj, Nepal</strong></li>
                     <li>Phone: +977-9848023023</li>
                 </ul>
-                <p><strong>Email:</strong> <a class="text-decoration-none" href="mailto:lumbiniinnovate@gmail.com">lumbiniinnovate@gmail.com</a></p>
+                <p><strong>Email:</strong>
+                <a class="text-decoration-none" 
+                href="mailto:lumbiniinnovate@gmail.com">lumbiniinnovate@gmail.com</a></p>
             </div>
         </div>
     </div>

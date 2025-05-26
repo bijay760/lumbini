@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
         <!-- Brand logo with better sizing control -->
-        <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+        <a class="navbar-brand d-flex align-items-center" 
+        href="{{ route('home') }}">
             <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
                  class="img-fluid me-2"
                  style="height: 77px; width: auto;"
@@ -9,10 +10,14 @@
         </a>
 
         <!-- Mobile toggle button with animation -->
-        <button class="navbar-toggler" type="button"
-                data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" aria-expanded="false"
+        <button class="navbar-toggler" 
+                type="button"
+                data-bs-toggle="collapse" 
+                data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" 
+                aria-expanded="false"
                 aria-label="Toggle navigation">
+                
             <span class="navbar-toggler-icon"></span>
         </button>
 

@@ -13,9 +13,14 @@
                 <p>We're revolutionizing property solutions with cutting-edge technology and personalized service.</p>
             </div>
             <div class="col-lg-6">
-                <div class="position-relative overflow-hidden rounded-4 shadow" style="height: 100%;">
-                    <div class="position-absolute top-0 start-0 h-100 bg-primary" style="width: 50%; border-radius: 25px 0 0 25px; z-index: 0;"></div>
-                    <img src="{{ asset('backend/assets/images/our_team.jpg') }}" alt="Our Team" class="img-fluid h-100 object-fit-cover position-relative rounded-4" style="z-index: 1;">
+                <div class="position-relative overflow-hidden rounded-4 shadow" 
+                style="height: 100%;">
+                    <div class="position-absolute top-0 start-0 h-100 bg-primary" 
+                    style="width: 50%; border-radius: 25px 0 0 25px; z-index: 0;"></div>
+                    <img src="{{ asset('backend/assets/images/our_team.jpg') }}" 
+                    alt="Our Team" 
+                    class="img-fluid h-100 object-fit-cover position-relative rounded-4" 
+                    style="z-index: 1;">
                 </div>
             </div>
         </div>
@@ -50,13 +55,15 @@
 </section>
 
 <!-- Why We Stand Out -->
-<section class="py-5" style="background-color: #20254d;">
+<section class="py-5" 
+        style="background-color: #20254d;">
     <div class="container">
         <h2 class="text-center text-white fw-bold mb-5">Why We Stand Out</h2>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="text-center text-white">
-                    <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px;">
+                    <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" 
+                    style="width: 70px; height: 70px;">
                         <i class="bi bi-geo-alt fs-4"></i>
                     </div>
                     <h5 class="fw-semibold">Locally Rooted, Globally Connected</h5>
@@ -65,7 +72,8 @@
             </div>
             <div class="col-md-4">
                 <div class="text-center text-white">
-                    <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px;">
+                    <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" 
+                    style="width: 70px; height: 70px;">
                         <i class="bi bi-graph-up fs-4"></i>
                     </div>
                     <h5 class="fw-semibold">Market Expertise</h5>
@@ -74,7 +82,8 @@
             </div>
             <div class="col-md-4">
                 <div class="text-center text-white">
-                    <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 70px; height: 70px;">
+                    <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" 
+                    style="width: 70px; height: 70px;">
                         <i class="bi bi-headset fs-4"></i>
                     </div>
                     <h5 class="fw-semibold">End-to-End Support</h5>
@@ -97,9 +106,14 @@
                 Our passionate, licensed professionals are here to listen, advise, and act in your best interests—every step of the way.</p>
             </div>
             <div class="col-lg-6">
-                <div class="position-relative overflow-hidden rounded-4 shadow" style="height: 100%;">
-                    <div class="position-absolute top-0 start-0 h-100 bg-primary" style="width: 50%; border-radius: 25px 0 0 25px; z-index: 0;"></div>
-                    <img src="{{ asset('backend/assets/images/our_team.jpg') }}" alt="Our Team" class="img-fluid h-100 object-fit-cover position-relative rounded-4" style="z-index: 1;">
+                <div class="position-relative overflow-hidden rounded-4 shadow" 
+                style="height: 100%;">
+                    <div class="position-absolute top-0 start-0 h-100 bg-primary" 
+                    style="width: 50%; border-radius: 25px 0 0 25px; z-index: 0;"></div>
+                    <img src="{{ asset('backend/assets/images/our_team.jpg') }}" 
+                    alt="Our Team" 
+                    class="img-fluid h-100 object-fit-cover position-relative rounded-4" 
+                    style="z-index: 1;">
                 </div>
             </div>
         </div>
