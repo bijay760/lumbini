@@ -40,7 +40,7 @@
                 </li>
 
                 <li class="nav-item mx-1">
-                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('land.booking') ? 'active' : '' }}"
+                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('about-us') ? 'active' : '' }}"
                        href="{{ route('about-us') }}">
                         <i class="bi bi-map me-1 d-lg-none"></i>
                         About Us
