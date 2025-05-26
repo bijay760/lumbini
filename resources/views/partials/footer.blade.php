@@ -1,17 +1,16 @@
-<footer class="bg-dark text-white pt-5 pb-4">
+<footer class="text-white pt-5 pb-4" style="background: #20254d;">
     <div class="container">
         <div class="row">
             <!-- Company Info -->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <div class="d-flex align-items-center mb-3">
-                    <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center text-md-start">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-3">
+                    <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
                          class="img-fluid me-2"
-                         style="height: 40px; width: auto;"
+                         style="height: 40px;"
                          alt="Company Logo">
-                    <h5 class="mb-0 fw-bold">Your Brand</h5>
                 </div>
-                <p class="text-muted">Providing quality land booking services with transparency and efficiency.</p>
-                <div class="social-icons mt-4">
+                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">Providing quality land booking services with transparency and efficiency.</p>
+                <div class="social-icons mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="#" class="text-white me-3"><i class="bi bi-facebook fs-5"></i></a>
                     <a href="#" class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
                     <a href="#" class="text-white me-3"><i class="bi bi-linkedin fs-5"></i></a>
@@ -19,47 +18,36 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase fw-bold mb-4">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="{{ route('home') }}" class="text-white text-decoration-none">Home</a></li>
-                    <li class="mb-2"><a href="{{ route('land.booking') }}" class="text-white text-decoration-none">Land Booking</a></li>
-                    <li class="mb-2"><a href="{{ route('reports') }}" class="text-white text-decoration-none">Reports</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
-                    <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center text-lg-left">
                 <h5 class="text-uppercase fw-bold mb-4">Contact Us</h5>
                 <ul class="list-unstyled">
                     <li class="mb-2">
                         <i class="bi bi-geo-alt-fill me-2"></i>
-                        123 Business Street, City, Country
+                        Chandragiri-13, Kathmandu, Nepal
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>
-                        +1 234 567 890
+                        +977-9801104064
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-geo-alt-fill me-2"></i>
+                        Karkado, Nepalgunj, Nepal
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        +977-9848023023
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-envelope-fill me-2"></i>
-                        info@yourbrand.com
-                    </li>
-                    <li class="mb-2">
-                        <i class="bi bi-clock-fill me-2"></i>
-                        Mon-Fri: 9AM - 5PM
+                        lumbiniinnovate@gmail.com
                     </li>
                 </ul>
             </div>
-
-            <!-- Newsletter -->
-            <div class="col-lg-3 col-md-6">
-                <h5 class="text-uppercase fw-bold mb-4">Newsletter</h5>
-                <p class="text-muted">Subscribe to our newsletter for the latest updates.</p>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="text-uppercase fw-bold mb-4 text-center text-lg-left">Connect With Us</h5>
+                <p class="text-white text-center text-lg-left">Subscribe to our mail for the latest updates.</p>
                 <form class="mb-3">
-                    <div class="input-group">
+                    <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
                         <button class="btn btn-primary" type="submit">
                             <i class="bi bi-send-fill"></i>
@@ -67,10 +55,11 @@
                     </div>
                 </form>
                 <div class="payment-methods mt-3">
-                    <p class="small text-muted mb-2">We accept:</p>
-                    <img src="https://via.placeholder.com/40x25" alt="Visa" class="me-2">
-                    <img src="https://via.placeholder.com/40x25" alt="Mastercard" class="me-2">
-                    <img src="https://via.placeholder.com/40x25" alt="PayPal" class="me-2">
+                    <p class="small text-white mb-2">We accept:</p>
+                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+                        <img src="https://esewa.com.np/common/images/esewa_logo.png" alt="eSewa" style="height: 24px;">
+                        <img src="https://fonepay.com/images/logo.png" alt="Fonepay" style="height: 24px;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,21 +68,15 @@
 
         <!-- Copyright -->
         <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="small mb-0">&copy; {{ date('Y') }} Your Brand. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-none small">Privacy Policy</a></li>
-                    <li class="list-inline-item"><span class="mx-2">•</span></li>
-                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-none small">Terms of Service</a></li>
-                    <li class="list-inline-item"><span class="mx-2">•</span></li>
-                    <li class="list-inline-item"><a href="#" class="text-white text-decoration-none small">Sitemap</a></li>
-                </ul>
+            <div class="text-center text-md-start">
+                <p class="small mb-0">&copy; {{ date('Y') }} Lumbini Innovate Ltd.  All rights reserved.</p>
             </div>
         </div>
     </div>
 </footer>
+
+<!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 <!-- Back to Top Button -->
 <a href="#" class="btn btn-primary btn-lg back-to-top rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">

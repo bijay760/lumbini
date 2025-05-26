@@ -7,232 +7,220 @@
 @endpush
 
 @section('content')
-    <header class="masthead">
+    <!-- Hero Section -->
+    <header class="masthead" style="background: img-url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+     background-size: cover; background-position: center;">
         <div class="container position-relative">
             <div class="row align-items-center">
-                <div class="col">
+                <div class="col-lg-7">
                     <div class="text-left text-white">
-                        <h1 class="mb-2 ">Lumbini Innovate Ltd. is a subsidiary company of Lumbini Innovate Ltd.</h1>
-                        <p class= "col-md-7 col-lg-6">
-                           Established by aiming
-                            to invest in share market, derivative market, real estate and other innovative means of investment.
-                            Its authorized capital is NPR. 1 Billion.
+                        <h1 class="mb-4 fw-bold display-4">Lumbini Innovate Pvt. Ltd.</h1>
+
+                        <p class="lead mb-4 text-justify ">
+                            <b>Your journey to the perfect home starts here.</b><br>
+                            At Lumbini Innovate Pvt. Ltd. we believe that every home has a story
+                            and we're here to help you write yours. Whether you're looking to buy your dream house,
+                            sell your current property, or rent a space that fits your lifestyle, our dedicated team
+                            of experts is with you at every step.
                         </p>
-                        <form class="form-subscribe" id="contactForm">
-                            <div class="row">
-                                <div class="col-auto">
-                                    <a href="{{ route('land.booking') }}" class="btn btn-lg" id="submitButton" type="submit">Book Now</a>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="{{ route('land.booking') }}" class="btn btn-light btn-lg px-4 py-3 fw-bold" style="background-color: #fff; color: #20254D;">Book Now</a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Us</a>
+                        </div>
                     </div>
                 </div>
-
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="position-relative">
+                        <div class="rounded-4 overflow-hidden shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
+                                 alt="Dream Home"
+                                 class="img-fluid rounded-4"
+                                 style="border: 4px solid rgba(255,255,255,0.2);">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="showcase">
-        <div class="container-fluid">
-            <div class="row g-0">
-                <div class="col-lg-4 order-2 order-lg- text-white showcase-img"
-                     style="background-image: url('https://www.bflexion.com/themes/custom/bflexion/images/background-home.png')">
-                </div>
-                <div class="col-lg-7 ms-auto order-1 order-lg- my-auto showcase-text">
-                    <h2>About Us</h2>
-                    <p class="lead mb-0">
-                        <b>Lumbini Innovate Ltd.</b> is a subsidiary company of Lumbini Innovate Ltd. established by aiming
-                        to invest in share market, derivative market, real estate and other innovative means of investment. Its
-                        authorized capital is NPR. 1 Billion.
-                        Being a subsidiary company of Lumbini Innovate Ltd. we have provided opportunity to the shareholders
-                        of Lumbini Innovate Ltd. to take share ownership at first instance. We will open the opportunities
-                        for others as well fulfilling the legal requirements.
-                    </p>
-
-                    <div class="abt-img"><img src="{{ asset('backend/assets/images/abt.jpg') }}" class="img-fluid" alt=""></div>
-
-                    <h2>Our Projects</h2>
-                    <p class="lead mb-0">
-                        Our <b>first project</b> has been developed with a real estate project in Nepalgunj. It is a 44
-                        kattha land development project situated in Nepalgunj-Kohalpur road. We are planning to develop 6000 Square feet
-                        for vehicle showrooms which can accommodate 4 large showrooms consisting spare parts and servicing
-                        areas for the four wheel or two wheeler automobile brands. Then 16,000 square feet area for the godam. All
-                        these developed commercial properties will be rented out.
-                        From the day of incorporation, we have already started investing into share market. Since the market
-                        gone down, it is good time of entry in the share market.
-                    </p>
-                </div>
-            </div>
-            <div class="row g-0">
-                <div class="col-lg-5 order-lg- text-white showcase-img"
-                     style="background-image: url('https://static.wixstatic.com/media/12316e44d26649c69a935420b4dbb784.jpg/v1/fill/w_640,h_500,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/12316e44d26649c69a935420b4dbb784.jpg')">
-                </div>
-                <div class="col-lg-6 me-auto my-auto showcase-text">
-                    <h2>Super Benefit for Shareholders</h2>
-                    <p class="lead mb-0">
-                        All the shareholders are owners of the company. Therefore, providing maximum benefit to the
-                        shareholders is always in top priority of the company. Therefore both our old shareholders and
-                        new coming shareholders will get a direct discount on land purchase. Therefore, we invite people
-                        to be our shareholders.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="bod">
-        <div class="container">
-            <div class="row">
+    <!-- Trusted Partner Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center mr-4">
                 <div class="col-lg-6">
-                    <div class="row">
-                        <h2 class="mb-5">Board of Directors</h2>
-                        <div class="col-lg-12">
-                            <div class="bod-item">
-                                <h5>Dr. Keshav Prasad Shrestha</h5>
-                                <p class="font-weight-light mb-0">Chairman</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="bod-item">
-                                <h5>Kishor Paudel</h5>
-                                <p class="font-weight-light mb-0">Director</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="bod-item">
-                                <h5>Rajesh Kumar Pathak</h5>
-                                <p class="font-weight-light mb-0">Director</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 bg">
-                    <div class="row">
-                        <h2 class="mb-5">Contact Us</h2>
-                        <div class="col-lg-12">
-                            <div class="bod-item">
-                                <h5>Satdobato-15, Lalitpur, Nepal</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="bod-item">
-                                <h5><span class="enem" data-mbx="tcatnoc" data-www="erahsayhskal" data-ext="moc"
-                                          style="cursor:pointer;" onclick="sendMail(this)"></span></h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="bod-item">
-                                <h5>01-5402777</h5>
-                            </div>
-                        </div>
-                        <div class="col-lg-12">
-                            <div class="bod-item">
-                                <h5>www.Lumbiniinnovate.com</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <h2 class="display-5 fw-bold mb-4" style="color: #20254D;">Your Trusted Real Estate Partner</h2>
+                    <p class="lead mb-4 text-muted lh-base">
+                        Navigating the real estate market can feel overwhelming. That's why we've built our reputation on trust,
+                        transparency, and a deep understanding of the local market. With years of experience and a customer-first
+                        approach, we ensure that your experience is not only successful — but enjoyable too.
+                    </p>
 
-    <section class="landbook bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <h2>Land Booking</h2>
-                    <br><br>
-                    <p>We have policy of providing plotted, developed ghaderi land direct 10% discount for our shareholders.
-                        Therefore, If you have already made share application amount, you are eligible for pre-booking of the land
-                        in 10% discount.</p>
-
-                    <p> There are 4 categories of the land. Being nearer to the highway are bit expensive and vice versa.
-                        They are tabulated below. Each ghaderi land piece has more than 10 meter front face so they are enough to
-                        build residential houses. Below prices of 10 dhur land but in reality they range from 10 dhur to 13 dhur.
-                        Therefore, later depending upon your specific choices of the land, the total price calculation of the land
-                        may vary.</p>
-                    <p>We also have arrangements with banks, finance and cooperatives to do financing if you are eligible to
-                        take loan from the bank. You need to do 30% down payment and we will manage 70% financing for you. Please
-                        note that this is not a commitment for making available of land because there is already huge demand of
-                        this land. Final booking of the land will be in your name only when you deposit at least 30% of the land
-                        price. After depositing 30% price of the land price, you will get 30 days maximum time to make it 100%
-                        payment (of course you can apply for loan with our help).</p>
-                </div>
-                <div class="col-md-5">
-                    <div class="border table-responsive p-3">
-                        <table class="table  table-striped table-hover text-center">
-                            <thead>
-                            <tr>
-                                <th>Land Category</th>
-                                <th>Price for 10 Dhur for Public</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>A</td>
-                                <td>45,00,000</td>
-                            </tr>
-                            <tr>
-                                <td>B</td>
-                                <td>40,00,000</td>
-                            </tr>
-                            <tr>
-                                <td>C</td>
-                                <td>38,00,000</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="my-4">
+                        <img src="{{ asset('backend/assets/images/abt.jpg') }}"
+                             class="img-fluid rounded-4 shadow-lg w-100"
+                             alt="About Us"
+                             style="max-height: 400px; object-fit: cover;">
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <div class="border p-2">
-                        <a href="{{ asset('backend/assets/images/land2.jpg') }}" data-lightbox="land">
-                            <img src="{{ asset('backend/assets/images/land2.jpg') }}" class="img-fluid d-block m-auto" alt="">
-                        </a>
+
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h2 class="display-5 fw-bold mb-4" style="color: #20254D;">Why Choose Lumbini Innovate Pvt. Ltd.</h2>
+
+                        <div class="benefits-list">
+                            <div class="d-flex mb-4">
+                                <div class="me-4">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                    </svg>
+                                </div>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Verified Listings</h4>
+                                    <p class="mb-0 text-muted">
+                                        We ensure that every property listed on our platform is thoroughly verified for authenticity and legal compliance — no surprises, just peace of mind.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                               <div class="me-4">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                    </svg>
+                                </div>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Local Market Expertise</h4>
+                                    <p class="mb-0 text-muted">
+                                        Our agents know the neighborhoods, the trends, and the opportunities. We provide insights that go beyond square footage — like school zones, commute times, and lifestyle fit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="me-4">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                                    </svg>
+                                </div>
+                                </div>
+                                <div>
+                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Trusted by Thousands</h4>
+                                    <p class="mb-0 text-muted">
+                                        With hundreds of successful transactions and glowing client testimonials, we've built a community that speaks for itself. Join the thousands who have found their perfect property with us.
+                                    </p>
+                                </div>
+                            </div>
+
+{{--                            <div class="d-flex">--}}
+{{--                                <div class="me-4">--}}
+{{--                                    <div class="me-4">--}}
+{{--                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">--}}
+{{--                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">--}}
+{{--                                        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>--}}
+{{--                                    </svg>--}}
+{{--                                        <div>--}}
+{{--                                            <h4 class="h5 fw-bold" style="color: #1C345C;">Hassle-Free Transactions</h4>--}}
+{{--                                            <p class="mb-0 text-muted">--}}
+{{--                                                From property visits to paperwork, we handle everything. Our end-to-end service means fewer headaches and more confidence in every decision.--}}
+{{--                                            </p>--}}
+{{--                                        </div>--}}
+{{--                                </div>--}}
+
+{{--                                </div>--}}
+
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="landbook bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12">
-                    <h2>NOTICE</h2>
-                    <br><br>
-                </div>
-                <div class="col-md-8 shadow-sm border bg-white p-3">
-                    <span class="notice-container">
-                        <h5 class="text-center mb-3">
-                            <strong><u> गाडीको शोरुम निर्माण तथा संचालन प्रस्ताव आव्हान</u></strong>
-                        </h5>
-                        <br>
-                        <p>
-                            यस कम्पनीको हकभोग स्वामित्वमा रहेको नेपालगंज कोहलपुर रोडमा राँझा एअरपोर्ट देखि १.५
-                            किलोमीटर उत्तर (कोहलपुर तर्फ) अवस्थित ५ कठ्ठा जमीनमा २ वटा सवारी साधनको शोरुम
-                            निर्माण गरि संचालन गर्नुपर्ने भएकोले इच्छुक व्यक्ति, फर्म वा कम्पनीले इमेल मार्फत्
-                            प्रस्ताव पेश गर्नुहुन वा तल दिईएको गुगल लिंकमा गै फारम भर्नुहुन अनुरोध गरिन्छ । <br><br>
+    <!-- Shareholder Benefits Section -->
+    <section class="" style="background: linear-gradient(135deg, #20254D 0%, #1C345C 100%);">
+        <div class="container py-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8 text-white">
+                    <h2 class="display-5 fw-bold  mb-2">Ready to Find Your Dream Property?</h2>
+                    <p class="lead ">Join thousands of satisfied clients who found their perfect home with</p>
+                    <p class="lead mb-2">Lumbini Innovate Pvt. Ltd.</p>
 
-                            शोरुम निर्माण हुने जग्गाको पूर्ण तयारी भैसकेको र अवलोकन गर्न चाहनुहुने महानुभावहरुले
-                            तलको फोनमा सम्पर्क गर्न सक्नुहुनेछ । <br><br>
-
-                            इमेल वा गुगल फर्मबाहेक अन्य फरक माध्यमबाट आएका प्रस्तावहरु स्वीकार गरिनेछैन ।
-                            प्रस्ताव स्वीकार गर्ने वा नगर्ने अन्तिम अधिकार कम्पनीमा सुरक्षित रहेको छ । <br><br>
-
-                            <br>
-                            <u><b>थप जानकारीको लागि</b></u><br>
-                            लक्ष्य क्यापिटल लिमिटेड <br>
-                            मोबाइलः ९८५८०२११६६ <br>
-                            इमेलः <span class="enem email-link"
-                                        data-mbx="tcatnoc"
-                                        data-www="erahsayhskal"
-                                        data-ext="moc" style="cursor:pointer;" onclick="sendMail(this)"></span> <br>
-                            Link: <a href="{{ route('home') }}">www.lumbiniinnovate.com</a>
-                        </p>
-                    </span>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center">
+                        <a href="{{ route('land.booking') }}" class="btn btn-light btn-lg px-4 py-3 fw-bold" style="color: #20254D;">Get Started</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Our Team</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="bg-white">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 order-lg-2 ps-lg-5">
+                    <h2 class="display-5 fw-bold mb-4" style="color: #20254D;">Our Mission & Vision</h2>
+                    <p class="lead mb-4 text-muted lh-base text-justify">
+                        Our mission is to simplify the real estate journey by offering exceptional service, expert guidance,
+                        and unwavering integrity. We strive to remove the stress from property decisions by managing every step
+                        with professionalism and care. From the first showing to the final signature, we’re committed to making your
+                        experience smooth, rewarding, and hassle-free. We envision a future where buying or selling a home is no
+                        longer complicated, but instead an exciting and positive experience. Our goal is to become the most trusted
+                        and innovative real estate brand in the region, known for our commitment to quality, value, and genuine care.
+                        By blending cutting-edge technology with personalized service, we’re redefining what clients can expect from a
+                        real estate agency.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#" class="btn btn-primary btn-lg px-4 py-3 fw-bold" style="background-color: #1C345C; border-color: #1C345C;">Learn About Shareholding</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                <div class="">
+                    <div style="height: 100%;">
+                        <img src="https://merlionbuilders.com/wp-content/uploads/2021/06/ourvisionq.png"
+                            alt=""
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+
 @endsection
+
+@push('styles')
+<style>
+    .masthead {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    .benefit-icon {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    .rounded-4 {
+        border-radius: 1rem !important;
+    }
+
+    .shadow-lg {
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+    }
+
+    @media (min-width: 992px) {
+        .masthead {
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+    }
+</style>
+@endpush
