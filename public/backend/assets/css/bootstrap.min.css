@@ -4364,6 +4364,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  text-decoration: none;
 }
 
 .navbar-collapse {
@@ -4395,7 +4396,7 @@ input[type="button"].btn-block {
   height: 1.5em;
   vertical-align: middle;
   content: "";
-  color: black;
+  /* color: black; */
   background: no-repeat center center;
   background-size: 100% 100%;
 }

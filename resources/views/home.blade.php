@@ -67,7 +67,7 @@
                     </p>
 
                     <div class="my-4">
-                        <img src="{{ asset('backend/assets/images/abt.jpg') }}"
+                        <img src="https://sbrealtyar.com/images/local-expertise-mobile.png"
                              class="img-fluid rounded-4 shadow-lg w-100"
                              alt="About Us"
                              style="max-height: 400px; object-fit: cover;">
@@ -195,18 +195,12 @@
                         making your
                         experience smooth, rewarding, and hassle-free. We envision a future where buying or selling a
                         home is no
-                        longer complicated, but instead an exciting and positive experience. Our goal is to become the
-                        most trusted
-                        and innovative real estate brand in the region, known for our commitment to quality, value, and
-                        genuine care.
-                        By blending cutting-edge technology with personalized service, we’re redefining what clients can
-                        expect from a
-                        real estate agency.
+                        longer complicated, but instead an exciting and positive experience.
                     </p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="#"
+                        <a href="{{ route('contact') }}"
                            class="btn btn-primary btn-lg px-4 py-3 fw-bold"
-                           style="background-color: #1C345C; border-color: #1C345C;">Learn About Shareholding</a>
+                           style="background-color: #1C345C; border-color: #1C345C;">Contact Us</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
