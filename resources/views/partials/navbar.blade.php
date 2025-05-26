@@ -1,10 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+<nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
         <!-- Brand logo with better sizing control -->
         <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
             <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
                  class="img-fluid me-2"
-                 style="height: 40px; width: auto;"
+                 style="height: 77px; width: auto;"
                  alt="Company Logo">
         </a>
 
@@ -49,13 +49,15 @@
                     </a>
                 </li>
             </ul>
-
-
-            <!-- <div class="d-flex ms-lg-3">
-                <a href="#" class="btn btn-outline-light rounded-pill px-3">
-                    <i class="bi bi-person-circle me-1"></i> Login
-                </a>
-            </div> -->
         </div>
     </div>
 </nav>
+
+<style>
+/* Make navbar-toggler-icon black on mobile */
+@media (max-width: 991.98px) {
+    .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+}
+</style>

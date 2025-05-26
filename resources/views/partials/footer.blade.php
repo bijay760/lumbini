@@ -6,7 +6,7 @@
                 <div class="d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-3">
                     <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
                          class="img-fluid me-2"
-                         style="height: 40px;"
+                         style="height: 77px; width: auto;"
                          alt="Company Logo">
                 </div>
                 <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">Providing quality land booking services with transparency and efficiency.</p>
