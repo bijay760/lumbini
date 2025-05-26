@@ -4,24 +4,26 @@
 
 @section('content')
     <div class="about-page">
+
         <!-- Hero Section -->
-        <div class="row g-0">  <!-- Changed from gap-0 to g-0 (Bootstrap's gutter removal class) -->
-            <section class="hero-section bg-primary text-white py-5 col-lg-8 pe-lg-0">  <!-- Added pe-lg-0 to remove right padding on large screens -->
+        <div class="row g-0">
+            <section class="hero-section py-3">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
-                        <div class="col">
+                        <div class="col-lg-6 text-white">
                             <h1 class="display-4 fw-bold mb-4">🏡 About Lumbani Innovate</h1>
                             <p class="lead">Transforming real estate through innovation and integrity</p>
                             <p class="mb-3">We're revolutionizing property solutions with cutting-edge technology and personalized service.</p>
-
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="position-absolute h-100 bg-primary" style="width: 50%;"></div>
+                            <img src="{{ asset('backend/assets/images/our_team.jpg') }}" alt="Our Team"
+                                 class="img-fluid h-100 object-fit-cover rounded shadow w-100 position-relative">
                         </div>
                     </div>
                 </div>
             </section>
-            <div class="col-lg-4 ps-lg-0">  <!-- Wrapped img in div and added ps-lg-0 to remove left padding -->
-                <img src="{{ asset('backend/assets/images/our_team.jpg') }}" alt="Our Team"
-                     class="img-fluid h-100 object-fit-cover rounded-end shadow w-100 w-md-100">  <!-- Added h-100 and object-fit-cover -->
-            </div>
+
         </div>
 
 
@@ -108,16 +110,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- CTA Section -->
-{{--        <section class=" text-white py-5" style="background:#20254d ">--}}
-{{--            <div class="container text-center py-4">--}}
-{{--                <h2 class="fw-bold mb-4">📞 Let's Connect</h2>--}}
-{{--                <p class="lead mb-4">Got questions? Want to learn more about our team or services?</p>--}}
-{{--                <p class="mb-4">Reach out to us anytime — we're here to help.</p>--}}
-{{--                <a href="{{ route('contact') }}" class="btn btn-light btn-lg px-4">Contact Us</a>--}}
-{{--            </div>--}}
-{{--        </section>--}}
     </div>
 @endsection
 

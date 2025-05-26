@@ -7,6 +7,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/land-bookings', function () {
+
     return view('land-bookings');
 })->name('land.booking');
 
