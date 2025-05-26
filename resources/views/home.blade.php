@@ -8,7 +8,9 @@
 
 @section('content')
     <!-- Hero Section -->
-    <header class="masthead" style="background-size: cover; background-position: center;">
+    <header class="masthead" 
+            style="background-size: cover; background-position: center;">
+
         <div class="container position-relative">
             <div class="row align-items-center">
                 <div class="col-lg-7">
@@ -23,8 +25,14 @@
                             of experts is with you at every step.
                         </p>
                         <div class="d-flex flex-wrap gap-3 mt-4">
-                            <a href="{{ route('land.booking') }}" class="btn btn-light btn-lg px-4 py-3 fw-bold" style="background-color: #fff; color: #20254D;">Book Now</a>
-                            <a href="{{ route('about-us') }}" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">About Us</a>
+
+                            <a href="{{ route('land.booking') }}" 
+                            class="btn btn-light btn-lg px-4 py-3 fw-bold" 
+                            style="background-color: #fff; color: #20254D;">Book Now</a>
+
+                            <a href="{{ route('about-us') }}" 
+                            class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">About Us</a>
+
                         </div>
                     </div>
                 </div>
@@ -47,7 +55,8 @@
         <div class="container py-5">
             <div class="row g-5 align-items-center mr-4">
                 <div class="col-lg-6">
-                    <h2 class="display-5 fw-bold mb-4" style="color: #20254D;">Your Trusted Real Estate Partner</h2>
+                    <h2 class="display-5 fw-bold mb-4" 
+                    style="color: #20254D;">Your Trusted Real Estate Partner</h2>
                     <p class="lead mb-4 text-muted lh-base">
                         Navigating the real estate market can feel overwhelming. That's why we've built our reputation on trust,
                         transparency, and a deep understanding of the local market. With years of experience and a customer-first
@@ -64,13 +73,19 @@
 
                 <div class="col-lg-6">
                     <div class="ps-lg-5">
-                        <h2 class="display-5 fw-bold mb-4" style="color: #20254D;">Why Choose Lumbini Innovate Pvt. Ltd.</h2>
+                        <h2 class="display-5 fw-bold mb-4" 
+                        style="color: #20254D;">Why Choose Lumbini Innovate Pvt. Ltd.</h2>
 
                         <div class="benefits-list">
                             <div class="d-flex mb-4">
                                 <div class="me-4">
-                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center"
+                                     style="width: 50px; height: 50px;background-color: #20254d;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" 
+                                    height="24" 
+                                    fill="white" 
+                                    viewBox="0 0 16 16">
                                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
                                     </svg>
                                 </div>
@@ -85,14 +100,20 @@
 
                             <div class="d-flex mb-4">
                                <div class="me-4">
-                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                                    <div class="rounded-circle d-flex align-items-center justify-content-center" 
+                                    style="width: 50px; background-color: #20254d; height: 50px;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" 
+                                    height="24" 
+                                    fill="white" 
+                                    viewBox="0 0 16 16">
                                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
                                     </svg>
                                 </div>
                                 </div>
                                 <div>
-                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Local Market Expertise</h4>
+                                    <h4 class="h5 fw-bold" 
+                                    style="color: #1C345C;">Local Market Expertise</h4>
                                     <p class="mb-0 text-muted">
                                         Our agents know the neighborhoods, the trends, and the opportunities. We provide insights that go beyond square footage — like school zones, commute times, and lifestyle fit.
                                     </p>
@@ -101,14 +122,21 @@
 
                             <div class="d-flex mb-4">
                                 <div class="me-4">
-                                    <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 16 16">
+                                    <div class=" rounded-circle d-flex align-items-center justify-content-center" 
+                                    style="width: 50px; height: 50px; background-color: #20254d;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" 
+                                    height="24"
+                                    fill="white" 
+                                    viewBox="0 0 16 16">
                                         <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
                                     </svg>
                                 </div>
                                 </div>
                                 <div>
-                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Trusted by Thousands</h4>
+                                    <h4 class="h5 fw-bold" 
+                                    style="color: #1C345C;">Trusted by Thousands</h4>
+
                                     <p class="mb-0 text-muted">
                                         With hundreds of successful transactions and glowing client testimonials, we've built a community that speaks for itself. Join the thousands who have found their perfect property with us.
                                     </p>
@@ -121,7 +149,8 @@
     </section>
 
     <!-- Shareholder Benefits Section -->
-    <section class="" style="background: linear-gradient(135deg, #20254D 0%, #1C345C 100%);">
+    <section class="" 
+    style="background: linear-gradient(135deg, #20254D 0%, #1C345C 100%);">
         <div class="container py-5">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8 text-white">
@@ -130,8 +159,11 @@
                     <p class="lead mb-2">Lumbini Innovate Pvt. Ltd.</p>
 
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
-                        <a href="{{ route('land.booking') }}" class="btn btn-light btn-lg px-4 py-3 fw-bold" style="color: #20254D;">Get Started</a>
-                        <a href="{{ route('contact') }}" class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Our Team</a>
+                        <a href="{{ route('land.booking') }}" 
+                        class="btn btn-light btn-lg px-4 py-3 fw-bold" 
+                        style="color: #20254D;">Get Started</a>
+                        <a href="{{ route('contact') }}" 
+                        class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Our Team</a>
                     </div>
                 </div>
             </div>
@@ -141,7 +173,8 @@
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 order-lg-2 ps-lg-5">
-                    <h2 class="display-5 fw-bold mb-4" style="color: #20254D;">Our Mission & Vision</h2>
+                    <h2 class="display-5 fw-bold mb-4"
+                     style="color: #20254D;">Our Mission & Vision</h2>
                     <p class="lead mb-4 text-muted lh-base text-justify">
                         Our mission is to simplify the real estate journey by offering exceptional service, expert guidance,
                         and unwavering integrity. We strive to remove the stress from property decisions by managing every step
@@ -153,7 +186,9 @@
                         real estate agency.
                     </p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="#" class="btn btn-primary btn-lg px-4 py-3 fw-bold" style="background-color: #1C345C; border-color: #1C345C;">Learn About Shareholding</a>
+                        <a href="#" 
+                        class="btn btn-primary btn-lg px-4 py-3 fw-bold" 
+                        style="background-color: #1C345C; border-color: #1C345C;">Learn About Shareholding</a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
@@ -169,8 +204,38 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-
+    <div class="container my-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6 mb-4 mb-lg-0">
+      <div class="bg-primary bg-opacity-10 p-4 rounded shadow">
+        <h2 class="fw-bold mb-3">Lumbini Innovate - A Real Estate Solution is at Hotel Siddhartha View, Karkando Nepalgunj</h2>
+        <p class="fs-5 text-dark">
+          हामीले ल्याएका छौ नेपालगंज उप-महानगरपालिका कारकाँदो होटेल सिद्धार्थको नजिकै आकर्षक आवासीय घडेरीहरु ।<br><br>
+          पानी, बत्ति र पक्की सडकको सुबिधा सहित<br>
+          रोजेर खरिद एवं बुकिङ्ग को लागि समयमै सम्पर्क गर्नुहोस्<br><br>
+          <i class="bi bi-telephone-fill me-2"></i>
+            मोबाईल नं. : ९८५८०२५२४१
+        </p>
+      </div>
+    </div>
+    <div class="container my-5">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+    
+    <!-- Facebook Video: 9:16 ratio -->
+    <div class="aspect-[9/16] w-full md:w-1/2">
+      <iframe 
+        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwatch%2F%3Fv%3D670532369198941&show_text=false&autoplay=true&mute=false&width=360&height=640" 
+        width="360" 
+        height="640" 
+        style="border:none;overflow:hidden" 
+        scrolling="no" 
+        frameborder="0" 
+        allowfullscreen="true" 
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
+    </div>
+  </div>
+</div>
 @endsection
 
 @push('styles')
