@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+
+
+Route::Post('/store',[ContactController::class,'store'])->name('contact.store');
 
 Route::get('/', function () {
     return view('home');
@@ -17,6 +21,8 @@ Route::get('/about-us', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+
 
 
 Route::fallback(function () {
