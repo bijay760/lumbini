@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About Us - Lumbani Innovate')
+@section('title', 'About Us - Lumbini Innovate')
 
 @section('content')
     <!-- Hero Section -->

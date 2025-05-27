@@ -1,7 +1,7 @@
 
 @extends('layouts.app')
 
-@section('title', 'Lumbani Innovate - Home')
+@section('title', 'Lumbini Innovate - Home')
 
 @push('modals')
     @include('modals.share-sell-notice')
@@ -14,7 +14,7 @@
             <h1 class="display-1 fw-bold">404</h1>
             <p class="fs-2 fw-medium mt-4">Oops! Page not found</p>
             <p class="mt-4 mb-5">The page you're looking for doesn't exist or has been moved.</p>
-        
+
         </div>
     </div>
 </div>

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('css/form.css') }}"/>
     <link rel="stylesheet" href="{{ asset('css/date.css') }}"/>
 
-    <title>@yield('title', 'Lumbani Innovate')</title>
+    <title>@yield('title', 'Lumbini Innovate')</title>
 
     <!-- Facebook Chat Plugin -->
     <div id="fb-root"></div>

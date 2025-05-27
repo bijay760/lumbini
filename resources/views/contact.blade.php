@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Lumbani Innovate - Contact Us')
+@section('title', 'Lumbini Innovate - Contact Us')
 
 @push('modals')
     @include('modals.share-sell-notice')

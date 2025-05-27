@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Lumbani Innovate - land Booking')
+@section('title', 'Lumbini Innovate - land Booking')
 
 
 @section('content')
@@ -23,7 +23,7 @@
             <form action="https://www.lakshyashare.com/landbookings/store" method="POST" enctype="multipart/form-data"
                   class="formdes shadow-sm" id="application-form">
 
-                <h1 class="form-title">Lumbani Capital Land Booking Form</h1>
+                <h1 class="form-title">Lumbini Capital Land Booking Form</h1>
                 <input type="hidden" name="_token" value="">
                 <div class="form-group">
                     <div class="input-group mb-3">

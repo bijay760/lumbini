@@ -33,6 +33,15 @@
                               style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
                     </a>
                 </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('projects') ? 'active' : '' }}"
+                       href="{{ route('projects') }}" style="text-decoration: none;">
+                        <i class="bi bi-house-door me-1 d-lg-none"></i>
+                        Our Project
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
+                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                    </a>
+                </li>
 
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('about-us') ? 'active' : '' }}"
