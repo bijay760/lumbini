@@ -10,8 +10,7 @@
                 <div class="col-lg-12 mb-4 mb-lg-0">
                     <h1 class="display-4 fw-bold">A Real Estate Solution </h1>
                     <p class="lead">Transforming real estate through innovation and integrity.</p>
-                    <p>We're revolutionizing property solutions with cutting-edge technology and personalized
-                        service.</p>
+                    <p>We are revolutionizing property solutions in Nepal with affordable, tech-driven, and personalized services.</p>
                 </div>
 {{--                <div class="col-lg-6">--}}
 {{--                    <div class="position-relative overflow-hidden rounded-4 shadow"--}}
