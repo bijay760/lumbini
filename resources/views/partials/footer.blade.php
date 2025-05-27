@@ -1,4 +1,4 @@
-<footer class="text-white pt-5 pb-4" 
+<footer class="text-white pt-5 pb-4"
 style="background: #20254d;">
     <div class="container">
         <div class="row">
@@ -12,19 +12,10 @@ style="background: #20254d;">
                 </div>
                 <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">Providing quality land booking services with transparency and efficiency.</p>
                 <div class="social-icons mt-4 text-md-start justify-content-md-start justify-content-lg-start">
-                    <a href="https://www.facebook.com/lumbini.innovate" 
+                    <a href="https://www.facebook.com/lumbini.innovate"
                     target ="_blank"
                     class="text-white me-3">
                     <i class="bi bi-facebook fs-5"></i></a>
-
-                    <a href="#" 
-                    class="text-white me-3"><i class="bi bi-twitter fs-5"></i></a>
-
-                    <a href="#" 
-                    class="text-white me-3"><i class="bi bi-linkedin fs-5"></i></a>
-
-                    <a href="#" 
-                    class="text-white me-3"><i class="bi bi-instagram fs-5"></i></a>
                 </div>
             </div>
 
@@ -34,14 +25,6 @@ style="background: #20254d;">
                     <li class="mb-2">
                         <i class="bi bi-geo-alt-fill me-2"></i>
                         Chandragiri-13, Kathmandu, Nepal
-                    </li>
-                    <li class="mb-2">
-                        <i class="bi bi-telephone-fill me-2"></i>
-                        +977-9801104064
-                    </li>
-                    <li class="mb-2">
-                        <i class="bi bi-geo-alt-fill me-2"></i>
-                        Karkado, Nepalgunj, Nepal
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>
@@ -58,11 +41,11 @@ style="background: #20254d;">
                 <p class="text-white = text-lg-left">Subscribe to our mail for the latest updates.</p>
                 <form class="mb-3">
                     <div class="input-group mx-sm-auto ms-md-0">
-                        <input type="email" 
-                        class="form-control" 
-                        placeholder="Your Email" 
+                        <input type="email"
+                        class="form-control"
+                        placeholder="Your Email"
                         aria-label="Your Email">
-                        <button class="btn btn-primary" 
+                        <button class="btn btn-primary"
                         type="submit">
                             <i class="bi bi-send-fill"></i>
                         </button>
@@ -71,11 +54,11 @@ style="background: #20254d;">
                 <div class="payment-methods mt-3">
                     <p class="small text-white mb-2">We accept:</p>
                     <div class="d-flex justify-content-center justify-content-lg-start gap-3">
-                        <img src="https://esewa.com.np/common/images/esewa_logo.png" 
-                        alt="eSewa" 
+                        <img src="https://esewa.com.np/common/images/esewa_logo.png"
+                        alt="eSewa"
                         style="height: 24px;">
-                        <img src="https://fonepay.com/images/logo.png" 
-                        alt="Fonepay" 
+                        <img src="https://fonepay.com/images/logo.png"
+                        alt="Fonepay"
                         style="height: 24px;">
                     </div>
                 </div>
@@ -97,7 +80,7 @@ style="background: #20254d;">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 <!-- Back to Top Button -->
-<a href="#" class="btn btn-primary btn-lg back-to-top rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center" 
+<a href="#" class="btn btn-primary btn-lg back-to-top rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center"
 style="width: 50px; height: 50px;">
     <i class="bi bi-arrow-up"></i>
 </a>

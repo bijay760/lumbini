@@ -26,7 +26,7 @@
                         </p>
                         <div class="d-flex flex-wrap gap-3 mt-4">
 
-                            <a href="{{ route('land.booking') }}"
+                            <a href="{{ route('about-us') }}"
                                class="btn btn-light btn-lg px-4 py-3 fw-bold"
                                style="background-color: #fff; color: #20254D;">Book Now</a>
 
@@ -156,6 +156,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Shareholder Benefits Section -->
@@ -169,11 +170,11 @@
                     <p class="lead mb-2">Lumbini Innovate Pvt. Ltd.</p>
 
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
-                        <a href="{{ route('land.booking') }}"
+                        <a href="{{ route('about-us') }}"
                            class="btn btn-light btn-lg px-4 py-3 fw-bold"
                            style="color: #20254D;">Get Started</a>
                         <a href="{{ route('contact') }}"
-                           class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact Our Team</a>
+                           class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -239,65 +240,65 @@
             </div>
         </div>
     </div>
-            @endsection
+@endsection
 
-            @push('styles')
-                <style>
-                    .masthead {
-                        padding-top: 6rem;
-                        padding-bottom: 6rem;
-                    }
+@push('styles')
+    <style>
+        .masthead {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
 
-                    .benefit-icon {
-                        display: inline-block;
-                        width: 30px;
-                        text-align: center;
-                        margin-right: 10px;
-                    }
+        .benefit-icon {
+            display: inline-block;
+            width: 30px;
+            text-align: center;
+            margin-right: 10px;
+        }
 
-                    .rounded-4 {
-                        border-radius: 1rem !important;
-                    }
+        .rounded-4 {
+            border-radius: 1rem !important;
+        }
 
-                    .shadow-lg {
-                        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
-                    }
+        .shadow-lg {
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+        }
 
-                    @media (min-width: 992px) {
-                        .masthead {
-                            padding-top: 8rem;
-                            padding-bottom: 8rem;
-                        }
-                    }
-                </style>
-                <script>
-                    function unmuteVideo() {
-                        const video = document.getElementById("myVideo");
-                        if (video) {
-                            video.muted = false;
-                        }
-                    }
+        @media (min-width: 992px) {
+            .masthead {
+                padding-top: 8rem;
+                padding-bottom: 8rem;
+            }
+        }
+    </style>
+    <script>
+        function unmuteVideo() {
+            const video = document.getElementById("myVideo");
+            if (video) {
+                video.muted = false;
+            }
+        }
 
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const video = document.getElementById("myVideo");
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("myVideo");
 
-                        const observer = new IntersectionObserver(
-                            (entries, observer) => {
-                                entries.forEach(entry => {
-                                    if (entry.isIntersecting) {
-                                        unmuteVideo();
-                                        observer.unobserve(video); // Unobserve after first unmute
-                                    }
-                                });
-                            },
-                            {
-                                threshold: 0.5
-                            }
-                        );
-
-                        if (video) {
-                            observer.observe(video);
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            unmuteVideo();
+                            observer.unobserve(video); // Unobserve after first unmute
                         }
                     });
-                </script>
-            @endpush
+                },
+                {
+                    threshold: 0.5
+                }
+            );
+
+            if (video) {
+                observer.observe(video);
+            }
+        });
+    </script>
+@endpush

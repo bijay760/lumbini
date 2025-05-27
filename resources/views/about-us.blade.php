@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <h1 class="display-4 fw-bold">About Lumbani Innovate A Real Estate Solution </h1>
+                <h1 class="display-4 fw-bold">A Real Estate Solution </h1>
                 <p class="lead">Transforming real estate through innovation and integrity.</p>
                 <p>We're revolutionizing property solutions with cutting-edge technology and personalized service.</p>
             </div>
@@ -28,66 +28,71 @@
 </section>
 
 <!-- Mission & Vision -->
-<section class="bg-light py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h3 class="fw-bold text-black mb-3">Our Mission</h3>
-                        <p>Our mission is simple: To simplify the real estate process by delivering exceptional service, expert guidance, and unmatched integrity.</p>
-                        <p>We aim to take the stress out of property decisions by handling everything with professionalism and care—from the first showing to the final signature.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card h-100 border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h3 class="fw-bold text-black mb-3">Our Vision</h3>
-                        <p>We envision a world where finding or selling a home is no longer complicated or stressful.</p>
-                        <p>Our goal is to be the most trusted and innovative real estate brand in the region, delivering value and genuine care.</p>
-                        <p>By merging technology with personal service, we're setting a new standard for what real estate service should feel like.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{{--<section class="bg-light py-5">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row g-4">--}}
+{{--            <div class="col-md-6">--}}
+{{--                <div class="card h-100 border-0 shadow-sm">--}}
+{{--                    <div class="card-body p-4">--}}
+{{--                        <h3 class="fw-bold text-black mb-3">Our Mission</h3>--}}
+{{--                        <p>Our mission is simple: To simplify the real estate process by delivering exceptional service, expert guidance, and unmatched integrity.</p>--}}
+{{--                        <p>We aim to take the stress out of property decisions by handling everything with professionalism and care—from the first showing to the final signature.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-md-6">--}}
+{{--                <div class="card h-100 border-0 shadow-sm">--}}
+{{--                    <div class="card-body p-4">--}}
+{{--                        <h3 class="fw-bold text-black mb-3">Our Vision</h3>--}}
+{{--                        <p>We envision a world where finding or selling a home is no longer complicated or stressful.</p>--}}
+{{--                        <p>Our goal is to be the most trusted and innovative real estate brand in the region, delivering value and genuine care.</p>--}}
+{{--                        <p>By merging technology with personal service, we're setting a new standard for what real estate service should feel like.</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</section>--}}
 
 <!-- Why We Stand Out -->
-<section class="py-5"
+<section class="py-3"
         style="background-color: #20254d;">
     <div class="container">
-        <h2 class="text-center text-white fw-bold mb-5">Why We Stand Out</h2>
+        <h2 class="text-center text-white fw-bold mb-4">Why We Stand Out</h2>
         <div class="row g-4">
+            <!-- Prime Locations -->
             <div class="col-md-4">
                 <div class="text-center text-white">
                     <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
-                    style="width: 70px; height: 70px;">
-                        <i class="bi bi-geo-alt fs-4"></i>
+                         style="width: 70px; height: 70px;">
+                        <i class="bi bi-geo-alt-fill fs-4"></i>  <!-- Filled location icon -->
                     </div>
-                    <h5 class="fw-semibold">Locally Rooted, Globally Connected</h5>
-                    <p class="mb-0">Deep community ties with international expertise and reach.</p>
+                    <h5 class="fw-semibold">Prime Locations</h5>
+                    <p class="mb-0">Exclusive properties in high-growth urban centers.</p>
                 </div>
             </div>
+
+            <!-- Bank Financing -->
             <div class="col-md-4">
                 <div class="text-center text-white">
                     <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
-                    style="width: 70px; height: 70px;">
-                        <i class="bi bi-graph-up fs-4"></i>
+                         style="width: 70px; height: 70px;">
+                        <i class="bi bi-building-check fs-4"></i>  <!-- Bank building icon -->
                     </div>
-                    <h5 class="fw-semibold">Market Expertise</h5>
-                    <p class="mb-0">In-depth knowledge of neighborhoods, pricing, and trends.</p>
+                    <h5 class="fw-semibold">Bank Financing</h5>
+                    <p class="mb-0">Preferred partnerships with top lenders for competitive rates.</p>
                 </div>
             </div>
+
+            <!-- Private Financing -->
             <div class="col-md-4">
                 <div class="text-center text-white">
                     <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
-                    style="width: 70px; height: 70px;">
-                        <i class="bi bi-headset fs-4"></i>
+                         style="width: 70px; height: 70px;">
+                        <i class="bi bi-shield-lock fs-4"></i>  <!-- Secure private financing icon -->
                     </div>
-                    <h5 class="fw-semibold">End-to-End Support</h5>
-                    <p class="mb-0">From listings to legal—we manage every detail with care.</p>
+                    <h5 class="fw-semibold">Private Financing</h5>
+                    <p class="mb-0">Flexible investment options with discreet capital solutions.</p>
                 </div>
             </div>
         </div>
