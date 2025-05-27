@@ -10,7 +10,7 @@ style="background: #20254d;">
                          style="height: 77px; width: auto;"
                          alt="Company Logo">
                 </div>
-                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">Providing quality land booking services with transparency and efficiency.</p>
+                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A Complete Real-estate solution.</p>
                 <div class="social-icons mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="https://www.facebook.com/lumbini.innovate"
                     target ="_blank"
@@ -38,7 +38,7 @@ style="background: #20254d;">
             </div>
             <div class="col-lg-4 col-md-6 justify-start">
                 <h5 class="text-uppercase fw-bold mb-4  text-lg-left">Connect With Us</h5>
-                <p class="text-white = text-lg-left">Subscribe to our mail for the latest updates.</p>
+                <p class="text-white = text-lg-left">Be the first to know about our upcoming projects.</p>
                 <form class="mb-3">
                     <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email"
