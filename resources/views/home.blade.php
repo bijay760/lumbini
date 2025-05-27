@@ -18,7 +18,7 @@
                         <h1 class="mb-4 fw-bold display-4">Lumbini Innovate Pvt. Ltd.</h1>
 
                         <p class="lead mb-4 text-justify ">
-                            <b>Your journey to the perfect home starts here.</b><br>
+                            <b>Your journey to the perfect property starts here.</b><br>
                             At Lumbini Innovate Pvt. Ltd. we believe that every home has a story
                             and we're here to help you write yours. Whether you're looking to buy your dream house,
                             sell your current property, or rent a space that fits your lifestyle, our dedicated team
@@ -54,7 +54,7 @@
     <!-- Trusted Partner Section -->
     <section class="py-5 bg-light">
         <div class="container py-5">
-            <div class="row g-5 align-items-center mr-4">
+            <div class="row g-5 mr-4">
                 <div class="col-lg-6">
                     <h2 class="display-5 fw-bold mb-4"
                         style="color: #20254D;">Your Trusted Real Estate Partner</h2>
@@ -67,7 +67,7 @@
                     </p>
 
                     <div class="my-4">
-                        <img src="https://sbrealtyar.com/images/local-expertise-mobile.png"
+                        <img src="https://dam.buhlergroup.com/rendition/e54eab5b827e421988c998b19eeebdf2/-FJPG-TwebHeader_1x1-S1024x1024"
                              class="img-fluid rounded-4 shadow-lg w-100"
                              alt="About Us"
                              style="max-height: 400px; object-fit: cover;">
@@ -94,10 +94,9 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Verified Listings</h4>
+                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Prime Locations</h4>
                                     <p class="mb-0 text-muted">
-                                        We ensure that every property listed on our platform is thoroughly verified for
-                                        authenticity and legal compliance — no surprises, just peace of mind.
+                                        Exclusive properties in high-growth urban centers.
                                     </p>
                                 </div>
                             </div>
@@ -118,11 +117,9 @@
                                 </div>
                                 <div>
                                     <h4 class="h5 fw-bold"
-                                        style="color: #1C345C;">Local Market Expertise</h4>
+                                        style="color: #1C345C;">Bank Financing</h4>
                                     <p class="mb-0 text-muted">
-                                        Our agents know the neighborhoods, the trends, and the opportunities. We provide
-                                        insights that go beyond square footage — like school zones, commute times, and
-                                        lifestyle fit.
+                                        Preferred partnerships with top Banks for competitive rates.
                                     </p>
                                 </div>
                             </div>
@@ -143,12 +140,10 @@
                                 </div>
                                 <div>
                                     <h4 class="h5 fw-bold"
-                                        style="color: #1C345C;">Trusted by Thousands</h4>
+                                        style="color: #1C345C;">Private Financing</h4>
 
                                     <p class="mb-0 text-muted">
-                                        With hundreds of successful transactions and glowing client testimonials, we've
-                                        built a community that speaks for itself. Join the thousands who have found
-                                        their perfect property with us.
+                                        Flexible Financing options with discreet capital solutions.
                                     </p>
                                 </div>
                             </div>

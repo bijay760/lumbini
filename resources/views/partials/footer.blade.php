@@ -51,17 +51,17 @@ style="background: #20254d;">
                         </button>
                     </div>
                 </form>
-                <div class="payment-methods mt-3">
-                    <p class="small text-white mb-2">We accept:</p>
-                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
-                        <img src="https://esewa.com.np/common/images/esewa_logo.png"
-                        alt="eSewa"
-                        style="height: 24px;">
-                        <img src="https://fonepay.com/images/logo.png"
-                        alt="Fonepay"
-                        style="height: 24px;">
-                    </div>
-                </div>
+{{--                <div class="payment-methods mt-3">--}}
+{{--                    <p class="small text-white mb-2">We accept:</p>--}}
+{{--                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">--}}
+{{--                        <img src="https://esewa.com.np/common/images/esewa_logo.png"--}}
+{{--                        alt="eSewa"--}}
+{{--                        style="height: 24px;">--}}
+{{--                        <img src="https://fonepay.com/images/logo.png"--}}
+{{--                        alt="Fonepay"--}}
+{{--                        style="height: 24px;">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
 
