@@ -77,8 +77,7 @@
                 <div class="col-lg-6">
                     <div class="ps-lg-5">
                         <h2 class="display-5 fw-bold mb-4"
-                            style="color: #20254D;">Why Choose Lumbini Innovate Pvt. Ltd.</h2>
-
+                            style="color: #20254D;">Why Choose us?</h2>
                         <div class="benefits-list">
                             <div class="d-flex mb-4">
                                 <div class="me-4">

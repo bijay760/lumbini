@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
         <!-- Brand logo with better sizing control -->
-        <a class="navbar-brand d-flex align-items-center" 
+        <a class="navbar-brand d-flex align-items-center"
         href="{{ route('home') }}">
             <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
                  class="img-fluid me-2"
@@ -10,14 +10,14 @@
         </a>
 
         <!-- Mobile toggle button with animation -->
-        <button class="navbar-toggler" 
+        <button class="navbar-toggler"
                 type="button"
-                data-bs-toggle="collapse" 
+                data-bs-toggle="collapse"
                 data-bs-target="#mainNavbar"
-                aria-controls="mainNavbar" 
+                aria-controls="mainNavbar"
                 aria-expanded="false"
                 aria-label="Toggle navigation">
-                
+
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -26,7 +26,7 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('home') ? 'active' : '' }}"
-                       href="{{ route('home') }}">
+                       href="{{ route('home') }}" style="text-decoration: none;">
                         <i class="bi bi-house-door me-1 d-lg-none"></i>
                         Home
                         <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
@@ -35,19 +35,8 @@
                 </li>
 
                 <li class="nav-item mx-1">
-                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('land.booking') ? 'active' : '' }}"
-                       href="{{ route('land.booking') }}">
-                        <i class="bi bi-map me-1 d-lg-none"></i>
-                        Land Booking
-                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
-                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
-                    </a>
-                </li>
-                
-
-                <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('about-us') ? 'active' : '' }}"
-                       href="{{ route('about-us') }}">
+                       href="{{ route('about-us') }}" style="text-decoration: none;">
                         <i class="bi bi-map me-1 d-lg-none"></i>
                         About Us
                         <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
@@ -57,7 +46,7 @@
 
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('contact') ? 'active' : '' }}"
-                       href="{{ route('contact') }}">
+                       href="{{ route('contact') }}" style="text-decoration: none;">
                         <i class="bi bi-map me-1 d-lg-none"></i>
                         Contact
                         <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
