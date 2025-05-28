@@ -24,13 +24,12 @@
                         <div style="color:#ffffff;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
-                letter-spacing:-1px;
-                 ">
-                            Real Estate Solution
+                letter-spacing: -1px;
+                font-size: 13.8px;">A Complete Real Estate Solution
                         </div>
                     </div>
                 </a>
-                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">AA complete Real Estate solution.</p>
+                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A complete Real Estate solution.</p>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="https://www.facebook.com/lumbini.innovate"
                        target="_blank"

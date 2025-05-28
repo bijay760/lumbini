@@ -20,9 +20,9 @@
                 <div style="color:#1c345c;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
-                 letter-spacing:-1px;
-                 ">
-                    Real Estate Solution</div>
+                letter-spacing: -1px;
+                font-size: 13.8px;
+                 ">A Complete Real Estate Solution</div>
             </div>
         </a>
 
