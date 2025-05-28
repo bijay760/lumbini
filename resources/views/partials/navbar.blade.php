@@ -1,3 +1,4 @@
+<!-- @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); -->
 <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
         <!-- Brand logo with better sizing control -->
@@ -10,15 +11,41 @@
                  
         </a> -->
 
-        <a class="navbar-brand d-flex align-items-center" style="text-decoration: none;" href="{{ route('home') }}">
+        <!-- <a class="navbar-brand d-flex align-items-center" 
+        style="text-decoration: none;"
+        href="{{ route('home') }}">
     <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
          class="img-fluid me-2"
-         style="height: 77px; width: auto;"
+         style="
+         height: 77px; 
+         width: auto;"
          alt="Company Logo">
-    <!-- <span style="font-size: 0.875rem; font-weight: bold; color: #20254d;">
-        A Complete Real <br>State Solution
-    </span> -->
-</a>
+    
+</a> -->
+<a class="navbar-brand d-flex align-items-center" 
+    href="{{ route('home') }}" 
+    style="text-decoration: none;
+    line-height: 22px;
+    ">
+            <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
+                 class="img-fluid mr-3"
+                 style="height: 77px; width: auto;"
+                 alt="Company Logo">
+            <div>
+                <div style="color:#20254d;
+                 font-family: Montserrat, sans-serif;
+                 font-weight: 800;
+                letter-spacing:-0.92px;
+                 ">
+                    LUMBINI INNOVATE</div>
+                <div style="color:#1c345c; 
+                font-family: Montserrat, sans-serif;
+                font-weight: 500;
+                 ">
+                    Real State Solution</div>
+            </div>
+        </a>
+
 
 
         <!-- <div class="d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-3">
