@@ -34,7 +34,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 ">
                     <h3 class="fw-bold"> Who We Are</h3>
-                    <p style="text-align: justify;">Lumbini Innovate is a full-service real estate agency providing
+                    <p style="text-align: justify;">Lumbini Innovate is a full-service real estate company providing
                         complete property solutions throughout Nepal. While we operate nationally, our exclusive focus
                         is currently in Nepalgunj city, where we specialize in fulfilling your dreams—whether it’s
                         buying your first home, securing high-growth investment properties, or finding rental

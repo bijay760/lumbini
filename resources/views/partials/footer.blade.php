@@ -32,7 +32,7 @@ style="background: #20254d;">
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-envelope-fill me-2"></i>
-                        lumbiniinnovate@gmail.com
+                        info@lumbiniinnovate.com.np
                     </li>
                 </ul>
             </div>

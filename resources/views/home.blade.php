@@ -165,7 +165,7 @@
                     <p class="lead mb-2">Lumbini Innovate Pvt. Ltd.</p>
 
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
-                        <a href="{{ route('about-us') }}"
+                        <a href="{{ route('projects') }}"
                            class="btn btn-light btn-lg px-4 py-3 fw-bold"
                            style="color: #20254D;">Get Started</a>
                         <a href="{{ route('contact') }}"
