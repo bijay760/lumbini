@@ -25,7 +25,7 @@
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
                  ">
-                            Real State Solution
+                            Real EState Solution
                         </div>
                     </div>
                 </a>
