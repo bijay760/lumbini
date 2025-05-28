@@ -171,7 +171,7 @@ input[type="number"] {
     right: 0;
     left: 0;
     bottom: 0;
-   
+
     background-size: cover;
     opacity: 0.5;
     z-index: -1;
@@ -288,8 +288,13 @@ label.error {
 }
 
 .nav-link {
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
+
+.nav-link:hover .active-indicator {
+    width: 100% !important;
+}
+
 
 .nav-link:hover {
     transform: translateY(-2px);
@@ -304,6 +309,19 @@ label.error {
         margin: 0.25rem 0;
     }
 }
+/* For mobile view */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding: 10px 0;
+    }
+    .nav-item {
+        margin: 5px 0;
+    }
+    .nav-link {
+        padding: 8px 15px !important;
+    }
+}
+
 @-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(0.95);
@@ -1401,4 +1419,3 @@ footer.footer {
   }
 
 
-  

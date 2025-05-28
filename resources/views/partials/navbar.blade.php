@@ -43,44 +43,48 @@
 
         <!-- Navbar content with improved structure -->
         <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!-- Home -->
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('home') ? 'active' : '' }}"
                        href="{{ route('home') }}" style="text-decoration: none;">
                         <i class="bi bi-house-door me-1 d-lg-none"></i>
-                        Home
-                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
-                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                        <span class="d-lg-inline">Home</span>
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('home') ? 'active-indicator' : '' }}"
+                              style="height: 3px; width: {{ request()->routeIs('home') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
                     </a>
                 </li>
 
+                <!-- About Us -->
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('about-us') ? 'active' : '' }}"
                        href="{{ route('about-us') }}" style="text-decoration: none;">
-                        <i class="bi bi-map me-1 d-lg-none"></i>
-                        About Us
-                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
-                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                        <i class="bi bi-info-circle me-1 d-lg-none"></i>
+                        <span class="d-lg-inline">About Us</span>
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('about-us') ? 'active-indicator' : '' }}"
+                              style="height: 3px; width: {{ request()->routeIs('about-us') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
                     </a>
                 </li>
+
+                <!-- Projects -->
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('projects') ? 'active' : '' }}"
                        href="{{ route('projects') }}" style="text-decoration: none;">
-                        <i class="bi bi-house-door me-1 d-lg-none"></i>
-                        Projects
-                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
-                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                        <i class="bi bi-folder me-1 d-lg-none"></i>
+                        <span class="d-lg-inline">Projects</span>
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('projects') ? 'active-indicator' : '' }}"
+                              style="height: 3px; width: {{ request()->routeIs('projects') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
                     </a>
                 </li>
 
-
+                <!-- Contact -->
                 <li class="nav-item mx-1">
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('contact') ? 'active' : '' }}"
                        href="{{ route('contact') }}" style="text-decoration: none;">
-                        <i class="bi bi-map me-1 d-lg-none"></i>
-                        Contact
-                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black active-indicator"
-                              style="height: 3px; width: 0; transition: width 0.3s ease;"></span>
+                        <i class="bi bi-envelope me-1 d-lg-none"></i>
+                        <span class="d-lg-inline">Contact</span>
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('contact') ? 'active-indicator' : '' }}"
+                              style="height: 3px; width: {{ request()->routeIs('contact') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
                     </a>
                 </li>
             </ul>

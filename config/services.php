@@ -14,6 +14,9 @@ return [
     |
     */
 
+    'recaptcha' => [
+        'secret' => env('RECAPTCHA_SECRET_KEY'),
+    ],
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],

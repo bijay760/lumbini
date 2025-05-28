@@ -5,19 +5,17 @@ namespace App\Http\Controllers;
 use App\Jobs\SendContactMail;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use App\Rules\Recaptcha;
 
 class ContactController extends Controller
 {
     public function store(Request $request)
     {
         $request->validate([
-            'customer_name' => 'required|max:255',
-            'customer_email' => 'required|email|max:255',
+            'customer_name' => 'required',
+            'customer_email' => 'required|email',
             'message' => 'required',
-            'g-recaptcha-response' => 'required|captcha'
-        ], [
-            'g-recaptcha-response.required' => 'Please complete the reCAPTCHA verification.',
-            'g-recaptcha-response.captcha' => 'Failed reCAPTCHA verification.'
+            'g-recaptcha-response' => ['required', new Recaptcha]
         ]);
         $data = [
             'name' => $request->customer_name,

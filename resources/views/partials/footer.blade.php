@@ -42,32 +42,30 @@ style="background: #20254d;">
                 </ul>
             </div>
             <div class="col-lg-4 col-md-6 justify-start">
-                <h5 class="text-uppercase fw-bold mb-4  text-lg-left">Connect With Us</h5>
-                <p class="text-white = text-lg-left">Be the first to know about our upcoming projects.</p>
+                <h5 class="text-uppercase fw-bold mb-4 text-lg-left">Connect With Us</h5>
+                <p class="text-white text-lg-left">Be the first to know about our projects.</p>
                 <form class="mb-3">
                     <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email"
-                        class="form-control"
-                        placeholder="Your Email"
-                        aria-label="Your Email">
-                        <button class="btn btn-primary"
-                        type="submit">
-                            <i class="bi bi-send-fill"></i>
-                        </button>
+                               class="form-control"
+                               placeholder="Your Email"
+                               aria-label="Your Email"
+                               required>
                     </div>
+                    <div class="input-group mx-sm-auto ms-md-0 mt-1">
+                        <input type="tel"
+                               class="form-control"
+                               placeholder="Your Phone Number"
+                               aria-label="Your Phone Number"
+                               required>
+
+                    </div>
+                    <button class="btn btn-primary w-100 mt-1"
+                            type="submit">Subscribe Now
+                    </button>
                 </form>
-{{--                <div class="payment-methods mt-3">--}}
-{{--                    <p class="small text-white mb-2">We accept:</p>--}}
-{{--                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">--}}
-{{--                        <img src="https://esewa.com.np/common/images/esewa_logo.png"--}}
-{{--                        alt="eSewa"--}}
-{{--                        style="height: 24px;">--}}
-{{--                        <img src="https://fonepay.com/images/logo.png"--}}
-{{--                        alt="Fonepay"--}}
-{{--                        style="height: 24px;">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </div>
+
         </div>
 
         <hr class="my-4 bg-secondary">
