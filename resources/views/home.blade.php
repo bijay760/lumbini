@@ -214,16 +214,14 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-lg-9">
-                <div class=" bg-opacity-10 p-4 rounded shadow">
-                    <h2 class="fw-bold mb-3">Lumbini Innovate - A Real Estate Solution is at Hotel Siddhartha View,
-                        Karkando Nepalgunj</h2>
+                <div class="bg-opacity-10 p-4 rounded shadow">
+                    <h2 class="fw-bold mb-3">Lumbini Innovate - A Real Estate Solution is at Hotel Siddhartha View, Karkando Nepalgunj</h2>
                     <p class="fs-5">
-                        हामीले ल्याएका छौ नेपालगंज उप-महानगरपालिका कारकाँदो होटेल सिद्धार्थको नजिकै आकर्षक आवासीय
-                        घडेरीहरु ।<br><br>
-                        पानी, बत्ति र पक्की सडकको सुबिधा सहित<br>
-                        रोजेर खरिद एवं बुकिङ्ग को लागि समयमै सम्पर्क गर्नुहोस्<br><br>
+                        We are offering attractive residential plots near Hotel Siddhartha in Karkando, Nepalgunj Sub-Metropolitan City.<br><br>
+                        Includes facilities such as water supply, electricity, and paved roads.<br>
+                        Please contact us in time for selection, purchase, or booking.<br><br>
                         <i class="bi bi-telephone-fill me-2"></i>
-                        मोबाईल नं. : ९८५८०२५२४१
+                        Mobile No.: +977-9848023023
                     </p>
                 </div>
             </div>
