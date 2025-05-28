@@ -25,7 +25,7 @@
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
                  ">
-                            Real EState Solution
+                            Real Estate Solution
                         </div>
                     </div>
                 </a>
