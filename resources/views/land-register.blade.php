@@ -119,7 +119,7 @@
                                     <h4 class="h5 fw-bold"
                                         style="color: #1C345C;">Bank Financing</h4>
                                     <p class="mb-0 text-muted">
-                                        Preferred partnerships with top Banks for competitive rates.
+                                        Partnerships with top Banks for competitive rates.
                                     </p>
                                 </div>
                             </div>
@@ -161,7 +161,7 @@
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8 text-white">
                     <h2 class="display-5 fw-bold  mb-2">Ready to Find Your Dream Property?</h2>
-                    <p class="lead ">Join thousands of satisfied clients who found their perfect home with</p>
+                    <p class="lead ">Join hundreds of satisfied clients who found their perfect property with</p>
                     <p class="lead mb-2">Lumbini Innovate Pvt. Ltd.</p>
 
                     <div class="d-flex flex-wrap gap-3 justify-content-center">

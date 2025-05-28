@@ -115,7 +115,7 @@
                             <i class="bi bi-building-check fs-4"></i>  <!-- Bank building icon -->
                         </div>
                         <h5 class="fw-semibold">Bank Financing</h5>
-                        <p class="mb-0">Preferred partnerships with top Banks for competitive rates.</p>
+                        <p class="mb-0">Partnerships with top Banks for competitive rates.</p>
                     </div>
                 </div>
 

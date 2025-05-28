@@ -26,7 +26,7 @@
                         </p>
                         <div class="d-flex flex-wrap gap-3 mt-4">
 
-                            <a href="{{ route('about-us') }}"
+                            <a href="{{ route('projects') }}"
                                class="btn btn-light btn-lg px-4 py-3 fw-bold"
                                style="background-color: #fff; color: #20254D;">Book Now</a>
 
@@ -57,7 +57,7 @@
             <div class="row g-5 mr-4">
                 <div class="col-lg-6">
                     <h2 class="display-5 fw-bold mb-4"
-                        style="color: #20254D;">Your Trusted Real Estate Partner</h2>
+                        style="color: #20254D;">Your Real Estate Partner</h2>
                     <p class="lead mb-4 text-muted lh-base">
                         Navigating the real estate market can feel overwhelming. That's why we've built our reputation
                         on trust,
@@ -82,15 +82,8 @@
                             <div class="d-flex mb-4">
                                 <div class="me-4">
                                     <div class="rounded-circle d-flex align-items-center justify-content-center"
-                                         style="width: 50px; height: 50px;background-color: #20254d;">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             width="24"
-                                             height="24"
-                                             fill="white"
-                                             viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                        </svg>
+                                         style="width: 50px; height: 50px; background: #017bff;">
+                                        <i class="bi bi-geo-alt-fill fs-4 text-white"></i>
                                     </div>
                                 </div>
                                 <div>
@@ -104,22 +97,15 @@
                             <div class="d-flex mb-4">
                                 <div class="me-4">
                                     <div class="rounded-circle d-flex align-items-center justify-content-center"
-                                         style="width: 50px; background-color: #20254d; height: 50px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             width="24"
-                                             height="24"
-                                             fill="white"
-                                             viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                        </svg>
+                                         style="width: 50px; height: 50px;background: #017bff;">
+                                        <i class="bi bi-building-check fs-4 4 text-white"></i>
                                     </div>
                                 </div>
                                 <div>
                                     <h4 class="h5 fw-bold"
                                         style="color: #1C345C;">Bank Financing</h4>
                                     <p class="mb-0 text-muted">
-                                        Preferred partnerships with top Banks for competitive rates.
+                                        Partnerships with top Banks for competitive rates.
                                     </p>
                                 </div>
                             </div>
@@ -127,15 +113,8 @@
                             <div class="d-flex mb-4">
                                 <div class="me-4">
                                     <div class=" rounded-circle d-flex align-items-center justify-content-center"
-                                         style="width: 50px; height: 50px; background-color: #20254d;">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             width="24"
-                                             height="24"
-                                             fill="white"
-                                             viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                        </svg>
+                                         style="width: 50px; height: 50px; background: #017bff;">
+                                        <i class="bi bi-shield-lock fs-4 4 text-white"></i>
                                     </div>
                                 </div>
                                 <div>
@@ -161,7 +140,7 @@
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8 text-white">
                     <h2 class="display-5 fw-bold  mb-2">Ready to Find Your Dream Property?</h2>
-                    <p class="lead ">Join thousands of satisfied clients who found their perfect home with</p>
+                    <p class="lead ">Join hundreds of satisfied clients who found their perfect property with</p>
                     <p class="lead mb-2">Lumbini Innovate Pvt. Ltd.</p>
 
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
@@ -179,23 +158,18 @@
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 order-lg-2 ps-lg-5">
-                    <h2 class="display-5 fw-bold mb-4"
-                        style="color: #20254D;">Our Mission & Vision</h2>
+                    <h2 class="display-5 fw-bold mb-4" style="color: #20254D;">Our Recent Projects</h2>
                     <p class="lead mb-4 text-muted lh-base text-justify">
-                        Our mission is to simplify the real estate journey by offering exceptional service, expert
-                        guidance,
-                        and unwavering integrity. We strive to remove the stress from property decisions by managing
-                        every step
-                        with professionalism and care. From the first showing to the final signature, we’re committed to
-                        making your
-                        experience smooth, rewarding, and hassle-free. We envision a future where buying or selling a
-                        home is no
-                        longer complicated, but instead an exciting and positive experience.
+                        Explore our latest real estate developments and success stories. Each project showcases our commitment to
+                        quality, innovation, and client satisfaction
                     </p>
+
                     <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="{{ route('contact') }}"
+                        <a href="{{ route('projects') }}"
                            class="btn btn-primary btn-lg px-4 py-3 fw-bold"
-                           style="background-color: #1C345C; border-color: #1C345C;">Contact Us</a>
+                           style="background-color: #1C345C; border-color: #1C345C;">
+                            View All Projects
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">

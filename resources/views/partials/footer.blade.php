@@ -24,13 +24,13 @@
                         <div style="color:#ffffff;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
+                letter-spacing:-1px;
                  ">
                             Real Estate Solution
                         </div>
                     </div>
                 </a>
-                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A Complete
-                    Real-estate solution.</p>
+                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">AA complete Real Estate solution.</p>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="https://www.facebook.com/lumbini.innovate"
                        target="_blank"
@@ -65,26 +65,24 @@
             <div class="col-lg-4 col-md-6 justify-start">
                 <h5 class="text-uppercase fw-bold mb-4 text-lg-left">Connect With Us</h5>
                 <p class="text-white text-lg-left">Be the first to know about our projects.</p>
-                <form class="mb-3">
+                <form class="mb-3" id="subscriptionForm">
                     <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email"
                                class="form-control"
+                               id="emailInput"
                                placeholder="Your Email"
-                               aria-label="Your Email"
-                               required>
+                               aria-label="Your Email">
                     </div>
                     <div class="input-group mx-sm-auto ms-md-0 mt-1">
                         <input type="tel"
                                class="form-control"
+                               id="phoneInput"
                                placeholder="Your Phone Number"
-                               aria-label="Your Phone Number"
-                               required>
-
+                               aria-label="Your Phone Number">
                     </div>
                     <button class="btn btn-primary w-50 mt-1 text-start" type="submit">
                         Subscribe Now
                     </button>
-
                 </form>
             </div>
 
@@ -142,6 +140,17 @@
         opacity: 1;
     }
 </style>
+<script>
+    document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+        const email = document.getElementById('emailInput').value;
+        const phone = document.getElementById('phoneInput').value;
+
+        if (!email && !phone) {
+            event.preventDefault();
+            alert('Please fill in either email or phone number');
+        }
+    });
+</script>
 
 <!-- Back to Top JavaScript -->
 <script>
