@@ -28,10 +28,12 @@
                     <div class="collapse show" id="projectKarkando">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6 mb-4 mb-md-0">
-                                    <img src="{{asset('backend/assets/images/project1.png')}}"
+                                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center"
+                                     style="height: 300px; overflow: hidden;">
+                                    <img src="{{asset('backend/assets/images/login-images/karkado.jpg')}}"
                                          alt="Karkando Residential Plots"
-                                         class="img-fluid rounded shadow">
+                                         class="img-fluid rounded shadow h-100 w-auto object-fit-cover"
+                                         style="object-position: center;">
                                 </div>
                                 <div class="col-md-6">
                                     <h2 class="text-danger mb-3">Karkando, Near Siddhartha Hotel</h2>
@@ -80,10 +82,12 @@
                     <div class="collapse show" id="projectIndrapur">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center"
+                                     style="height: 300px; overflow: hidden;">
                                     <img src="{{asset('backend/assets/images/project1.png')}}"
-                                         alt="Indrapur Commercial Complex"
-                                         class="img-fluid rounded shadow">
+                                         alt="Indrapur Neaw Pauwa hotel"
+                                         class="img-fluid rounded shadow h-100 w-auto object-fit-cover"
+                                         style="object-position: center;">
                                 </div>
                                 <div class="col-md-6">
                                     <h2 class="text-danger mb-3">Indrapur, Near Pauwa Hotel</h2>
@@ -132,10 +136,12 @@
                     <div class="collapse" id="projectKanthepur">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center"
+                                     style="height: 300px; overflow: hidden;">
                                     <img src="{{asset('backend/assets/images/project1.png')}}"
-                                         alt="Kanthepur Development"
-                                         class="img-fluid rounded shadow">
+                                         alt="Kanthepur"
+                                         class="img-fluid rounded shadow h-100 w-auto object-fit-cover"
+                                         style="object-position: center;">
                                 </div>
                                 <div class="col-md-6">
                                     <h2 class="text-danger mb-3">Kanthepur Mixed Development</h2>
@@ -184,10 +190,12 @@
                     <div class="collapse" id="projectKantital">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center"
+                                     style="height: 300px; overflow: hidden;">
                                     <img src="{{asset('backend/assets/images/project1.png')}}"
-                                         alt="Kantital Residential"
-                                         class="img-fluid rounded shadow">
+                                         alt="Kantital"
+                                         class="img-fluid rounded shadow h-100 w-auto object-fit-cover"
+                                         style="object-position: center;">
                                 </div>
                                 <div class="col-md-6">
                                     <h2 class="text-danger mb-3">Kantital Gated Community</h2>
@@ -236,10 +244,12 @@
                     <div class="collapse" id="projectSolti">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center"
+                                     style="height: 300px; overflow: hidden;">
                                     <img src="{{asset('backend/assets/images/project1.png')}}"
                                          alt="Near Solti Hotel"
-                                         class="img-fluid rounded shadow">
+                                         class="img-fluid rounded shadow h-100 w-auto object-fit-cover"
+                                         style="object-position: center;">
                                 </div>
                                 <div class="col-md-6">
                                     <h2 class="text-danger mb-3">Commercial Spaces Near Solti Hotel</h2>
@@ -288,10 +298,12 @@
                     <div class="collapse" id="projectTrafficChowk">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6 mb-4 mb-md-0">
+                                <div class="col-md-6 mb-4 mb-md-0 d-flex justify-content-center align-items-center"
+                                     style="height: 300px; overflow: hidden;">
                                     <img src="{{asset('backend/assets/images/project1.png')}}"
-                                         alt="Traffic Chowk Premium"
-                                         class="img-fluid rounded shadow">
+                                         alt="Traffic chok"
+                                         class="img-fluid rounded shadow h-100 w-auto object-fit-cover"
+                                         style="object-position: center;">
                                 </div>
                                 <div class="col-md-6">
                                     <h2 class="text-danger mb-3">Traffic Chowk Luxury Apartments</h2>
