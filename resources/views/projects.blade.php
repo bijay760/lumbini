@@ -9,11 +9,9 @@
 @section('content')
     <div class="container py-5">
         <h1 class="text-center mb-5">Our Real Estate Projects</h1>
-
-        <!-- All Projects List -->
         <div class="row">
             <div class="col-12">
-                <!-- Project 1 - Karkando -->
+                <!-- Project 1 - -->
                 <div class="card mb-4">
                     <div class="card-header bg-white">
                         <button class="btn btn-link text-decoration-none w-100 text-start d-flex justify-content-between align-items-center"

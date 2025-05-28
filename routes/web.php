@@ -19,6 +19,15 @@ Route::get('/about-us', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+Route::get('/Booking', function () {
+    return view('Booking');
+})->name('Booking');
+Route::get('/land-register', function () {
+    return view('land-register');
+})->name('land-register');
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blog');
 
 
 Route::fallback(function () {
