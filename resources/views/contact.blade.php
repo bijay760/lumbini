@@ -8,47 +8,68 @@
 
 @section('content')
     <div class="container py-5">
+        @if(session('success'))
+            <div class="alert alert-success mb-4">
+                {{ session('success') }}
+            </div>
+        @endif
         <h2 class="mb-4 text-center">Contact Us</h2>
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form action="{{ route('contact.store') }}" method="POST">
+                <form action="{{ route('contact.store') }}" method="POST" id="contactForm">
                     @csrf
+                    <!-- Name Field -->
                     <div class="form-outline mb-4">
-                        <label class="form-label"
-                               for="formName">Name</label>
-                        <input type="text"
-                               id="formName" name="customer_name"
+                        <label class="form-label" for="formName">Name</label>
+                        <input type="text" id="formName" name="customer_name"
                                placeholder="Enter your name"
-                               class="form-control" required/>
+                               class="form-control @error('customer_name') is-invalid @enderror"
+                               value="{{ old('customer_name') }}" required/>
+                        @error('customer_name')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
 
-                    <!-- Email input -->
+                    <!-- Email Field -->
                     <div class="form-outline mb-4">
-                        <label class="form-label"
-                               for="formEmail">Email address</label>
-
-                        <input type="email"
-                               id="formEmail" name="customer_email"
+                        <label class="form-label" for="formEmail">Email address</label>
+                        <input type="email" id="formEmail" name="customer_email"
                                placeholder="Enter your email"
-                               class="form-control" required/>
+                               class="form-control @error('customer_email') is-invalid @enderror"
+                               value="{{ old('customer_email') }}" required/>
+                        @error('customer_email')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
 
-                    <!-- Message input -->
+                    <!-- Message Field -->
                     <div class="form-outline mb-4">
-                        <label class="form-label"
-                               for="formMessage">Message</label>
-
-                        <textarea class="form-control"
+                        <label class="form-label" for="formMessage">Message</label>
+                        <textarea class="form-control @error('message') is-invalid @enderror"
                                   id="formMessage" name="message"
                                   placeholder="Write your message here ..."
-                                  rows="4" required></textarea>
+                                  rows="4" required>{{ old('message') }}</textarea>
+                        @error('message')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
-                    <div class="g-recaptcha mb-4" data-sitekey="6LfjXkwrAAAAAIa5vRT4J3-Iej-U45n9Pvio11Z9"></div>
-                    <!-- Submit button -->
+
+                    <!-- reCAPTCHA Field -->
+                    <div class="mb-4">
+                        <div class="g-recaptcha" data-sitekey="6LfjXkwrAAAAAIa5vRT4J3-Iej-U45n9Pvio11Z9"></div>
+                        @error('g-recaptcha-response')
+                        <div class="text-danger small mt-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <!-- Submit Button -->
                     <button type="submit" id="submitBtn" class="btn btn-primary btn-block mb-4 w-100">
                         Send
                     </button>
                 </form>
+
+                <!-- reCAPTCHA Script -->
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             </div>
 
             <div class="col-md-6">
