@@ -1,13 +1,33 @@
 <nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
         <!-- Brand logo with better sizing control -->
-        <a class="navbar-brand d-flex align-items-center"
+        <!-- <a class="d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-3" style ="text-decoration: none;"
         href="{{ route('home') }}">
-            <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
-                 class="img-fluid me-2"
-                 style="height: 77px; width: auto;"
-                 alt="Company Logo">
-        </a>
+            <img src="{{ asset('backend/assets/images/login-images/logo (3).png') }}"
+                         class="img-fluid me-2"
+                         style="height: 77px; width: auto;"
+                         alt="Company Logo">A Complete Real-estate solution.
+                 
+        </a> -->
+
+        <a class="navbar-brand d-flex align-items-center" style="text-decoration: none;" href="{{ route('home') }}">
+    <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
+         class="img-fluid me-2"
+         style="height: 77px; width: auto;"
+         alt="Company Logo">
+    <!-- <span style="font-size: 0.875rem; font-weight: bold; color: #20254d;">
+        A Complete Real <br>State Solution
+    </span> -->
+</a>
+
+
+        <!-- <div class="d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-3">
+                    <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
+                         class="img-fluid me-2"
+                         style="height: 77px; width: auto;"
+                         alt="Company Logo">A Complete Real-estate solution.
+                </div> -->
+
 
         <!-- Mobile toggle button with animation -->
         <button class="navbar-toggler"

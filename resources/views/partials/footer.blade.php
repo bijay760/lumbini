@@ -11,11 +11,16 @@ style="background: #20254d;">
                          alt="Company Logo">
                 </div>
                 <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A Complete Real-estate solution.</p>
-                <div class="social-icons mt-4 text-md-start justify-content-md-start justify-content-lg-start">
+                <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="https://www.facebook.com/lumbini.innovate"
                     target ="_blank"
                     class="text-white me-3">
-                    <i class="bi bi-facebook fs-5"></i></a>
+                    <!-- <i class="bi bi-facebook fs-5"></i></a> -->
+                     <!-- <a href="https://cdn.pixabay.com/photo/2021/11/11/12/41/facebook-6786210_1280.png"></a> -->
+                     <img src="{{ asset('backend/assets/images/facebook.png') }}"
+                         class="me-2"
+                         style="height: 30px; width: auto; display: flex;"
+                         alt="Company Logo"></a>
                 </div>
             </div>
 
