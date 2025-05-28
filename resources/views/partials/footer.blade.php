@@ -1,44 +1,47 @@
 <footer class="text-white pt-5 pb-4"
-style="background: #20254d;">
+        style="background: #20254d;">
     <div class="container">
         <div class="row">
             <!-- Company Info -->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center text-md-start">
-               <a class="d-flex align-items-center mb-3" 
-    href="{{ route('home') }}" 
-    style="text-decoration: none;
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <a class="d-flex align-items-center mb-3"
+                   href="{{ route('home') }}"
+                   style="text-decoration: none;
     line-height: 22px;
     ">
-            <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
-                 class="img-fluid mr-3"
-                 style="height: 77px; width: auto;"
-                 alt="Company Logo">
-            <div>
-                <div style="color:#ffffff;
+                    <img src="{{ asset('public/backend/assets/images/login-images/logo(2312).png') }}"
+                         class="img-fluid"
+                         style="height: 77px; width: auto;"
+                         alt="Company Logo">
+                    <div>
+                        <div style="color:#ffffff;
                  font-family: Montserrat, sans-serif;
                  font-weight: 800;
                 letter-spacing:-0.92px;
                  ">
-                    LUMBINI INNOVATE</div>
-                <div style="color:#ffffff; 
+                            LUMBINI INNOVATE
+                        </div>
+                        <div style="color:#ffffff;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
                  ">
-                    Real State Solution</div>
-            </div>
-        </a>
-                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A Complete Real-estate solution.</p>
+                            Real Estate Solution
+                        </div>
+                    </div>
+                </a>
+                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A Complete
+                    Real-estate solution.</p>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="https://www.facebook.com/lumbini.innovate"
-                    target ="_blank"
-                    class="text-white me-3">
-                    <i class="bi bi-facebook fs-5"></i></a>
-                     <!-- <a href="https://cdn.pixabay.com/photo/2021/11/11/12/41/facebook-6786210_1280.png"></a> -->
-                     <!-- <img src="{{ asset('backend/assets/images/facebook.png') }}"
+                       target="_blank"
+                       class="text-white me-3">
+                        <i class="bi bi-facebook fs-5"></i></a>
+                    <!-- <a href="https://cdn.pixabay.com/photo/2021/11/11/12/41/facebook-6786210_1280.png"></a> -->
+                    <!-- <img src="{{ asset('backend/assets/images/facebook.png') }}"
                          class="me-2"
                          style="height: 30px; width: auto; display: flex;"
                          alt="Company Logo"> -->
-                        <!-- </a> -->
+                    <!-- </a> -->
                 </div>
             </div>
 
@@ -92,7 +95,7 @@ style="background: #20254d;">
         <!-- Copyright -->
         <div class="row align-items-center">
             <div class="text-center text-md-center">
-                <p class="small mb-0">&copy; {{ date('Y') }} Lumbini Innovate Ltd.  All rights reserved.</p>
+                <p class="small mb-0">&copy; {{ date('Y') }} Lumbini Innovate Ltd. All rights reserved.</p>
             </div>
         </div>
     </div>
@@ -102,8 +105,9 @@ style="background: #20254d;">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 <!-- Back to Top Button -->
-<a href="#" class="btn btn-primary btn-lg back-to-top rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center"
-style="width: 50px; height: 50px;">
+<a href="#"
+   class="btn btn-primary btn-lg back-to-top rounded-circle position-fixed bottom-0 end-0 m-4 d-flex align-items-center justify-content-center"
+   style="width: 50px; height: 50px;">
     <i class="bi bi-arrow-up"></i>
 </a>
 
@@ -154,6 +158,6 @@ style="width: 50px; height: 50px;">
 
     backToTopButton.addEventListener('click', (e) => {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({top: 0, behavior: 'smooth'});
     });
 </script>
