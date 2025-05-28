@@ -328,7 +328,7 @@
         </div>
 
         <!-- Contact CTA -->
-        <div class="text-center py-5 mt-4 bg-light rounded">
+        <div class="text-lg-center text-sm-left py-5 mt-4 bg-light rounded">
             <h3 class="mb-3">Ready to invest in your future?</h3>
             <p class="lead mb-4">Our team is ready to assist you with all property inquiries</p>
             <div class="d-flex justify-content-center gap-3">

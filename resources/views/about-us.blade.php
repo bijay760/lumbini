@@ -4,32 +4,21 @@
 
 @section('content')
     <!-- Hero Section -->
-    <section class="hero-section py-5">
+    <section class="hero-section py-lg-5 py-sm-3">
         <div class="container">
-            <div class="row align-items-center text-center">
+            <div class="row align-items-center text-sm-left text-lg-center">
                 <div class="col-lg-12 mb-4 mb-lg-0">
                     <h1 class="display-4 fw-bold">A Real Estate Solution </h1>
                     <p class="lead">Transforming real estate through innovation and integrity.</p>
                     <p>We are revolutionizing property solutions in Nepal with affordable, tech-driven, and personalized services.</p>
                 </div>
-{{--                <div class="col-lg-6">--}}
-{{--                    <div class="position-relative overflow-hidden rounded-4 shadow"--}}
-{{--                         style="height: 100%;">--}}
-{{--                        <div class="position-absolute top-0 start-0 h-100 bg-primary"--}}
-{{--                             style="width: 50%; border-radius: 25px 0 0 25px; z-index: 0;"></div>--}}
-{{--                        <img src="{{ asset('backend/assets/images/our_team.jpg') }}"--}}
-{{--                             alt="Our Team"--}}
-{{--                             class="img-fluid h-100 object-fit-cover position-relative rounded-4"--}}
-{{--                             style="z-index: 1;">--}}
-{{--                    </div>--}}
-{{--                </div>--}}
             </div>
         </div>
     </section>
 
 
     <!-- Who We Are -->
-    <section class="hero-section py-5">
+    <section class="hero-section py-lg-5 py-sm-3">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0 ">

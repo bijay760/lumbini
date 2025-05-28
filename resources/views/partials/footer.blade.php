@@ -3,14 +3,14 @@ style="background: #20254d;">
     <div class="container">
         <div class="row">
             <!-- Company Info -->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-center text-md-start">
-                <div class="d-flex align-items-center justify-content-center justify-content-md-start justify-content-lg-start mb-3">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <div class="mb-3">
                     <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
                          class="img-fluid me-2"
                          style="height: 77px; width: auto;"
                          alt="Company Logo">
                 </div>
-                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A Complete Real-estate solution.</p>
+                <p class="text-white justify-content-md-start justify-content-lg-start">A Complete Real-estate solution.</p>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="https://www.facebook.com/lumbini.innovate"
                     target ="_blank"
@@ -60,9 +60,10 @@ style="background: #20254d;">
                                required>
 
                     </div>
-                    <button class="btn btn-primary w-100 mt-1"
-                            type="submit">Subscribe Now
+                    <button class="btn btn-primary w-50 mt-1 text-start" type="submit">
+                        Subscribe Now
                     </button>
+
                 </form>
             </div>
 
