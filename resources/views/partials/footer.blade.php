@@ -5,7 +5,6 @@
             <!-- Company Info -->
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
                 <a class="d-flex align-items-center mb-3"
-
                    href="{{ route('home') }}"
                    style="text-decoration: none;
     line-height: 22px;
