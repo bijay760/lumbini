@@ -38,7 +38,7 @@ style="background: #20254d;">
             </div>
             <div class="col-lg-4 col-md-6 justify-start">
                 <h5 class="text-uppercase fw-bold mb-4  text-lg-left">Connect With Us</h5>
-                <p class="text-white = text-lg-left">Be the first to know about our upcoming projects.</p>
+                <p class="text-white = text-lg-left">Be the first to know about our projects.</p>
                 <form class="mb-3">
                     <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email"
