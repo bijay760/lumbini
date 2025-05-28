@@ -22,7 +22,6 @@
                         <div style="color:#ffffff;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
-                letter-spacing: -1px;
                 font-size: 10.3px;
                  ">A Complete Real Estate Solution</div>
                     </div>
