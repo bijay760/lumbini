@@ -13,7 +13,7 @@
                 {{ session('success') }}
             </div>
         @endif
-        <h2 class="mb-4 text-center">Contact Us</h2>
+        <h2 class="mb-4 text-lg-center text-sm-left">Contact Us</h2>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <form action="{{ route('contact.store') }}" method="POST" id="contactForm">

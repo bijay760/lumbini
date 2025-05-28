@@ -78,9 +78,10 @@ style="background: #20254d;">
                                required>
 
                     </div>
-                    <button class="btn btn-primary w-100 mt-1"
-                            type="submit">Subscribe Now
+                    <button class="btn btn-primary w-50 mt-1 text-start" type="submit">
+                        Subscribe Now
                     </button>
+
                 </form>
             </div>
 

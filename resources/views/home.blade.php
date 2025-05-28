@@ -226,11 +226,12 @@
                 </div>
             </div>
             <div class="col-lg-3 mt-2">
-                <video id="myVideo" width="auto" height="370" controls autoplay muted playsinline>
+                <video id="myVideo" class="w-100" height="370" controls autoplay muted playsinline>
                     <source src="{{ asset('backend/video/video.mp4') }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
+
         </div>
     </div>
 @endsection
