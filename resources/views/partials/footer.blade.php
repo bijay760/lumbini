@@ -17,16 +17,14 @@
                         <div style="color:#ffffff;
                  font-family: Montserrat, sans-serif;
                  font-weight: 800;
-                letter-spacing:-0.92px;
                  ">
-                            LUMBINI INNOVATE
-                        </div>
+                            LUMBINI INNOVATE</div>
                         <div style="color:#ffffff;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
                 letter-spacing: -1px;
-                font-size: 13.8px;">A Complete Real Estate Solution
-                        </div>
+                font-size: 10.3px;
+                 ">A Complete Real Estate Solution</div>
                     </div>
                 </a>
                 <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A complete Real Estate solution.</p>
