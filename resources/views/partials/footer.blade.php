@@ -26,7 +26,6 @@
                  ">A Complete Real Estate Solution</div>
                     </div>
                 </a>
-                <p class="text-white justify-content-md-start justify-content-lg-start text-lg-left">A complete Real Estate solution.</p>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
                     <a href="https://www.facebook.com/lumbini.innovate"
                        target="_blank"

@@ -189,7 +189,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="bg-opacity-10 p-4 rounded shadow">
-                    <h2 class="fw-bold mb-3">Lumbini Innovate - A Real Estate Solution is at Hotel Siddhartha View, Karkando Nepalgunj</h2>
+                    <h2 class="fw-bold mb-3">Karkado-18, Nepalgunj (near Siddhartha Hotel)</h2>
                     <p class="fs-5">
                         We are offering attractive residential plots near Hotel Siddhartha in Karkando, Nepalgunj Sub-Metropolitan City.<br><br>
                         Includes facilities such as water supply, electricity, and paved roads.<br>
