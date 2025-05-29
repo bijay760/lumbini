@@ -9,7 +9,7 @@
                    style="text-decoration: none;
     line-height: 22px;
     ">
-                    <img src="{{ asset('public/backend/assets/images/login-images/logo(2312).png') }}"
+                    <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
                          class="img-fluid"
                          style="height: 77px; width: auto;"
                          alt="Company Logo">
@@ -18,12 +18,14 @@
                  font-family: Montserrat, sans-serif;
                  font-weight: 800;
                  ">
-                            LUMBINI INNOVATE</div>
+                            LUMBINI INNOVATE
+                        </div>
                         <div style="color:#ffffff;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
                 font-size: 10.3px;
-                 ">A Complete Real Estate Solution</div>
+                 ">A Complete Real Estate Solution
+                        </div>
                     </div>
                 </a>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
@@ -49,11 +51,11 @@
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>
-                        +977-9848023023
+                        <a href="tel:+9779848023023" class="text-decoration-none text-white">+977-9848023023</a>
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-envelope-fill me-2"></i>
-                        info@lumbiniinnovate.com.np
+                        <a href="mailto:info@lumbiniinnovate.com.np" class="text-decoration-none text-white">info@lumbiniinnovate.com.np</a>
                     </li>
                 </ul>
             </div>
@@ -136,7 +138,7 @@
     }
 </style>
 <script>
-    document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+    document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
         const email = document.getElementById('emailInput').value;
         const phone = document.getElementById('phoneInput').value;
 

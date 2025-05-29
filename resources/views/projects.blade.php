@@ -50,7 +50,7 @@
                                     </div>
                                     <div class="bg-light p-3 rounded mb-4">
                                         <p class="mb-0">
-                                            <i class="bi bi-telephone-fill"></i> Contact: +977-9848023023
+                                            <i class="bi bi-telephone-fill"></i> Contact: <a href="tel:+9779848023023" class="text-decoration-none">+977-9848023023</a>
                                         </p>
                                     </div>
                                     <div class="d-grid gap-2 d-md-block">
@@ -104,7 +104,7 @@
                                     </div>
                                     <div class="bg-light p-3 rounded mb-4">
                                         <p class="mb-0">
-                                            <i class="bi bi-telephone-fill"></i> Contact: +977-9848023023
+                                            <i class="bi bi-telephone-fill"></i> Contact: <a href="tel:+9779848023023" class="text-decoration-none">+977-9848023023</a>
                                         </p>
                                     </div>
                                     <div class="d-grid gap-2 d-md-block">
@@ -158,7 +158,7 @@
                                     </div>
                                     <div class="bg-light p-3 rounded mb-4">
                                         <p class="mb-0">
-                                            <i class="bi bi-telephone-fill"></i> Contact: +977-9848023023
+                                            <i class="bi bi-telephone-fill"></i> Contact: <a href="tel:+9779848023023" class="text-decoration-none">+977-9848023023</a>
                                         </p>
                                     </div>
                                     <div class="d-grid gap-2 d-md-block">
@@ -212,7 +212,7 @@
                                     </div>
                                     <div class="bg-light p-3 rounded mb-4">
                                         <p class="mb-0">
-                                            <i class="bi bi-telephone-fill"></i> Contact: +977-9848023023
+                                            <i class="bi bi-telephone-fill"></i> Contact: <a href="tel:+9779848023023" class="text-decoration-none">+977-9848023023</a>
                                         </p>
                                     </div>
                                     <div class="d-grid gap-2 d-md-block">
@@ -266,7 +266,7 @@
                                     </div>
                                     <div class="bg-light p-3 rounded mb-4">
                                         <p class="mb-0">
-                                            <i class="bi bi-telephone-fill"></i> Contact: +977-9848023023
+                                            <i class="bi bi-telephone-fill"></i> Contact: <a href="tel:+9779848023023" class="text-decoration-none">+977-9848023023</a>
                                         </p>
                                     </div>
                                     <div class="d-grid gap-2 d-md-block">
@@ -320,7 +320,7 @@
                                     </div>
                                     <div class="bg-light p-3 rounded mb-4">
                                         <p class="mb-0">
-                                            <i class="bi bi-telephone-fill"></i> Contact: +977-9848023023
+                                            <i class="bi bi-telephone-fill"></i> Contact: <a href="tel:+9779848023023" class="text-decoration-none">+977-9848023023</a>
                                         </p>
                                     </div>
                                     <div class="d-grid gap-2 d-md-block">
@@ -343,7 +343,7 @@
             <p class="lead mb-4">Our team is ready to assist you with all property inquiries</p>
             <div class="d-flex justify-content-center gap-3">
                 <button class="btn btn-danger btn-lg">
-                    <i class="bi bi-telephone"></i> Call Now: +977-9848023023
+                    <i class="bi bi-telephone"></i> Call Now: <a href="tel:+9779848023023" class="text-decoration-none text-white">+977-9848023023</a>
                 </button>
                 <button class="btn btn-outline-primary btn-lg">
                     <i class="bi bi-whatsapp"></i> WhatsApp Us

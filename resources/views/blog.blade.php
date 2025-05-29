@@ -221,7 +221,7 @@
                         Includes facilities such as water supply, electricity, and paved roads.<br>
                         Please contact us in time for selection, purchase, or booking.<br><br>
                         <i class="bi bi-telephone-fill me-2"></i>
-                        Mobile No.: +977-9848023023
+                        Mobile No.: <a href="tel:+9779848023023" class="text-decoration-none">+977-9848023023</a>
                     </p>
                 </div>
             </div>
