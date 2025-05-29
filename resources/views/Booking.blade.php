@@ -8,12 +8,12 @@
 
 @section('content')
             <div class="container py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <div>
+                <div class="d-flex mb-3 justify-content-end">
+                    <!-- <div>
                         <h1 class="mb-0">Book our valuable land today</h1>
-                    </div>
+                    </div> -->
                     <div>
-                        <a href="{{ route('land-register') }}" class="btn btn-outline-primary">
+                        <a href="{{ route('land-register') }}" class="btn btn-outline-primary ">
                             Register Your Land
                         </a>
                     </div>
@@ -24,10 +24,10 @@
                     <div class="card-body">
                         <div class="container">
                 
-                <div class="d-flex justify-content-between align-items-center mb-5">
+                <!-- <div class="d-flex justify-content-between align-items-center mb-5">
                     <h1 class="text-center mb-0">Our Featured Properties</h1>
                     <a href="#" class="btn btn-outline-primary">View All Properties <i class="bi bi-arrow-right"></i></a>
-                </div>
+                </div> -->
 
                 <!-- Blog Posts Grid - Always Visible -->
                 <div class="row g-4">

@@ -65,16 +65,16 @@
                     </a>
                 </li>
 
-{{--                <!-- Projects -->--}}
-{{--                <li class="nav-item mx-1">--}}
-{{--                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('Booking') ? 'active' : '' }}"--}}
-{{--                       href="{{ route('Booking') }}" style="text-decoration: none;">--}}
-{{--                        <i class="bi bi-folder me-1 d-lg-none"></i>--}}
-{{--                        <span class="d-lg-inline">Booking</span>--}}
-{{--                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('Booking') ? 'active-indicator' : '' }}"--}}
-{{--                              style="height: 3px; width: {{ request()->routeIs('Booking') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+             <!-- Projects --> 
+             <li class="nav-item mx-1"> 
+                 <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('Booking') ? 'active' : '' }}" 
+                    href="{{ route('Booking') }}" style="text-decoration: none;"> 
+                     <i class="bi bi-folder me-1 d-lg-none"></i> 
+                     <span class="d-lg-inline">Booking</span> 
+                     <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('Booking') ? 'active-indicator' : '' }}" 
+                           style="height: 3px; width: {{ request()->routeIs('Booking') ? '100%' : '0' }}; transition: width 0.3s ease;"></span> 
+                 </a> 
+             </li> 
 
                 <!-- About Us -->
                 <li class="nav-item mx-1">
