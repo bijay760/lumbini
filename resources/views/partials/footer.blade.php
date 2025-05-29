@@ -9,7 +9,7 @@
                    style="text-decoration: none;
     line-height: 22px;
     ">
-                    <img src="{{ asset('public/backend/assets/images/login-images/logo(2312).png') }}"
+                    <img src="{{ asset('backend/assets/images/login-images/logo(2312).png') }}"
                          class="img-fluid"
                          style="height: 77px; width: auto;"
                          alt="Company Logo">
@@ -51,11 +51,11 @@
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-telephone-fill me-2"></i>
-                        +977-9848023023
+                        <a href="tel:+9779848023023" class="text-decoration-none text-white">+977-9848023023</a>
                     </li>
                     <li class="mb-2">
                         <i class="bi bi-envelope-fill me-2"></i>
-                        info@lumbiniinnovate.com.np
+                        <a href="mailto:info@lumbiniinnovate.com.np" class="text-decoration-none text-white">info@lumbiniinnovate.com.np</a>
                     </li>
                 </ul>
             </div>
