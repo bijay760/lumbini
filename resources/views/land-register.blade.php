@@ -24,72 +24,72 @@
 
 @section('content')
 <div class="container py-5">
-    <h2 class="mb-4 fw-bold text-center">Sell Your Land</h2>
+    <h2 class="mb-4 fw-bold text-center">Register your Property for sell</h2>
 
-    <form 
-    
-    method="POST" 
-    enctype="multipart/form-data" 
+    <form
+
+    method="POST"
+    enctype="multipart/form-data"
     class="form-section">
         @csrf
         <div class="mb-3">
-            <label for="topic" 
+            <label for="topic"
             class="form-label">Plot title </label>
 
-            <input type="text" 
-            class="form-control" 
-            id="topic" 
-            name="topic" 
-            placeholder="Enter Your plot name" 
+            <input type="text"
+            class="form-control"
+            id="topic"
+            name="topic"
+            placeholder="Enter Your plot name"
             required>
         </div>
 
-       
+
         <div class="mb-3">
-            <label for="location" 
+            <label for="location"
             class="form-label">Land Location</label>
 
-            <input type="text" 
-            class="form-control" 
-            id="location" 
-            name="location" 
+            <input type="text"
+            class="form-control"
+            id="location"
+            name="location"
             placeholder="Near Siddhartha Hotel" required>
         </div>
 
-        
+
         <div class="mb-3">
-            <label for="facilities" 
+            <label for="facilities"
             class="form-label">Facilities Nearby</label>
 
-            <textarea class="form-control" 
-            id="facilities" 
-            name="facilities" 
-            rows="3" 
+            <textarea class="form-control"
+            id="facilities"
+            name="facilities"
+            rows="3"
             placeholder="Schools, Hospitals, Market, Bus Stops" required></textarea>
         </div>
 
-        
+
         <div class="mb-3">
-            <label for="photo" 
+            <label for="photo"
             class="form-label">Upload Photo of Land Image</label>
 
-            <input type="file" 
-            class="form-control" 
-            id="photo" 
-            name="photo[]" 
-            multiple 
+            <input type="file"
+            class="form-control"
+            id="photo"
+            name="photo[]"
+            multiple
             accept="image/*" required>
         </div>
 
         <div class="mb-3">
-            <label for="photo" 
+            <label for="photo"
             class="form-label">Map of Land</label>
 
-            <input type="file" 
-            class="form-control" 
-            id="photo" 
-            name="photo[]" 
-            multiple 
+            <input type="file"
+            class="form-control"
+            id="photo"
+            name="photo[]"
+            multiple
             accept="image/*" required>
         </div>
 
@@ -110,45 +110,45 @@
 
         <div class="row g-3">
             <div class="col-md-6">
-                <label for="owner_name" 
+                <label for="owner_name"
                 class="form-label">Full Name</label>
-                <input type="text" 
-                class="form-control" 
+                <input type="text"
+                class="form-control"
                 placeholder ="Enter your full name"
-                id="owner_name" 
+                id="owner_name"
                 name="owner_name" required>
             </div>
 
             <div class="col-md-6">
-                <label for="owner_phone" 
+                <label for="owner_phone"
                 class="form-label">Phone Number</label>
 
-                <input type="tel" 
-                class="form-control" 
-                id="owner_phone" 
+                <input type="tel"
+                class="form-control"
+                id="owner_phone"
                 placeholder ="Enter your Phone"
                 name="owner_phone" required>
             </div>
 
             <div class="col-md-6">
-                <label for="owner_email" 
+                <label for="owner_email"
                 class="form-label">Email</label>
 
-                <input type="email" 
+                <input type="email"
                 placeholder ="Enter your email"
-                class="form-control" 
-                id="owner_email" 
+                class="form-control"
+                id="owner_email"
                 name="owner_email">
             </div>
 
             <!-- <div class="col-md-6">
-                <label for="nid" 
+                <label for="nid"
                 class="form-label">National ID / Citizenship No.</label>
 
-                <input type="text" 
+                <input type="text"
                 class="form-control" i
-                d="nid" 
-                name="nid" 
+                d="nid"
+                name="nid"
                 required>
             </div> -->
         </div>
@@ -161,9 +161,9 @@
 
         <!-- Submit Button -->
         <div class="d-grid">
-    <button type="submit" 
+    <button type="submit"
             class="btn btn-lg text-white font-bold rounded"
-            style="background-color: #1c345c; 
+            style="background-color: #1c345c;
             border: none;">
         Submit for Review
     </button>
