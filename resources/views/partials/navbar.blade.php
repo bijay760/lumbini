@@ -6,7 +6,7 @@
     style="text-decoration: none;
     line-height: 22px;
     ">
-            <img src="{{ asset('public/backend/assets/images/login-images/logo%20(3).png') }}"
+            <img src="{{ asset('backend/assets/images/login-images/logo%20(3).png') }}"
                  class="img-fluid"
                  style="height: 77px; width: auto;"
                  alt="Company Logo">
