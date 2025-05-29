@@ -1,298 +1,209 @@
 @extends('layouts.app')
 
-@section('title', 'Lumbini Innovate - Home')
-
-@push('modals')
-    @include('modals.share-sell-notice')
-@endpush
-
-@section('content')
-    <!-- Hero Section -->
-    <header class="masthead"
-            style="background-size: cover; background-position: center;">
-
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <div class="text-left text-white">
-                        <h1 class="mb-4 fw-bold display-4">Lumbini Innovate Pvt. Ltd.</h1>
-
-                        <p class="lead mb-4 text-justify ">
-                            <b>Your journey to the perfect property starts here.</b><br>
-                            At Lumbini Innovate Pvt. Ltd. we believe that every home has a story
-                            and we're here to help you write yours. Whether you're looking to buy your dream house,
-                            sell your current property, or rent a space that fits your lifestyle, our dedicated team
-                            of experts is with you at every step.
-                        </p>
-                        <div class="d-flex flex-wrap gap-3 mt-4">
-
-                            <a href="{{ route('about-us') }}"
-                               class="btn btn-light btn-lg px-4 py-3 fw-bold"
-                               style="background-color: #fff; color: #20254D;">Book Now</a>
-
-                            <a href="{{ route('about-us') }}"
-                               class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">About Us</a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 d-none d-lg-block">
-                    <div class="position-relative">
-                        <div class="rounded-4 overflow-hidden shadow-lg">
-                            <img
-                                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80"
-                                alt="Dream Home"
-                                class="img-fluid rounded-4"
-                                style="border: 4px solid rgba(255,255,255,0.2);">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Trusted Partner Section -->
-    <section class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="row g-5 mr-4">
-                <div class="col-lg-6">
-                    <h2 class="display-5 fw-bold mb-4"
-                        style="color: #20254D;">Your Trusted Real Estate Partner</h2>
-                    <p class="lead mb-4 text-muted lh-base">
-                        Navigating the real estate market can feel overwhelming. That's why we've built our reputation
-                        on trust,
-                        transparency, and a deep understanding of the local market. With years of experience and a
-                        customer-first
-                        approach, we ensure that your experience is not only successful — but enjoyable too.
-                    </p>
-
-                    <div class="my-4">
-                        <img src="https://dam.buhlergroup.com/rendition/e54eab5b827e421988c998b19eeebdf2/-FJPG-TwebHeader_1x1-S1024x1024"
-                             class="img-fluid rounded-4 shadow-lg w-100"
-                             alt="About Us"
-                             style="max-height: 400px; object-fit: cover;">
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="ps-lg-5">
-                        <h2 class="display-5 fw-bold mb-4"
-                            style="color: #20254D;">Why Choose us?</h2>
-                        <div class="benefits-list">
-                            <div class="d-flex mb-4">
-                                <div class="me-4">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center"
-                                         style="width: 50px; height: 50px;background-color: #20254d;">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             width="24"
-                                             height="24"
-                                             fill="white"
-                                             viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4 class="h5 fw-bold" style="color: #1C345C;">Prime Locations</h4>
-                                    <p class="mb-0 text-muted">
-                                        Exclusive properties in high-growth urban centers.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="d-flex mb-4">
-                                <div class="me-4">
-                                    <div class="rounded-circle d-flex align-items-center justify-content-center"
-                                         style="width: 50px; background-color: #20254d; height: 50px;">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             width="24"
-                                             height="24"
-                                             fill="white"
-                                             viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4 class="h5 fw-bold"
-                                        style="color: #1C345C;">Bank Financing</h4>
-                                    <p class="mb-0 text-muted">
-                                        Partnerships with top Banks for competitive rates.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="d-flex mb-4">
-                                <div class="me-4">
-                                    <div class=" rounded-circle d-flex align-items-center justify-content-center"
-                                         style="width: 50px; height: 50px; background-color: #20254d;">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                             width="24"
-                                             height="24"
-                                             fill="white"
-                                             viewBox="0 0 16 16">
-                                            <path
-                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4 class="h5 fw-bold"
-                                        style="color: #1C345C;">Private Financing</h4>
-
-                                    <p class="mb-0 text-muted">
-                                        Flexible Financing options with discreet capital solutions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Shareholder Benefits Section -->
-    <section class=""
-             style="background: linear-gradient(135deg, #20254D 0%, #1C345C 100%);">
-        <div class="container py-5">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-8 text-white">
-                    <h2 class="display-5 fw-bold  mb-2">Ready to Find Your Dream Property?</h2>
-                    <p class="lead ">Join hundreds of satisfied clients who found their perfect property with</p>
-                    <p class="lead mb-2">Lumbini Innovate Pvt. Ltd.</p>
-
-                    <div class="d-flex flex-wrap gap-3 justify-content-center">
-                        <a href="{{ route('projects') }}"
-                           class="btn btn-light btn-lg px-4 py-3 fw-bold"
-                           style="color: #20254D;">Get Started</a>
-                        <a href="{{ route('contact') }}"
-                           class="btn btn-outline-light btn-lg px-4 py-3 fw-bold">Contact us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="bg-white">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 order-lg-2 ps-lg-5">
-                    <h2 class="display-5 fw-bold mb-4"
-                        style="color: #20254D;">Our Mission & Vision</h2>
-                    <p class="lead mb-4 text-muted lh-base text-justify">
-                        Our mission is to simplify the real estate journey by offering exceptional service, expert
-                        guidance,
-                        and unwavering integrity. We strive to remove the stress from property decisions by managing
-                        every step
-                        with professionalism and care. From the first showing to the final signature, we’re committed to
-                        making your
-                        experience smooth, rewarding, and hassle-free. We envision a future where buying or selling a
-                        home is no
-                        longer complicated, but instead an exciting and positive experience.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="{{ route('contact') }}"
-                           class="btn btn-primary btn-lg px-4 py-3 fw-bold"
-                           style="background-color: #1C345C; border-color: #1C345C;">Contact Us</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="">
-                        <div style="height: 100%;">
-                            <img src="https://merlionbuilders.com/wp-content/uploads/2021/06/ourvisionq.png"
-                                 alt=""
-                                 style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="bg-opacity-10 p-4 rounded shadow">
-                    <h2 class="fw-bold mb-3">Lumbini Innovate - A Real Estate Solution is at Hotel Siddhartha View, Karkando Nepalgunj</h2>
-                    <p class="fs-5">
-                        We are offering attractive residential plots near Hotel Siddhartha in Karkando, Nepalgunj Sub-Metropolitan City.<br><br>
-                        Includes facilities such as water supply, electricity, and paved roads.<br>
-                        Please contact us in time for selection, purchase, or booking.<br><br>
-                        <i class="bi bi-telephone-fill me-2"></i>
-                        Mobile No.: +977-9848023023
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 mt-2">
-                <video id="myVideo" class="w-100" height="370" controls autoplay muted playsinline>
-                    <source src="{{ asset('backend/video/video.mp4') }}" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-
-        </div>
-    </div>
-@endsection
+@section('title', 'Register Your Land')
 
 @push('styles')
     <style>
-        .masthead {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
+        .form-section {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 2rem;
         }
 
-        .benefit-icon {
-            display: inline-block;
-            width: 30px;
-            text-align: center;
-            margin-right: 10px;
+        .form-control:focus {
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
         }
 
-        .rounded-4 {
-            border-radius: 1rem !important;
-        }
-
-        .shadow-lg {
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
-        }
-
-        @media (min-width: 992px) {
-            .masthead {
-                padding-top: 8rem;
-                padding-bottom: 8rem;
-            }
+        #map {
+            height: 300px;
+            width: 100%;
         }
     </style>
-    <script>
-        function unmuteVideo() {
-            const video = document.getElementById("myVideo");
-            if (video) {
-                video.muted = false;
-            }
-        }
+@endpush
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const video = document.getElementById("myVideo");
+@section('content')
+<div class="container py-5">
+    <h2 class="mb-4 fw-bold text-center">Sell Your Land</h2>
 
-            const observer = new IntersectionObserver(
-                (entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            unmuteVideo();
-                            observer.unobserve(video); // Unobserve after first unmute
-                        }
-                    });
-                },
-                {
-                    threshold: 0.5
-                }
-            );
+    <form 
+    
+    method="POST" 
+    enctype="multipart/form-data" 
+    class="form-section">
+        @csrf
+        <div class="mb-3">
+            <label for="topic" 
+            class="form-label">Plot title </label>
 
-            if (video) {
-                observer.observe(video);
-            }
+            <input type="text" 
+            class="form-control" 
+            id="topic" 
+            name="topic" 
+            placeholder="Enter Your plot name" 
+            required>
+        </div>
+
+       
+        <div class="mb-3">
+            <label for="location" 
+            class="form-label">Land Location</label>
+
+            <input type="text" 
+            class="form-control" 
+            id="location" 
+            name="location" 
+            placeholder="Near Siddhartha Hotel" required>
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="facilities" 
+            class="form-label">Facilities Nearby</label>
+
+            <textarea class="form-control" 
+            id="facilities" 
+            name="facilities" 
+            rows="3" 
+            placeholder="Schools, Hospitals, Market, Bus Stops" required></textarea>
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="photo" 
+            class="form-label">Upload Photo of Land Image</label>
+
+            <input type="file" 
+            class="form-control" 
+            id="photo" 
+            name="photo[]" 
+            multiple 
+            accept="image/*" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="photo" 
+            class="form-label">Map of Land</label>
+
+            <input type="file" 
+            class="form-control" 
+            id="photo" 
+            name="photo[]" 
+            multiple 
+            accept="image/*" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Land Location on Map</label>
+
+            <!-- <div id="map"></div>
+            <input type="hidden" name="latitude" id="latitude">
+            <input type="hidden" name="longitude" id="longitude"> -->
+
+             <input type="text"
+             placeholder ="Past your google map location"
+            class="form-control" required>
+        </div>
+
+        <!-- Owner Details -->
+        <h5 class="mt-4 mb-3 ">Owner Details</h5>
+
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="owner_name" 
+                class="form-label">Full Name</label>
+                <input type="text" 
+                class="form-control" 
+                placeholder ="Enter your full name"
+                id="owner_name" 
+                name="owner_name" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="owner_phone" 
+                class="form-label">Phone Number</label>
+
+                <input type="tel" 
+                class="form-control" 
+                id="owner_phone" 
+                placeholder ="Enter your Phone"
+                name="owner_phone" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="owner_email" 
+                class="form-label">Email</label>
+
+                <input type="email" 
+                placeholder ="Enter your email"
+                class="form-control" 
+                id="owner_email" 
+                name="owner_email">
+            </div>
+
+            <!-- <div class="col-md-6">
+                <label for="nid" 
+                class="form-label">National ID / Citizenship No.</label>
+
+                <input type="text" 
+                class="form-control" i
+                d="nid" 
+                name="nid" 
+                required>
+            </div> -->
+        </div>
+
+        <!-- Additional Notes -->
+        <div class="mb-3 mt-4">
+            <label for="notes" class="form-label">Additional Notes (Optional)</label>
+            <textarea class="form-control" id="notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid">
+    <button type="submit" 
+            class="btn btn-lg text-white font-bold rounded"
+            style="background-color: #1c345c; 
+            border: none;">
+        Submit for Review
+    </button>
+</div>
+    </form>
+</div>
+@endsection
+
+@push('scripts')
+
+<script src=""></script>
+<script>
+    let map;
+    let marker;
+
+    function initMap() {
+        const defaultLocation = { lat: 28.0500, lng: 81.6167 }; // Default Nepalgunj
+
+        map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: defaultLocation,
         });
-    </script>
+
+        marker = new google.maps.Marker({
+            position: defaultLocation,
+            map: map,
+            draggable: true
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function (evt) {
+            document.getElementById('latitude').value = evt.latLng.lat().toFixed(6);
+            document.getElementById('longitude').value = evt.latLng.lng().toFixed(6);
+        });
+    }
+
+    window.initMap = initMap;
+</script>
+<script>
+    window.addEventListener('load', function () {
+        initMap();
+    });
+</script>
 @endpush
