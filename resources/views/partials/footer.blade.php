@@ -18,12 +18,14 @@
                  font-family: Montserrat, sans-serif;
                  font-weight: 800;
                  ">
-                            LUMBINI INNOVATE</div>
+                            LUMBINI INNOVATE
+                        </div>
                         <div style="color:#ffffff;
                 font-family: Montserrat, sans-serif;
                 font-weight: 500;
                 font-size: 10.3px;
-                 ">A Complete Real Estate Solution</div>
+                 ">A Complete Real Estate Solution
+                        </div>
                     </div>
                 </a>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
@@ -136,7 +138,7 @@
     }
 </style>
 <script>
-    document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+    document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
         const email = document.getElementById('emailInput').value;
         const phone = document.getElementById('phoneInput').value;
 
