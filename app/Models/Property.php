@@ -19,7 +19,8 @@ class Property extends Model
         'state',
         'zip_code',
         'country',
-        'location',
+        'latitude',
+        'longitude',
         'bedrooms',
         'bathrooms',
         'area',
@@ -33,7 +34,8 @@ class Property extends Model
         'additional_info',
         'status',
         'ip_address',
-        'user_agent'
+        'user_agent',
+        'featured_image_id'
     ];
 
     protected $casts = [
@@ -42,19 +44,29 @@ class Property extends Model
         'area' => 'decimal:2'
     ];
 
-    // Scopes
-    public function scopeActive($query)
-    {
-        return $query->where('status', 'active');
-    }
-
-    public function scopePending($query)
-    {
-        return $query->where('status', 'pending');
-    }
-
+    // Relationships
     public function images()
     {
-        return $this->hasMany(PropertyImage::class);
+        return $this->hasMany(PropertyImage::class)->orderBy('order');
+    }
+
+    public function featuredImage()
+    {
+        return $this->belongsTo(PropertyImage::class, 'featured_image_id');
+    }
+
+    // Helper methods
+    public function setFeaturedImage(PropertyImage $image)
+    {
+        $this->featured_image_id = $image->id;
+        $this->save();
+
+        // Ensure only one featured image
+        PropertyImage::where('property_id', $this->id)
+            ->where('id', '!=', $image->id)
+            ->update(['is_featured' => false]);
+
+        $image->is_featured = true;
+        $image->save();
     }
 }

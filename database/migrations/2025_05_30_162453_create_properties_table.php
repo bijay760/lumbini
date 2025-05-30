@@ -50,6 +50,9 @@ return new class extends Migration
             $table->string('ip_address');
             $table->text('user_agent')->nullable();
 
+            // Featured image reference
+            $table->unsignedBigInteger('featured_image_id')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
 
@@ -59,6 +62,30 @@ return new class extends Migration
             $table->index('price');
             $table->index('status');
         });
+
+        // Create property images table
+        Schema::create('property_images', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('property_id');
+            $table->string('path'); // Path to the image file
+            $table->string('caption')->nullable();
+            $table->boolean('is_featured')->default(false);
+            $table->integer('order')->default(0);
+            $table->timestamps();
+
+            $table->foreign('property_id')
+                ->references('id')
+                ->on('properties')
+                ->onDelete('cascade');
+        });
+
+        // Add foreign key constraint for featured image
+        Schema::table('properties', function (Blueprint $table) {
+            $table->foreign('featured_image_id')
+                ->references('id')
+                ->on('property_images')
+                ->onDelete('set null');
+        });
     }
 
     /**
@@ -66,6 +93,11 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('properties', function (Blueprint $table) {
+            $table->dropForeign(['featured_image_id']);
+        });
+
+        Schema::dropIfExists('property_images');
         Schema::dropIfExists('properties');
     }
 };
