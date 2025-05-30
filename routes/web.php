@@ -3,8 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\PropertyController;
 
-
+// Property Registration Routes
+//Route::get('/property/register', [PropertyController::class, 'create'])->name('property.register');
+Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::Post('/store',[ContactController::class,'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe');
 

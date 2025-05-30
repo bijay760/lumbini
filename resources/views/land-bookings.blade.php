@@ -4,6 +4,7 @@
 
 
 @section('content')
+
     <div class="page">
         <div class="container">
             <form action="https://www.lakshyashare.com/landbookings/store" method="POST" enctype="multipart/form-data"

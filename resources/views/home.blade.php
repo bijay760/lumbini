@@ -8,6 +8,7 @@
 
 @section('content')
     <!-- Hero Section -->
+
     <header class="masthead"
             style="background-size: cover; background-position: center;">
 
