@@ -56,6 +56,16 @@
             placeholder="Near Siddhartha Hotel" required>
         </div>
 
+        <div class="mb-3">
+            <label for="kitta" 
+            class="form-label">Kitta No.</label>
+            
+            <input type="text" 
+            class="form-control" 
+            id="kitta" 
+            name="kitta" required>
+        </div>
+
 
         <div class="mb-3">
             <label for="facilities"
