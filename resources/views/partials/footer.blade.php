@@ -62,11 +62,13 @@
             <div class="col-lg-4 col-md-6 justify-start">
                 <h5 class="text-uppercase fw-bold mb-4 text-lg-left">Connect With Us</h5>
                 <p class="text-white text-lg-left">Be the first to know about our projects.</p>
-                <form class="mb-3" id="subscriptionForm">
+                <form class="mb-3" id="subscriptionForm" method="POST" action="{{ route('subscribe') }}">
+                    @csrf
                     <div class="input-group mx-sm-auto ms-md-0">
                         <input type="email"
                                class="form-control"
                                id="emailInput"
+                               name="email"
                                placeholder="Your Email"
                                aria-label="Your Email">
                     </div>
@@ -74,6 +76,7 @@
                         <input type="tel"
                                class="form-control"
                                id="phoneInput"
+                               name="phone"
                                placeholder="Your Phone Number"
                                aria-label="Your Phone Number">
                     </div>
@@ -81,6 +84,8 @@
                         Subscribe Now
                     </button>
                 </form>
+
+                <div id="subscriptionMessage" class="mt-2"></div>
             </div>
 
         </div>
@@ -139,13 +144,77 @@
 </style>
 <script>
     document.getElementById('subscriptionForm').addEventListener('submit', function (event) {
-        const email = document.getElementById('emailInput').value;
-        const phone = document.getElementById('phoneInput').value;
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+        const messageDiv = document.getElementById('subscriptionMessage');
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+
+        // Clear previous messages
+        messageDiv.innerHTML = '';
+        messageDiv.className = 'mt-2';
+
+        // Client-side validation - check if both fields are empty
+        const email = form.querySelector('#emailInput').value.trim();
+        const phone = form.querySelector('#phoneInput').value.trim();
 
         if (!email && !phone) {
-            event.preventDefault();
-            alert('Please fill in either email or phone number');
+            messageDiv.className = 'mt-2 alert alert-danger';
+            messageDiv.textContent = 'Please provide either email or phone number';
+            return; // Stop the form submission
         }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Subscribing...
+        `;
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    messageDiv.className = 'mt-2 alert alert-success';
+                    messageDiv.textContent = data.message;
+                    form.reset();
+                } else {
+                    messageDiv.className = 'mt-2 alert alert-danger';
+                    if (data.errors) {
+                        let errors = '';
+                        for (const [key, value] of Object.entries(data.errors)) {
+                            errors += `${value.join('<br>')}<br>`;
+                        }
+                        messageDiv.innerHTML = errors;
+                    } else {
+                        messageDiv.textContent = data.message || 'Subscription failed. Please try again.';
+                    }
+                }
+            })
+            .catch(error => {
+                messageDiv.className = 'mt-2 alert alert-danger';
+                messageDiv.textContent = 'An error occurred. Please try again later.';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                // Restore button state
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            });
     });
 </script>
 

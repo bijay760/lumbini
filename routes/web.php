@@ -2,9 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\SubscriptionController;
 
 
 Route::Post('/store',[ContactController::class,'store'])->name('contact.store');
+Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe');
 
 Route::get('/', function () {
     return view('home');
