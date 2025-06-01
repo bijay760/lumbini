@@ -2,13 +2,14 @@
 // app/Http/Controllers/PropertyController.php
 namespace App\Http\Controllers;
 
+use App\Jobs\SendEmail;
+use App\Mail\ContactMail;
+use App\Mail\PropertyRegistered;
 use App\Models\Property;
+use App\Rules\Recaptcha;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\PropertyImage;
-//use App\Mail\PropertyRegistered;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Validator;
 
 class PropertyController extends Controller
 {
@@ -20,21 +21,13 @@ class PropertyController extends Controller
             'title' => 'required|string|max:255',
             'description' => 'required|string',
 
-            // Location
             'address' => 'required|string',
             'city' => 'required|string',
             'state' => 'required|string',
             'zip_code' => 'required|string',
             'country' => 'required|string',
-            'latitude' => 'nullable|regex:/^-?\d{1,3}\.\d{6,8}$/',
-            'longitude' => 'nullable|regex:/^-?\d{1,3}\.\d{6,8}$/',
-
-            // Specifications
-            'bedrooms' => 'nullable|integer|min:0',
-            'bathrooms' => 'nullable|integer|min:0',
-            'area' => 'required|numeric|min:0',
-            'price' => 'required|numeric|min:0',
-            'year_built' => 'nullable|integer|min:1800|max:' . now()->year,
+            'latitude' => 'nullable|regex:/^-?\d{1,3}\.\d{4,8}$/',
+            'longitude' => 'nullable|regex:/^-?\d{1,3}\.\d{4,8}$/',
 
             // Owner info
             'owner_name' => 'required|string|max:255',
@@ -46,12 +39,9 @@ class PropertyController extends Controller
             'property_images.*' => 'nullable|image|mimes:jpeg,png,jpg|max:5120', // Max 5MB per image
             'featured_image' => 'nullable|string',
 
-            // Features
-            'features' => 'nullable|array',
-            'features.*' => 'string',
-
             'additional_info' => 'nullable|string',
-            'agree_terms' => 'required|accepted'
+            'agree_terms' => 'required|accepted',
+            'g-recaptcha-response' => ['required', new Recaptcha]
         ]);
 
         // Create Property
@@ -106,7 +96,10 @@ class PropertyController extends Controller
                 $property->save();
             }
         }
-
-        return redirect()->back()->with('success', 'Property registered successfully!');
+        $data=['owner_email'=>$property->owner_email];
+//        dd($data);
+        $mailable=new PropertyRegistered($data);
+        dispatch(new SendEmail($mailable));
+        return back()->with('success', 'Property registered successfully!');
     }
 }

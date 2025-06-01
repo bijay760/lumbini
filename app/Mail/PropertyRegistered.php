@@ -7,7 +7,6 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Property;
 
 class PropertyRegistered extends Mailable
 {
@@ -15,7 +14,7 @@ class PropertyRegistered extends Mailable
 
     public $property;
 
-    public function __construct(Property $property)
+    public function __construct( $property)
     {
         $this->property = $property;
     }
@@ -24,13 +23,17 @@ class PropertyRegistered extends Mailable
     {
         return new Envelope(
             subject: 'Your Property Listing Has Been Received',
+
         );
     }
 
     public function content()
     {
         return new Content(
-            view: 'email.registered',
+            view: 'email.register',
+            with: [
+                'data' => $this->property
+            ]
         );
     }
 

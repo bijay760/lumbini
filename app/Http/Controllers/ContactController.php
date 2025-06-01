@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\SendContactMail;
+use App\Jobs\SendEmail;
 use App\Mail\ContactMail;
 use App\Models\ContractDetail;
 use Illuminate\Http\Request;
@@ -25,7 +25,7 @@ class ContactController extends Controller
         ];
         ContractDetail::create($data);
         $mailable=new ContactMail($data);
-        dispatch(new SendContactMail($mailable));
+        dispatch(new SendEmail($mailable));
         return back()->with('success', 'Your message has been sent!');
     }
 }
