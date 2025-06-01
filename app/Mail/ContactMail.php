@@ -23,7 +23,7 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'New Contract Submission: ' . $this->data['owner_email'],
+            subject: 'New Contract Submission: ' . $this->data['email'],
         );
     }
 
