@@ -11,7 +11,7 @@ use Illuminate\Queue\SerializesModels;
 
 class ContactMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use SerializesModels;
 
     public $data;
 
