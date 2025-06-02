@@ -1,2 +1,11 @@
 User-agent: *
-Disallow:
+@if($allowCrawling)
+Allow: /
+Disallow: /admin/
+Disallow: /backend/
+@else
+Disallow: /  # Block all in non-production
+@endif
+
+# Dynamic sitemap URLs
+Sitemap: {{ url('/sitemap.xml') }}
