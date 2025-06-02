@@ -345,8 +345,10 @@
                 <button class="btn btn-danger btn-lg">
                     <i class="bi bi-telephone"></i> Call Now: <a href="tel:+9779848023023" class="text-decoration-none text-white">+977-9848023023</a>
                 </button>
-                <button class="btn btn-outline-primary btn-lg">
-                    <i class="bi bi-whatsapp"></i> WhatsApp Us
+                <button class="btn btn-primary btn-lg">
+                    <a href="https://wa.me/9779848023023" target="_blank" class="text-decoration-none text-white">
+                        <i class="bi bi-whatsapp"></i> WhatsApp Us
+                    </a>
                 </button>
             </div>
         </div>
