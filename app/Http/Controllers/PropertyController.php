@@ -2,9 +2,11 @@
 // app/Http/Controllers/PropertyController.php
 namespace App\Http\Controllers;
 
+use App\Jobs\SendEmail;
 use App\Jobs\SendEmailToUser;
 use App\Mail\ContactMail;
 use App\Mail\PropertyRegistered;
+use App\Mail\PropertyRegisteredAdmin;
 use App\Models\Property;
 use App\Rules\Recaptcha;
 use Illuminate\Http\Request;
@@ -99,6 +101,8 @@ class PropertyController extends Controller
         $data=['owner_email'=>$property->owner_email];
         $mailable=new PropertyRegistered($data);
         dispatch(new SendEmailToUser($property->owner_email,$mailable));
+        $mailable_admin=new PropertyRegisteredAdmin($data);
+        dispatch(new SendEmail($mailable_admin));
         return back()->with('success', 'Property registered successfully!');
     }
 }
