@@ -1,7 +1,3 @@
-@php
-    $allowCrawling = app()->environment('production');
-@endphp
-
 User-agent: *
 @if($allowCrawling)
 Allow: /
