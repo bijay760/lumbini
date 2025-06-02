@@ -341,7 +341,7 @@
         <div class="text-lg-center text-sm-left py-5 mt-4 bg-light rounded">
             <h3 class="mb-3">Ready to invest in your future?</h3>
             <p class="lead mb-4">Our team is ready to assist you with all property inquiries</p>
-            <div class="d-flex justify-content-center gap-3">
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
                 <button class="btn btn-danger btn-lg">
                     <i class="bi bi-telephone"></i> Call Now: <a href="tel:+9779848023023" class="text-decoration-none text-white">+977-9848023023</a>
                 </button>
