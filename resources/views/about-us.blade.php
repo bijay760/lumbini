@@ -8,7 +8,6 @@
 @section('og_image', asset('images/about-us-og.jpg'))
 @section('og_type', 'article')
 @section('twitter_image', asset('images/about-us-og.jpg'))
-
 @section('content')
     <!-- Hero Section -->
     <section class="hero-section py-lg-5 py-sm-3">
