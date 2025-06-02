@@ -97,7 +97,6 @@ class PropertyController extends Controller
             }
         }
         $data=['owner_email'=>$property->owner_email];
-//        dd($data);
         $mailable=new PropertyRegistered($data);
         dispatch(new SendEmail($mailable));
         return back()->with('success', 'Property registered successfully!');
