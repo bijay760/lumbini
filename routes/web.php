@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\PropertyController;
 
 // Property Registration Routes
@@ -10,6 +11,7 @@ use App\Http\Controllers\PropertyController;
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::Post('/store',[ContactController::class,'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe');
+Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
 Route::get('/', function () {
     return view('home');

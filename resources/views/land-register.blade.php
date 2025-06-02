@@ -1,6 +1,12 @@
 @extends('layouts.app')
+@section('title', 'Sell Your Property | List with Lumbani Innovate')
+@section('meta_description', 'Get the best value for your property in Nepal. List your home, land, or commercial property with Nepal\'s leading real estate platform.')
+@section('meta_keywords', 'sell property Nepal, list home for sale, property valuation Nepal, real estate agents Kathmandu')
 
-@section('title', 'Register Your Land')
+@section('og_title', 'Sell Your Property with Lumbani Innovate | Get Expert Valuation')
+@section('og_description', 'Maximize your property value with our professional selling services. Connect with qualified buyers across Nepal.')
+@section('og_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
+@section('twitter_image','https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
 
 @push('styles')
     <style>
@@ -58,7 +64,7 @@
                             <option value="">Select Type</option>
                             <option value="house" @selected(old('property_type') == 'house')>House</option>
                             <option value="apartment" @selected(old('property_type') == 'apartment')>Apartment</option>
-                            <option value="land" @selected(old('property_type') == 'land')>Land</option>
+                            <option value="land" @selected(old('property_type') == 'land') selected>Land</option>
                             <option value="commercial" @selected(old('property_type') == 'commercial')>Commercial
                             </option>
                         </select>

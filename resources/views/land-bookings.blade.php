@@ -1,8 +1,5 @@
 @extends('layouts.app')
 
-@section('title', 'Lumbini Innovate - land Booking')
-
-
 @section('content')
 
     <div class="page">

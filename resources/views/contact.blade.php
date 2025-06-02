@@ -1,10 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Lumbini Innovate - Contact Us')
+@section('title', 'Contact Us | Lumbani Innovate Real Estate')
+@section('meta_description', 'Get in touch with Nepal\'s leading real estate experts. Contact Lumbani Innovate for property inquiries, partnerships, or customer support.')
+@section('meta_keywords', 'contact real estate Nepal, property inquiry Kathmandu, real estate support Nepal, Lumbani Innovate contact')
 
-@push('modals')
-    @include('modals.share-sell-notice')
-@endpush
+@section('og_title', 'Contact Our Real Estate Experts | Lumbani Innovate')
+@section('og_description', 'Reach out to our team for property inquiries, investment opportunities, or any real estate services in Nepal.')
+@section('og_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
+@section('twitter_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
 
 @section('content')
     <div class="container py-5">

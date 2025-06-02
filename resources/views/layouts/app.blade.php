@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Dynamic Meta Tags -->
+    <title>@yield('title', 'Lumbani Innovate - Complete Real Estate Solutions')</title>
+    <meta name="description" content="@yield('meta_description', 'Complete real estate solution in Nepal. Property listings, land deals, home buying/selling, and innovative property management services.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'real estate Nepal, property Kathmandu, buy land Nepal, sell house Nepal, property management, real estate solutions, Lumbani Innovate')">
+
+    <!-- Static Meta Tags -->
+    <meta name="author" content="Lumbani Innovate">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Dynamic Open Graph Tags -->
+    <meta property="og:title" content="@hasSection('og_title')@yield('og_title')@else@yield('title', 'Lumbani Innovate - Complete Real Estate Solutions in Nepal')@endif">
+    <meta property="og:description" content="@hasSection('og_description')@yield('og_description')@else@yield('meta_description', 'Your trusted partner for all real estate needs in Nepal. Find, buy, sell, and manage properties with our innovative solutions.')@endif">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:image" content="@yield('og_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')">
+    <meta property="og:site_name" content="Lumbani Innovate">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Dynamic Twitter Cards -->
+    <meta name="twitter:card" content="@yield('twitter_card', 'summary_large_image')">
+    <meta name="twitter:title" content="@hasSection('twitter_title')@yield('twitter_title')@else@yield('title', 'Lumbani Innovate - Complete Real Estate Solutions in Nepal')@endif">
+    <meta name="twitter:description" content="@hasSection('twitter_description')@yield('twitter_description')@else@yield('meta_description', 'Your trusted partner for all real estate needs in Nepal. Find, buy, sell, and manage properties with our innovative solutions.')@endif">
+    <meta name="twitter:image" content="@yield('twitter_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')">
+    <meta name="twitter:site" content="@LumbaniInnovate">
+    <meta name="twitter:creator" content="@LumbaniInnovate">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- CSS Assets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,9 +44,6 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
           integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
           <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

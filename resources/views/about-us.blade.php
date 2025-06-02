@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
 @section('title', 'About Us - Lumbini Innovate')
+@section('meta_description', 'Learn about our mission to transform real estate in Nepal through innovation and integrity. Discover our story and values.')
+@section('meta_keywords', 'real estate Nepal, about Lumbani Innovate, property solutions Nepal, real estate company')
+@section('og_title', 'About Lumbani Innovate - Transforming Nepal\'s Real Estate')
+@section('og_description', 'Discover how we\'re revolutionizing property solutions in Nepal with affordable, tech-driven services')
+@section('og_image', asset('images/about-us-og.jpg'))
+@section('og_type', 'article')
+@section('twitter_image', asset('images/about-us-og.jpg'))
 
 @section('content')
     <!-- Hero Section -->

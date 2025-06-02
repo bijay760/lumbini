@@ -1,6 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Lumbini Innovate - Home')
+@section('title', 'Lumbani Innovate | Premier Real Estate Solutions in Nepal')
+@section('meta_description', 'Find your dream property in Nepal. Buy, sell, or rent residential and commercial properties with Nepal\'s most trusted real estate platform.')
+@section('meta_keywords', 'real estate Nepal, buy property Kathmandu, Nepal homes for sale, rent apartment Nepal, commercial property Nepal')
+
+@section('og_title', 'Lumbani Innovate - Transforming Real Estate in Nepal')
+@section('og_description', 'Discover innovative property solutions with Nepal\'s leading real estate platform. Find homes, lands, and commercial spaces.')
+@section('og_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
+@section('twitter_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
 
 @push('modals')
     @include('modals.share-sell-notice')

@@ -1,10 +1,13 @@
 @extends('layouts.app')
+@section('title', 'Property Listings in Nepal | Lumbani Innovate')
+@section('meta_description', 'Browse our latest property listings in Nepal. Find homes, apartments, land, and commercial properties for sale and rent.')
+@section('meta_keywords', 'Nepal property listings, houses for sale Kathmandu, land for sale Nepal, rent apartment Pokhara')
 
-@section('title', 'Lumbini Innovate - Projects')
+@section('og_title', 'Property Listings in Nepal | Lumbani Innovate')
+@section('og_description', 'Discover premium real estate listings across Nepal. Find your dream home or investment property today.')
+@section('og_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
+@section('twitter_image','https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
 
-@push('modals')
-    @include('modals.share-sell-notice')
-@endpush
 
 @section('content')
     <div class="container py-5">
