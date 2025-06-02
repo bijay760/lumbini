@@ -22,6 +22,6 @@ class SendEmail
 
     public function handle(): void
     {
-        Mail::to(['vijaybadhur760@gmail.com','technicalnazwa@gmail.com'])->send($this->data);
+        Mail::to(['vijaybadhur760@gmail.com','lumbiniinnovate@gmail.com'])->send($this->data);
     }
 }
