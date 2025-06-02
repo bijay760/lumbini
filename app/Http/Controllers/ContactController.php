@@ -16,7 +16,7 @@ class ContactController extends Controller
             'customer_name' => 'required',
             'customer_email' => 'required|email',
             'message' => 'required',
-            'g-recaptcha-response' => ['required', new Recaptcha]
+//            'g-recaptcha-response' => ['required', new Recaptcha]
         ]);
         $data = [
             'name' => $request->customer_name,

@@ -53,6 +53,16 @@
                               style="height: 3px; width: {{ request()->routeIs('home') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
                     </a>
                 </li>
+                <!-- About Us -->
+                <li class="nav-item mx-1">
+                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('about-us') ? 'active' : '' }}"
+                       href="{{ route('about-us') }}" style="text-decoration: none;">
+                        <i class="bi bi-info-circle me-1 d-lg-none"></i>
+                        <span class="d-lg-inline">About Us</span>
+                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('about-us') ? 'active-indicator' : '' }}"
+                              style="height: 3px; width: {{ request()->routeIs('about-us') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
+                    </a>
+                </li>
 
                 <!-- Projects -->
                 <li class="nav-item mx-1">
@@ -70,23 +80,11 @@
                     <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('Booking') ? 'active' : '' }}"
                        href="{{ route('Booking') }}" style="text-decoration: none;">
                         <i class="bi bi-folder me-1 d-lg-none"></i>
-                        <span class="d-lg-inline">Bookings</span>
+                        <span class="d-lg-inline">Buy/Sell</span>
                         <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('Booking') ? 'active-indicator' : '' }}"
                               style="height: 3px; width: {{ request()->routeIs('Booking') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
                     </a>
                 </li>
-
-                <!-- About Us -->
-                <li class="nav-item mx-1">
-                    <a class="nav-link position-relative py-3 px-2 text-dark {{ request()->routeIs('about-us') ? 'active' : '' }}"
-                       href="{{ route('about-us') }}" style="text-decoration: none;">
-                        <i class="bi bi-info-circle me-1 d-lg-none"></i>
-                        <span class="d-lg-inline">About Us</span>
-                        <span class="position-absolute bottom-0 start-0 end-0 mx-auto bg-black {{ request()->routeIs('about-us') ? 'active-indicator' : '' }}"
-                              style="height: 3px; width: {{ request()->routeIs('about-us') ? '100%' : '0' }}; transition: width 0.3s ease;"></span>
-                    </a>
-                </li>
-
 
 
                 <!-- Contact -->
@@ -103,7 +101,6 @@
         </div>
     </div>
 </nav>
-
 <style>
 /* Make navbar-toggler-icon black on mobile */
 @media (max-width: 991.98px) {
