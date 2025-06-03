@@ -5,9 +5,9 @@
 @section('meta_keywords', 'real estate Nepal, about Lumbani Innovate, property solutions Nepal, real estate company')
 @section('og_title', 'About Lumbani Innovate - Transforming Nepal\'s Real Estate')
 @section('og_description', 'Discover how we\'re revolutionizing property solutions in Nepal with affordable, tech-driven services')
-@section('og_image', asset('images/about-us-og.jpg'))
+@section('og_image', 'https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
 @section('og_type', 'article')
-@section('twitter_image', asset('images/about-us-og.jpg'))
+@section('twitter_image','https://lumbiniinnovate.com.np/backend/assets/images/login-images/logo%20(3).png')
 @section('content')
     <!-- Hero Section -->
     <section class="hero-section py-lg-5 py-sm-3">
