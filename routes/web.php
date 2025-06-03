@@ -5,6 +5,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\Admin\Login\AdminLoginController;
+use App\Http\Controllers\Admin\Dashboard\DashboardController;
 
 // Property Registration Routes
 //Route::get('/property/register', [PropertyController::class, 'create'])->name('property.register');
@@ -35,6 +37,20 @@ Route::get('/land-register', function () {
 Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
+
+
+
+
+// admin routes
+
+Route::middleware('check.whitelist')->group(function () {
+    Route::get('/admin', [AdminLoginController::class, 'index'])->name('admin.login_form');
+    Route::POST('/admin-login', [AdminLoginController::class, 'login'])->name('admin.login');
+    Route::middleware('admin.auth')->group(function() {
+        Route::post('logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+    });
+});
 
 
 Route::fallback(function () {

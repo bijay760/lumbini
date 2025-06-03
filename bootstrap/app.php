@@ -11,8 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'check.whitelist' => \App\Http\Middleware\CheckWhitelistIP::class,
+            'admin.auth' => \App\Http\Middleware\RedirectIfNotAdmin::class,
+            'guest' => \App\Http\Middleware\RedirectIfNotAdmin::class,
+        ]);
     })
+
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
