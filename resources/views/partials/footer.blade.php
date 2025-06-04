@@ -83,7 +83,7 @@
         <!-- Copyright -->
         <div class="row align-items-center">
             <div class="text-center text-md-center">
-                <p class="small mb-0">&copy; {{ date('Y') }} Lumbini Innovate Ltd. All rights reserved. &nbsp &nbsp | &nbsp &nbsp Developed by : <a href="https://365itservice.com/" target="_blank" class="text-decoration-none text-white">365 ENTERPRISES</a> </p>
+                <p class="small mb-0">&copy; {{ date('Y') }} Lumbini Innovate Pvt. Ltd. All rights reserved. &nbsp &nbsp | &nbsp &nbsp Developed by : <a href="https://365itservice.com/" target="_blank" class="text-decoration-none text-white">365 ENTERPRISES</a> </p>
             </div>
         </div>
     </div>

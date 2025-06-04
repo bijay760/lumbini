@@ -16,11 +16,11 @@ class AdminLoginController extends Controller
         if (Auth::guard('admin')->check()) {
             return redirect()->route('admin.dashboard');
         }
-        // Uncomment this only for initial admin user creation
-        // DB::table('admin_users')->insert([
-        //     'email' => 'vijaybadhur760@gmail.com',
-        //     'password' => Hash::make('Bijay760'),
-        // ]);
+//         Uncomment this only for initial admin user creation
+//         DB::table('admin_users')->insert([
+//             'email' => 'ashokgtm@gmaill.com','surname' => 'ashok',
+//             'password' => Hash::make('ashokgtm'),
+//         ]);
 
         return view('admin.login.index');
     }

@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\Admin\Properties\PropertiesController;
 use App\Http\Controllers\Admin\Login\AdminLoginController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 
@@ -46,9 +47,18 @@ Route::get('/blog', function () {
 Route::middleware('check.whitelist')->group(function () {
     Route::get('/admin', [AdminLoginController::class, 'index'])->name('admin.login_form');
     Route::POST('/admin-login', [AdminLoginController::class, 'login'])->name('admin.login');
-    Route::middleware('admin.auth')->group(function() {
+    Route::prefix('admin')->middleware('admin.auth')->group(function() {
+        // Dashboard Related Routes
         Route::post('logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
         Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+        // Properties Related Routes
+        Route::get('properties', [PropertiesController::class, 'index'])->name('admin.properties');
+        Route::get('properties/create', [PropertiesController::class, 'create'])->name('admin.properties.create');
+        Route::POST('properties/store', [PropertiesController::class, 'store'])->name('admin.properties.store');
+        Route::DELETE('properties/delete/{id}', [PropertiesController::class, 'delete'])->name('admin.properties.delete');
+        Route::get('properties/edit/{id}', [PropertiesController::class, 'edit'])->name('admin.properties.edit');
+        Route::post('properties/update/{id}', [PropertiesController::class, 'update'])->name('admin.properties.update');
     });
 });
 
