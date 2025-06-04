@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <!-- Company Info -->
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
                 <a class="d-flex align-items-center mb-3"
                    href="{{ route('home') }}"
                    style="text-decoration: none;
@@ -29,37 +29,25 @@
                     </div>
                 </a>
                 <div class="mt-4 text-md-start justify-content-md-start justify-content-lg-start">
-                    <a href="https://www.facebook.com/lumbini.innovate"
-                       target="_blank"
-                       class="text-white me-3">
-                        <i class="bi bi-facebook fs-5"></i></a>
-                    <!-- <a href="https://cdn.pixabay.com/photo/2021/11/11/12/41/facebook-6786210_1280.png"></a> -->
-                    <!-- <img src="{{ asset('backend/assets/images/facebook.png') }}"
-                         class="me-2"
-                         style="height: 30px; width: auto; display: flex;"
-                         alt="Company Logo"> -->
-                    <!-- </a> -->
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            Chandragiri-13, Kathmandu, Nepal
+                        </li>
+
+                        <li class="mb-2">
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            <a href="mailto:info@lumbiniinnovate.com.np" class="text-decoration-none text-white">info@lumbiniinnovate.com.np</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            <a href="tel:+9779848023023" class="text-decoration-none text-white">+977-9848023023</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0 justify- text-lg-left">
-                <h5 class="text-uppercase fw-bold mb-4">Contact Us</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="bi bi-geo-alt-fill me-2"></i>
-                        Chandragiri-13, Kathmandu, Nepal
-                    </li>
-                    <li class="mb-2">
-                        <i class="bi bi-telephone-fill me-2"></i>
-                        <a href="tel:+9779848023023" class="text-decoration-none text-white">+977-9848023023</a>
-                    </li>
-                    <li class="mb-2">
-                        <i class="bi bi-envelope-fill me-2"></i>
-                        <a href="mailto:info@lumbiniinnovate.com.np" class="text-decoration-none text-white">info@lumbiniinnovate.com.np</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-6 justify-start">
+            <div class="col-sm-6 col-lg-4 justify-start">
                 <h5 class="text-uppercase fw-bold mb-4 text-lg-left">Connect With Us</h5>
                 <p class="text-white text-lg-left">Be the first to know about our projects.</p>
                 <form class="mb-3" id="subscriptionForm" method="POST" action="{{ route('subscribe') }}">
