@@ -48,6 +48,14 @@
             <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
+        <div class="form-group mb-3">
+            <label for="location" class="form-label">Location</label>
+            <textarea class="form-control @error('location') is-invalid @enderror" id="location"
+                      name="location" rows="3" required>{{ old('location') ?? $property->location ?? '' }}</textarea>
+            @error('location')
+            <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
     </div>
 
     <!-- Location Details -->
@@ -205,50 +213,40 @@
         </div>
 
         <!-- Additional Features -->
-        <label for="property_images" class="form-label">Additional Features</label>
         <div class="form-group mb-3">
-            @php
-                // Get old input if available (after validation errors)
-                $oldFeatures = is_array(old('features')) ? old('features') : [];
+            <label for="property_features" class="form-label">Additional Features</label>
 
-                // Convert property features to array
-                $propertyFeatures = [];
-                if (isset($property->features)) {
-                    if (is_string($property->features)) {
-                        // Handle JSON string (either "[\"garage\",\"fireplace\"]" or ["garage","fireplace"])
-                        $cleaned = trim($property->features, '"');
-                        $propertyFeatures = json_decode($property->features, true) ?? [];
-                        $propertyFeatures = json_decode($propertyFeatures, true) ?? [];
-                    } elseif (is_array($property->features)) {
-                        // Already an array
-                        $propertyFeatures = $property->features;
-                    }
-                }
+            <!-- Hidden input to store all features as JSON -->
+            <input type="hidden" name="features" id="featuresJson"
+                   value="{{ isset($property) ? $property->features : (is_array(old('features')) ? old('features') : '[]') }}">
 
-                // Final selected features (old input takes precedence)
-                $selectedFeatures = !empty($oldFeatures) ? $oldFeatures : $propertyFeatures;
-                $selectedFeatures = is_array($selectedFeatures) ? $selectedFeatures : [];
-            @endphp
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="has_garage" name="features[]"
-                       value="garage" @checked(in_array('garage', $selectedFeatures))>
-                <label class="form-check-label" for="has_garage">Garage</label>
+            <!-- Container for displaying added features -->
+            <div id="featuresContainer" class="mb-3">
+                @if(isset($property) && $property->features)
+                    @foreach(json_decode(json_decode($property->features)) as $feature)
+                        <span class="badge bg-primary me-2 mb-2 feature-badge">
+                    {{ $feature }}
+                    <button type="button" class="btn-close btn-close-white ms-1"
+                            onclick="removeFeature('{{ addslashes($feature) }}')"></button>
+                </span>
+                    @endforeach
+                @elseif(is_array(old('features')))
+                    @foreach(old('features') as $feature)
+                        <span class="badge bg-primary me-2 mb-2 feature-badge">
+                    {{ $feature }}
+                    <button type="button" class="btn-close btn-close-white ms-1"
+                            onclick="removeFeature('{{ addslashes($feature) }}')"></button>
+                </span>
+                    @endforeach
+                @endif
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="has_garden" name="features[]"
-                       value="garden" @checked(in_array('garden', $selectedFeatures))>
-                <label class="form-check-label" for="has_garden">Garden</label>
+
+            <!-- Input for adding new features -->
+            <div class="input-group">
+                <input type="text" id="featureInput" class="form-control" placeholder="Add a feature (e.g. garage, pool)">
+                <button class="btn btn-primary" type="button" onclick="addFeature()">Add</button>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="has_pool" name="features[]"
-                       value="pool" @checked(in_array('pool', $selectedFeatures))>
-                <label class="form-check-label" for="has_pool">Pool</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="has_fireplace" name="features[]"
-                       value="fireplace" @checked(in_array('fireplace', $selectedFeatures))>
-                <label class="form-check-label" for="has_fireplace">Fireplace</label>
-            </div>
+
             @error('features')
             <div class="text-danger small mt-1">{{ $message }}</div>
             @enderror

@@ -90,6 +90,14 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+                    <div class="form-group mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <textarea class="form-control @error('location') is-invalid @enderror" id="location"
+                                  name="location" rows="3" required>{{ old('location') }}</textarea>
+                        @error('location')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
 
                 <!-- Location Details -->
@@ -114,7 +122,7 @@
                             @enderror
                         </div>
                         <div class="col-md-6 form-group mb-3">
-                            <label for="state" class="form-label">State/Region</label>
+                            <label for="state" class="form-label"> State/Region </label>
                             <input type="text" class="form-control @error('state') is-invalid @enderror" id="state"
                                    name="state" value="{{ old('state') }}" required>
                             @error('state')
@@ -125,7 +133,7 @@
 
                     <div class="row">
                         <div class="col-md-6 form-group mb-3">
-                            <label for="zip_code" class="form-label">Zip/Postal Code</label>
+                            <label for="zip_code" class="form-label"> Zip / Postal Code </label>
                             <input type="text" class="form-control @error('zip_code') is-invalid @enderror"
                                    id="zip_code" name="zip_code" value="{{ old('zip_code') }}" required>
                             @error('zip_code')
@@ -189,7 +197,7 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="owner_phone" class="form-label">Phone Number</label>
+                        <label for="owner_phone" class="form-label"> Phone Number </label>
                         <input type="tel" class="form-control @error('owner_phone') is-invalid @enderror"
                                id="owner_phone" name="owner_phone" value="{{ old('owner_phone') }}" required>
                         @error('owner_phone')
@@ -198,7 +206,7 @@
                     </div>
 
                     <div class="form-group mb-3">
-                        <label for="preferred_contact" class="form-label">Preferred Contact Method</label>
+                        <label for="preferred_contact" class="form-label"> Preferred Contact Method </label>
                         <select class="form-select @error('preferred_contact') is-invalid @enderror"
                                 id="preferred_contact" name="preferred_contact">
                             <option value="email" @selected(old('preferred_contact') == 'email')>Email</option>
@@ -229,28 +237,30 @@
                     </div>
 
                     <!-- Additional Features -->
-                    <label for="property_images" class="form-label">Additional Features</label>
                     <div class="form-group mb-3">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="has_garage" name="features[]"
-                                   value="garage" @checked(is_array(old('features')) && in_array('garage', old('features')))>
-                            <label class="form-check-label" for="has_garage">Garage</label>
+                        <label for="property_features" class="form-label">Additional Features</label>
+
+                        <!-- Hidden input to store all features as JSON -->
+                        <input type="hidden" name="features" id="featuresJson" value="{{ is_array(old('features')) ? json_encode(old('features')) : '[]' }}">
+
+                        <!-- Container for displaying added features -->
+                        <div id="featuresContainer" class="mb-3">
+                            @if(is_array(old('features')))
+                                @foreach(old('features') as $feature)
+                                    <span class="badge bg-primary me-2 mb-2">
+                    {{ $feature }}
+                    <button type="button" class="btn-close btn-close-white ms-1" onclick="removeFeature('{{ $feature }}')"></button>
+                </span>
+                                @endforeach
+                            @endif
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="has_garden" name="features[]"
-                                   value="garden" @checked(is_array(old('features')) && in_array('garden', old('features')))>
-                            <label class="form-check-label" for="has_garden">Garden</label>
+
+                        <!-- Input for adding new features -->
+                        <div class="input-group">
+                            <input type="text" id="featureInput" class="form-control" placeholder="Add a feature (e.g. garage, pool)">
+                            <button class="btn btn-primary" type="button" onclick="addFeature()">Add</button>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="has_pool" name="features[]"
-                                   value="pool" @checked(is_array(old('features')) && in_array('pool', old('features')))>
-                            <label class="form-check-label" for="has_pool">Pool</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="has_fireplace" name="features[]"
-                                   value="fireplace" @checked(is_array(old('features')) && in_array('fireplace', old('features')))>
-                            <label class="form-check-label" for="has_fireplace">Fireplace</label>
-                        </div>
+
                         @error('features')
                         <div class="text-danger small mt-1">{{ $message }}</div>
                         @enderror
@@ -299,6 +309,58 @@
     </div>
 @endsection
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let features = [];
+
+        // Initialize with existing features
+        const existingFeatures = document.getElementById('featuresJson').value;
+        if (existingFeatures) {
+            features = JSON.parse(existingFeatures);
+            updateFeaturesDisplay();
+        }
+
+        // Make functions available globally by attaching to window
+        window.addFeature = function() {
+            const input = document.getElementById('featureInput');
+            const feature = input.value.trim();
+
+            if (feature && !features.includes(feature)) {
+                features.push(feature);
+                updateFeaturesDisplay();
+                input.value = '';
+            }
+        };
+
+        window.removeFeature = function(feature) {
+            features = features.filter(f => f !== feature);
+            updateFeaturesDisplay();
+        };
+
+        function updateFeaturesDisplay() {
+            const container = document.getElementById('featuresContainer');
+            const jsonInput = document.getElementById('featuresJson');
+
+            jsonInput.value = JSON.stringify(features);
+            container.innerHTML = features.map(feature => `
+            <span class="badge bg-primary me-2 mb-2">
+                ${feature}
+                <button type="button" class="btn-close btn-close-white ms-1"
+                        onclick="removeFeature('${feature.replace(/'/g, "\\'")}')"></button>
+            </span>
+        `).join('');
+        }
+
+        // Add event listener for Enter key
+        document.getElementById('featureInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addFeature();
+                e.preventDefault();
+            }
+        });
+    });
+</script>
 @push('scripts')
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 @endpush

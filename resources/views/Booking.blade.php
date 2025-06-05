@@ -253,7 +253,7 @@
                                          class="img-fluid rounded shadow h-100 object-fit-cover">
                                 </div>
                                 <div class="card-body flex-grow-1 overflow-auto">
-                                    <h5 class="text-danger"></h5>
+                                    <h5 class="text-danger">{{$property->location}}</h5>
                                     <p class="text-muted mb-2">
                                         <i class="bi bi-geo-alt-fill"></i>{{$property->address}}
                                     </p>

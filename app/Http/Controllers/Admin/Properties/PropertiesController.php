@@ -53,6 +53,7 @@ class PropertiesController extends Controller
             'city' => 'required|string',
             'state' => 'required|string',
             'zip_code' => 'required|string',
+            'location' => 'required|string',
             'country' => 'required|string',
             'latitude' => 'nullable|regex:/^-?\d{1,3}\.\d{4,8}$/',
             'longitude' => 'nullable|regex:/^-?\d{1,3}\.\d{4,8}$/',
@@ -75,7 +76,8 @@ class PropertiesController extends Controller
         // Create Property
         $property = new Property();
         $property->fill($validated);
-        $property->features = json_encode($request->features ?? []);
+        $property->features =$request->features ?? [];
+        $property->location=$request->location;
         $property->additional_info = $request->additional_info;
         $property->ip_address=$request->ip();
         $property->save();
@@ -88,7 +90,7 @@ class PropertiesController extends Controller
 
             foreach ($request->file('property_images') as $index => $image) {
                 $filename = Str::uuid() . '.' . $image->getClientOriginalExtension();
-                $destinationPath = public_path('backend/properties');
+                $destinationPath = base_path('backend/properties');
 
                 // Create directory if not exists
                 if (!file_exists($destinationPath)) {
@@ -152,14 +154,16 @@ class PropertiesController extends Controller
             'featured_image' => 'nullable|string',
 
             'additional_info' => 'nullable|string',
-            'status'=>'required|in:pending,approved,rejected'
+            'status'=>'required|in:pending,approved,rejected',
+            'location' => 'required|string',
             // Removed agree_terms as it's not typically needed for updates
         ]);
 
         // Find and update Property
         $property = Property::findOrFail($id);
         $property->fill($validated);
-        $property->features = json_encode($request->features ?? []);
+        $property->location=$request->location;
+        $property->features = $request->features ?? [];
         $property->additional_info = $request->additional_info;
         $property->save();
 
@@ -173,7 +177,7 @@ class PropertiesController extends Controller
 
             foreach ($request->file('property_images') as $index => $image) {
                 $filename = Str::uuid() . '.' . $image->getClientOriginalExtension();
-                $destinationPath = public_path('backend/properties');
+                $destinationPath = base_path('backend/properties');
 
                 // Create directory if not exists
                 if (!file_exists($destinationPath)) {

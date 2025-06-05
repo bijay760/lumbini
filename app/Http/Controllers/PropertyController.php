@@ -19,8 +19,23 @@ class PropertyController extends Controller
 
     public function index()
     {
-        $properties = DB::table('properties')->join('property_images', 'properties.id', '=', 'property_images.property_id')->where('status', '=', 'approved')->orderBy('properties.created_at', 'DESC')->get();
-//        dd($properties);
+        $properties = DB::table('properties')
+            ->leftJoin(DB::raw('
+        (
+            SELECT *
+            FROM property_images AS pi1
+            WHERE pi1.created_at = (
+                SELECT MAX(pi2.created_at)
+                FROM property_images AS pi2
+                WHERE pi2.property_id = pi1.property_id
+            )
+        ) AS latest_images
+    '), 'properties.id', '=', 'latest_images.property_id')
+            ->where('properties.status', '=', 'approved')
+            ->orderBy('properties.created_at', 'DESC')
+            ->select('properties.*', 'latest_images.path') // replace with your image column
+            ->get();
+
         return view('Booking', compact('properties'));
     }
 
@@ -51,14 +66,16 @@ class PropertyController extends Controller
             'featured_image' => 'nullable|string',
 
             'additional_info' => 'nullable|string',
+            'location' => 'required|string',
             'agree_terms' => 'required|accepted',
-            'g-recaptcha-response' => ['required', new Recaptcha]
+//            'g-recaptcha-response' => ['required', new Recaptcha]
         ]);
 
         // Create Property
         $property = new Property();
         $property->fill($validated);
-        $property->features = json_encode($request->features ?? []);
+        $property->location = $request->location;
+        $property->features = $request->features ?? [];
         $property->additional_info = $request->additional_info;
         $property->ip_address = $request->ip();
         $property->save();
@@ -71,7 +88,7 @@ class PropertyController extends Controller
 
             foreach ($request->file('property_images') as $index => $image) {
                 $filename = Str::uuid() . '.' . $image->getClientOriginalExtension();
-                $destinationPath = public_path('backend/properties');
+                $destinationPath = base_path('backend/properties');
 
                 // Create directory if not exists
                 if (!file_exists($destinationPath)) {

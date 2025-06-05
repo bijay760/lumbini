@@ -11,6 +11,7 @@ class CheckWhitelistIP
     protected $whitelistedIps = [
         '127.0.0.1',
         '199.241.137.139',
+        '::1'
     ];
     /**
      * Handle an incoming request.
