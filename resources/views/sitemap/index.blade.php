@@ -26,7 +26,7 @@
 
     <!-- Apply for Sale -->
     <url>
-        <loc>https://lumbiniinnovate.com.np/Booking</loc>
+        <loc>https://lumbiniinnovate.com.np/booking</loc>
         <lastmod>{{ now()->format('Y-m-d') }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>

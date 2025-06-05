@@ -54,8 +54,8 @@
                                     <span class="">{{ $property->property_type }}</span>
                                 </td>
                                 <td>
-                                        <span class="badge {{ $property->status ? 'bg-success' : 'bg-secondary' }}">
-                                            {{ $property->status ? 'Active' : 'Inactive' }}
+                                        <span class="badge {{ $property->status=='approved' ? 'bg-success' : 'bg-warning' }}">
+                                            {{ $property->status}}
                                         </span>
                                 </td>
                                 <td>

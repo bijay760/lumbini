@@ -68,7 +68,8 @@ class PropertiesController extends Controller
             'featured_image' => 'nullable|string',
 
             'additional_info' => 'nullable|string',
-            'agree_terms' => 'required|accepted'
+            'agree_terms' => 'required|accepted',
+            'status'=>'required|in:pending,approved,rejected',
         ]);
 
         // Create Property
@@ -151,6 +152,7 @@ class PropertiesController extends Controller
             'featured_image' => 'nullable|string',
 
             'additional_info' => 'nullable|string',
+            'status'=>'required|in:pending,approved,rejected'
             // Removed agree_terms as it's not typically needed for updates
         ]);
 

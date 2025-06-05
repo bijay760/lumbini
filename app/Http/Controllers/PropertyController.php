@@ -10,11 +10,20 @@ use App\Mail\PropertyRegisteredAdmin;
 use App\Models\Property;
 use App\Rules\Recaptcha;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use App\Models\PropertyImage;
 
 class PropertyController extends Controller
 {
+
+    public function index()
+    {
+        $properties = DB::table('properties')->join('property_images', 'properties.id', '=', 'property_images.property_id')->where('status', '=', 'approved')->orderBy('properties.created_at', 'DESC')->get();
+//        dd($properties);
+        return view('Booking', compact('properties'));
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -51,7 +60,7 @@ class PropertyController extends Controller
         $property->fill($validated);
         $property->features = json_encode($request->features ?? []);
         $property->additional_info = $request->additional_info;
-        $property->ip_address=$request->ip();
+        $property->ip_address = $request->ip();
         $property->save();
 
         // Handle Images
@@ -98,10 +107,10 @@ class PropertyController extends Controller
                 $property->save();
             }
         }
-        $data=['owner_email'=>$property->owner_email];
-        $mailable=new PropertyRegistered($data);
-        dispatch(new SendEmailToUser($property->owner_email,$mailable));
-        $mailable_admin=new PropertyRegisteredAdmin($data);
+        $data = ['owner_email' => $property->owner_email];
+        $mailable = new PropertyRegistered($data);
+        dispatch(new SendEmailToUser($property->owner_email, $mailable));
+        $mailable_admin = new PropertyRegisteredAdmin($data);
         dispatch(new SendEmail($mailable_admin));
         return back()->with('success', 'Property registered successfully!');
     }

@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\Dashboard\DashboardController;
 
 // Property Registration Routes
 //Route::get('/property/register', [PropertyController::class, 'create'])->name('property.register');
+Route::get('booking', [PropertyController::class, 'index'])->name('booking');
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::Post('/store',[ContactController::class,'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe');
@@ -29,9 +30,7 @@ Route::get('/about-us', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-Route::get('/Booking', function () {
-    return view('Booking');
-})->name('Booking');
+
 Route::get('/land-register', function () {
     return view('land-register');
 })->name('land-register');

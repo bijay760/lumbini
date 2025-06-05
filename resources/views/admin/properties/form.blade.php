@@ -18,6 +18,20 @@
         </div>
 
         <div class="form-group mb-3">
+            <label for="status" class="form-label">Property Status</label>
+            <select class="form-select @error('status') is-invalid @enderror" id="status"
+                    name="status" required>
+                <option value="">Select Status</option>
+                <option value="pending" @selected((old('status') ?? $property->status ?? '') == 'pending')>Pending</option>
+                <option value="approved" @selected((old('status') ?? $property->status ?? '') == 'approved')>Approved</option>
+                <option value="rejected" @selected((old('status') ?? $property->status ?? '') == 'rejected')>Rejected</option>
+            </select>
+            @error('status')
+            <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
+        </div>
+
+        <div class="form-group mb-3">
             <label for="title" class="form-label">Property Title</label>
             <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                    name="title" value="{{ old('title') ?? $property->title ?? '' }}" required>
