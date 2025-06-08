@@ -31,13 +31,13 @@
         /* Selected/Active menu item style */
         .nav-link.active {
             color: #fff;
-            background-color: #007bff; /* Blue background */
+            background-color: #aaafb5; /* Blue background */
             font-weight: 500;
         }
 
         /* Icon color for active item */
         .nav-link.active i {
-            color: #aaafb5;
+            color: #ffffff;
         }
 
         .sidebar {
