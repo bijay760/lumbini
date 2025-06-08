@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Plots\PlotsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
@@ -68,6 +69,12 @@ Route::middleware('check.whitelist')->group(function () {
         Route::DELETE('properties/delete-document/{id}', [LandParcelController::class, 'deleteDocument'])->name('admin.properties.deleteDocument');
         Route::get('properties/edit/{id}', [LandParcelController::class, 'edit'])->name('admin.properties.edit');
         Route::post('properties/update/{id}', [LandParcelController::class, 'update'])->name('admin.properties.update');
+
+
+        // Plots relalated routes
+        Route::get('plots',[PlotsController::class, 'index'])->name('admin.plots');
+        Route::get('plots/create',[PlotsController::class, 'create'])->name('admin.plots.create');
+        Route::post('plots/store',[PlotsController::class, 'store'])->name('admin.plots.store');
 
     });
 });

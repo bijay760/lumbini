@@ -81,7 +81,7 @@
                                 <td style="text-align: center;">{{ $landParcel->thali_amount}}</td>
                                 <td>{{ _date($landParcel->purchase_date)}}</td>
                                 <td>{{ $landParcel->purchase_from}}</td>
-                                <td>{{ $landParcel->plots_count }}</td>
+                                <td><a href="{{route('admin.plots',['id'=>$landParcel->id])}}" target="_blank">{{ $landParcel->plots_count }}</a></td>
                                 <td>
                                     @if($landParcel->is_approved)
                                         <span class="badge bg-success">Approved</span>

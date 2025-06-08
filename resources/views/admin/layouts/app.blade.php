@@ -173,6 +173,12 @@
                         <i class="fas fa-landmark"></i> Properties
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('admin/plots') || request()->is('admin/plots/*') ? ' active' : '' }}"
+                       href="{{route('admin.plots')}}">
+                        <i class="fas fa-map-marked-alt"></i> Plots
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -196,6 +202,12 @@
                         <a class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? ' active' : '' }}"
                            href="{{route('admin.properties')}}">
                             <i class="fas fa-landmark"></i>Properties
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('admin/plots') || request()->is('admin/plots/*') ? ' active' : '' }}"
+                           href="{{route('admin.plots')}}">
+                            <i class="fas fa-map-marked-alt"></i>Plots
                         </a>
                     </li>
                 </ul>
