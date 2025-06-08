@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\Admin\LandParcel\LandParcelController;
 use App\Http\Controllers\Admin\Properties\PropertiesController;
 use App\Http\Controllers\Admin\Login\AdminLoginController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
@@ -12,7 +13,7 @@ use App\Http\Controllers\Admin\Dashboard\DashboardController;
 // Property Registration Routes
 //Route::get('/property/register', [PropertyController::class, 'create'])->name('property.register');
 Route::get('booking', [PropertyController::class, 'index'])->name('booking');
-Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
+Route::post('/buy-sale', [PropertyController::class, 'store'])->name('properties.store');
 Route::Post('/store',[ContactController::class,'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe');
 Route::get('sitemap.xml', [SitemapController::class, 'index']);
@@ -51,13 +52,23 @@ Route::middleware('check.whitelist')->group(function () {
         Route::post('logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
         Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
-        // Properties Related Routes
-        Route::get('properties', [PropertiesController::class, 'index'])->name('admin.properties');
-        Route::get('properties/create', [PropertiesController::class, 'create'])->name('admin.properties.create');
-        Route::POST('properties/store', [PropertiesController::class, 'store'])->name('admin.properties.store');
-        Route::DELETE('properties/delete/{id}', [PropertiesController::class, 'delete'])->name('admin.properties.delete');
-        Route::get('properties/edit/{id}', [PropertiesController::class, 'edit'])->name('admin.properties.edit');
-        Route::post('properties/update/{id}', [PropertiesController::class, 'update'])->name('admin.properties.update');
+        // Buy-sale Related Routes
+        Route::get('buy-sale', [PropertiesController::class, 'index'])->name('admin.buy-sale');
+        Route::get('buy-sale/create', [PropertiesController::class, 'create'])->name('admin.buy-sale.create');
+        Route::POST('buy-sale/store', [PropertiesController::class, 'store'])->name('admin.buy-sale.store');
+        Route::DELETE('buy-sale/delete/{id}', [PropertiesController::class, 'delete'])->name('admin.buy-sale.delete');
+        Route::get('buy-sale/edit/{id}', [PropertiesController::class, 'edit'])->name('admin.buy-sale.edit');
+        Route::post('buy-sale/update/{id}', [PropertiesController::class, 'update'])->name('admin.buy-sale.update');
+
+        //Property related Routes
+        Route::get('properties', [LandParcelController::class, 'index'])->name('admin.properties');
+        Route::get('properties/create', [LandParcelController::class, 'create'])->name('admin.properties.create');
+        Route::Post('properties/store', [LandParcelController::class, 'store'])->name('admin.properties.store');
+        Route::DELETE('properties/delete/{id}', [LandParcelController::class, 'delete'])->name('admin.properties.delete');
+        Route::DELETE('properties/delete-document/{id}', [LandParcelController::class, 'deleteDocument'])->name('admin.properties.deleteDocument');
+        Route::get('properties/edit/{id}', [LandParcelController::class, 'edit'])->name('admin.properties.edit');
+        Route::post('properties/update/{id}', [LandParcelController::class, 'update'])->name('admin.properties.update');
+
     });
 });
 

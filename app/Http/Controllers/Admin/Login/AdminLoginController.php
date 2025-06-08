@@ -18,8 +18,8 @@ class AdminLoginController extends Controller
         }
 //         Uncomment this only for initial admin user creation
 //         DB::table('admin_users')->insert([
-//             'email' => 'ashokgtm@gmaill.com','surname' => 'ashok',
-//             'password' => Hash::make('ashokgtm'),
+//             'email' => 'vijaybadhur760@gmaill.com','username' => 'bijay',
+//             'password' => Hash::make('Bijay760'),
 //         ]);
 
         return view('admin.login.index');

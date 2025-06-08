@@ -39,6 +39,7 @@
         .nav-link.active i {
             color: #fff;
         }
+
         .sidebar {
             width: 220px;
             min-height: calc(100vh - 56px);
@@ -48,12 +49,14 @@
             border: none;
             padding: 0;
         }
+
         .navbar-brand {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             max-width: 150px;
         }
+
         @media (min-width: 768px) {
             .navbar-brand {
                 max-width: none;
@@ -122,8 +125,9 @@
                 <div class="dropdown d-md-none">
                     <a class="nav-link p-0" href="#" role="button"
                        id="mobileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
-                          style="width: 36px; height: 36px; font-weight: bold;">
+                    <span
+                        class="d-inline-flex align-items-center justify-content-center rounded-circle bg-primary text-white"
+                        style="width: 36px; height: 36px; font-weight: bold;">
                         {{ strtoupper(substr(Auth::guard('admin')->user()->email ?? 'A', 0, 1)) }}
                     </span>
                     </a>
@@ -151,12 +155,21 @@
             </div>
             <ul class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('admin/dashboard') || request()->is('admin/dashboard/*') ? ' active' : '' }}" href="{{route('admin.dashboard')}}">
+                    <a class="nav-link {{ request()->is('admin/dashboard') || request()->is('admin/dashboard/*') ? ' active' : '' }}"
+                       href="{{route('admin.dashboard')}}">
                         <i class="fas fa-tachometer-alt"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? ' active' : '' }}" href="{{route('admin.properties')}}">
+                    <a class="nav-link {{ request()->is('admin/buy-sale') || request()->is('admin/buy-sale/*') ? ' active' : '' }}"
+                       href="{{route('admin.buy-sale')}}">
+                        <i class="fas fa-handshake"></i></i> BuySale List
+                        {{--                        <i class="fas fa-landmark"></i> BuySale List--}}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? ' active' : '' }}"
+                       href="{{route('admin.properties')}}">
                         <i class="fas fa-landmark"></i> Properties
                     </a>
                 </li>
@@ -168,13 +181,21 @@
             <div class="bg-light p-3">
                 <ul class="nav flex-column mobile-nav">
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('admin/dashboard') || request()->is('admin/dashboard/*') ? ' active' : '' }}" href="{{route('admin.dashboard')}}">
+                        <a class="nav-link {{ request()->is('admin/dashboard') || request()->is('admin/dashboard/*') ? ' active' : '' }}"
+                           href="{{route('admin.dashboard')}}">
                             <i class="fas fa-tachometer-alt"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? ' active' : '' }}" href="{{route('admin.properties')}}">
-                            <i class="fas fa-landmark"></i> Properties
+                        <a class="nav-link {{ request()->is('admin/buy-sale') || request()->is('admin/buy-sale/*') ? ' active' : '' }}"
+                           href="{{route('admin.buy-sale')}}">
+                            <i class="fas fa-handshake"></i>BuySale List
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? ' active' : '' }}"
+                           href="{{route('admin.properties')}}">
+                            <i class="fas fa-landmark"></i>Properties
                         </a>
                     </li>
                 </ul>
@@ -183,7 +204,7 @@
     </div>
 </div>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         const currentPath = window.location.pathname.toLowerCase();
         const navLinks = document.querySelectorAll('#mainNav .nav-link');
 

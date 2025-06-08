@@ -24,21 +24,21 @@ class PropertiesController extends Controller
                     ->orWhere('description', 'like', '%'.request('search').'%');
             })->orderBy('created_at', 'desc')
             ->paginate(10); // This returns a LengthAwarePaginator instance
-        return view('admin.properties.index',compact('properties'));
+        return view('admin.buy-sale.index',compact('properties'));
     }
 
     public function delete($id){
         DB::table('properties')->where('id',$id)->delete();
-        return redirect()->route('admin.properties')->with('success','Property Deleted Successfully');
+        return redirect()->route('admin.buy-sale')->with('success','Property Deleted Successfully');
     }
     public function edit($id){
         $property = DB::table('properties')->where('id', $id)->first();
         $images = DB::table('property_images')->where('property_id', $id)->get();
-       return view('admin.properties.edit',compact('property','images'));
+       return view('admin.buy-sale.edit',compact('property','images'));
     }
 
     public function create(){
-        return view('admin.properties.create');
+        return view('admin.buy-sale.create');
     }
 
     public function store(Request $request)
@@ -124,7 +124,7 @@ class PropertiesController extends Controller
                 $property->save();
             }
         }
-        return redirect()->route('admin.properties')->with('success', 'Property registered successfully!');
+        return redirect()->route('admin.buy-sale')->with('success', 'Property registered successfully!');
     }
 
     public function update(Request $request, $id)
@@ -242,7 +242,7 @@ class PropertiesController extends Controller
             }
         }
 
-        return redirect()->route('admin.properties')->with('success', 'Property updated successfully!');
+        return redirect()->route('admin.buy-sale')->with('success', 'Property updated successfully!');
     }
 
 }

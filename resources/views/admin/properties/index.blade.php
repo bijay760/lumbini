@@ -37,34 +37,65 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Address</th>
-                            <th>Type</th>
+                            <th>Title</th>
+                            <th>Location</th>
+                            <th>Kitta</th>
+                            <th>Dhoor</th>
+                            <th>Sq.meter</th>
+                            <th>G.Value</th>
+                            <th>T.Amount</th>
+                            <th>Pu.Date</th>
+                            <th>From</th>
+                            <th>Plots</th>
                             <th>Status</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($properties as $property)
+                        <tr style="height: 30px;">
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"><b>{{$totalDhoor}}</b></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"><b>{{$totalSqMeter}}</b></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"><b>{{$totalThaliAmount}}</b></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
+                        </tr>
+
+
+                        @foreach($landParcels as $landParcel)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $property->title }}</td>
-                                <td>{{ $property->address }}</td>
+                                <td>{{ $landParcel->title }}</td>
+                                <td>{{ $landParcel->district }}<br>{{$landParcel->municipality}}, {{$landParcel->ward_no}}</td>
+                                <td style="text-align: center;">{{ $landParcel->kitta_no }}</td>
+                                <td style="text-align: center;">{{ $landParcel->dhoor }}</td>
+                                <td style="text-align: center;">{{ $landParcel->total_area }}</td>
+                                <td>{{ $landParcel->goverment_value??'-'}}</td>
+                                <td style="text-align: center;">{{ $landParcel->thali_amount}}</td>
+                                <td>{{ _date($landParcel->purchase_date)}}</td>
+                                <td>{{ $landParcel->purchase_from}}</td>
+                                <td>{{ $landParcel->plots_count }}</td>
                                 <td>
-                                    <span class="">{{ $property->property_type }}</span>
-                                </td>
-                                <td>
-                                        <span class="badge {{ $property->status=='approved' ? 'bg-success' : 'bg-warning' }}">
-                                            {{ $property->status}}
-                                        </span>
+                                    @if($landParcel->is_approved)
+                                        <span class="badge bg-success">Approved</span>
+                                    @else
+                                        <span class="badge bg-warning">Pending</span>
+                                    @endif
                                 </td>
                                 <td>
                                     <div class="d-flex" style="gap:12px;">
-                                        <a href="{{route('admin.properties.edit',['id'=>$property->id])}}"
+                                        <a href="{{route('admin.properties.edit',['id'=>$landParcel->id])}}"
                                            class="btn btn-sm btn-outline-primary">
                                             <i class="fas fa-edit"></i>
                                         </a>
-                                        <form action="{{ route('admin.properties.delete', ['id' => $property->id]) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Are you sure?')">
+                                        <form action="{{ route('admin.properties.delete', ['id' => $landParcel->id]) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Are you sure?')">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-outline-danger">
@@ -74,34 +105,30 @@
                                     </div>
                                 </td>
                             </tr>
-                        @empty
-                            <tr>
-                                <td colspan="6" class="text-center">No properties found</td>
-                            </tr>
-                        @endforelse
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
 
                 <!-- Pagination -->
-                @if($properties->hasPages())
+                @if($landParcels->hasPages())
                     <div class="mt-3 d-flex justify-content-center">
                         <nav aria-label="Page navigation">
                             <ul class="pagination pagination-sm">
                                 {{-- Previous Page Link --}}
-                                @if($properties->onFirstPage())
+                                @if($landParcels->onFirstPage())
                                     <li class="page-item disabled">
                                         <span class="page-link">&laquo;</span>
                                     </li>
                                 @else
                                     <li class="page-item">
-                                        <a class="page-link" href="{{ $properties->previousPageUrl() }}" rel="prev">&laquo;</a>
+                                        <a class="page-link" href="{{ $landParcels->previousPageUrl() }}" rel="prev">&laquo;</a>
                                     </li>
                                 @endif
 
                                 {{-- Pagination Elements --}}
-                                @foreach($properties->getUrlRange(1, $properties->lastPage()) as $page => $url)
-                                    @if($page == $properties->currentPage())
+                                @foreach($landParcels->getUrlRange(1, $landParcels->lastPage()) as $page => $url)
+                                    @if($page == $landParcels->currentPage())
                                         <li class="page-item active">
                                             <span class="page-link">{{ $page }}</span>
                                         </li>
@@ -113,9 +140,9 @@
                                 @endforeach
 
                                 {{-- Next Page Link --}}
-                                @if($properties->hasMorePages())
+                                @if($landParcels->hasMorePages())
                                     <li class="page-item">
-                                        <a class="page-link" href="{{ $properties->nextPageUrl() }}"
+                                        <a class="page-link" href="{{ $landParcels->nextPageUrl() }}"
                                            rel="next">&raquo;</a>
                                     </li>
                                 @else

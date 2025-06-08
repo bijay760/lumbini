@@ -1,285 +1,526 @@
-<div class="row g-3">
-    <!-- Basic Information -->
-    <div class="col-md-6">
-        <h4 class="mb-3">Basic Information</h4>
-        <div class="form-group mb-3">
-            <label for="property_type" class="form-label">Property Type</label>
-            <select class="form-select @error('property_type') is-invalid @enderror" id="property_type"
-                    name="property_type" required>
-                <option value="">Select Type</option>
-                <option value="house" @selected((old('property_type') ?? $property->property_type ?? '') == 'house')>House</option>
-                <option value="apartment" @selected((old('property_type') ?? $property->property_type ?? '') == 'apartment')>Apartment</option>
-                <option value="land" @selected((old('property_type') ?? $property->property_type ?? '') == 'land')>Land</option>
-                <option value="commercial" @selected((old('property_type') ?? $property->property_type ?? '') == 'commercial')>Commercial</option>
-            </select>
-            @error('property_type')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
+<div class="container-fluid">
+    <!-- Basic Information Section -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Basic Information</h5>
+                </div>
 
-        <div class="form-group mb-3">
-            <label for="status" class="form-label">Property Status</label>
-            <select class="form-select @error('status') is-invalid @enderror" id="status"
-                    name="status" required>
-                <option value="">Select Status</option>
-                <option value="pending" @selected((old('status') ?? $property->status ?? '') == 'pending')>Pending</option>
-                <option value="approved" @selected((old('status') ?? $property->status ?? '') == 'approved')>Approved</option>
-                <option value="rejected" @selected((old('status') ?? $property->status ?? '') == 'rejected')>Rejected</option>
-            </select>
-            @error('status')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="form-group mb-3">
-            <label for="title" class="form-label">Property Title</label>
-            <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
-                   name="title" value="{{ old('title') ?? $property->title ?? '' }}" required>
-            @error('title')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="form-group mb-3">
-            <label for="description" class="form-label">Description</label>
-            <textarea class="form-control @error('description') is-invalid @enderror" id="description"
-                      name="description" rows="3" required>{{ old('description') ?? $property->description ?? '' }}</textarea>
-            @error('description')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-        <div class="form-group mb-3">
-            <label for="location" class="form-label">Location</label>
-            <textarea class="form-control @error('location') is-invalid @enderror" id="location"
-                      name="location" rows="3" required>{{ old('location') ?? $property->location ?? '' }}</textarea>
-            @error('location')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-    </div>
-
-    <!-- Location Details -->
-    <div class="col-md-6">
-        <h4 class="mb-3">Location Details</h4>
-        <div class="form-group mb-3">
-            <label for="address" class="form-label">Full Address</label>
-            <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
-                   name="address" value="{{ old('address') ?? $property->address ?? '' }}" required>
-            @error('address')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 form-group mb-3">
-                <label for="city" class="form-label">City</label>
-                <input type="text" class="form-control @error('city') is-invalid @enderror" id="city"
-                       name="city" value="{{ old('city') ?? $property->city ?? '' }}" required>
-                @error('city')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="col-md-6 form-group mb-3">
-                <label for="state" class="form-label">State/Region</label>
-                <input type="text" class="form-control @error('state') is-invalid @enderror" id="state"
-                       name="state" value="{{ old('state') ?? $property->state ?? '' }}" required>
-                @error('state')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6 form-group mb-3">
-                <label for="zip_code" class="form-label">Zip/Postal Code</label>
-                <input type="text" class="form-control @error('zip_code') is-invalid @enderror"
-                       id="zip_code" name="zip_code" value="{{ old('zip_code') ?? $property->zip_code ?? '' }}" required>
-                @error('zip_code')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
-            <div class="col-md-6 form-group mb-3">
-                <label for="country" class="form-label">Country</label>
-                <input type="text" class="form-control @error('country') is-invalid @enderror" id="country"
-                       name="country" value="{{ old('country') ?? $property->country ?? '' }}" required>
-                @error('country')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-            </div>
-        </div>
-
-        <!-- Coordinates Section -->
-        <div class="row">
-            <div class="col-md-6 form-group mb-3">
-                <label for="latitude" class="form-label">Latitude</label>
-                <input type="text" class="form-control @error('latitude') is-invalid @enderror"
-                       id="latitude" name="latitude" value="{{ old('latitude') ?? $property->latitude ?? '' }}"
-                       pattern="-?\d{1,3}\.\d{4,8}" placeholder="e.g., 27.717245">
-                @error('latitude')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-                <small class="text-muted">Format: XX.XXXXXX (decimal degrees)</small>
-            </div>
-            <div class="col-md-6 form-group mb-3">
-                <label for="longitude" class="form-label">Longitude</label>
-                <input type="text" class="form-control @error('longitude') is-invalid @enderror"
-                       id="longitude" name="longitude" value="{{ old('longitude') ?? $property->longitude ?? '' }}"
-                       pattern="-?\d{1,3}\.\d{4,8}" placeholder="e.g., 85.324036">
-                @error('longitude')
-                <div class="invalid-feedback">{{ $message }}</div>
-                @enderror
-                <small class="text-muted">Format: XX.XXXXXX (decimal degrees)</small>
-            </div>
-        </div>
-    </div>
-
-    <!-- Owner/Contact Information -->
-    <div class="col-md-6">
-        <h4 class="mb-3">Contact Information</h4>
-        <div class="form-group mb-3">
-            <label for="owner_name" class="form-label">Full Name</label>
-            <input type="text" class="form-control @error('owner_name') is-invalid @enderror"
-                   id="owner_name" name="owner_name" value="{{ old('owner_name') ?? $property->owner_name ?? '' }}" required>
-            @error('owner_name')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="form-group mb-3">
-            <label for="owner_email" class="form-label">Email</label>
-            <input type="email" class="form-control @error('owner_email') is-invalid @enderror"
-                   id="owner_email" name="owner_email" value="{{ old('owner_email') ?? $property->owner_email ?? '' }}" required>
-            @error('owner_email')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="form-group mb-3">
-            <label for="owner_phone" class="form-label">Phone Number</label>
-            <input type="tel" class="form-control @error('owner_phone') is-invalid @enderror"
-                   id="owner_phone" name="owner_phone" value="{{ old('owner_phone') ?? $property->owner_phone ?? '' }}" required>
-            @error('owner_phone')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-
-        <div class="form-group mb-3">
-            <label for="preferred_contact" class="form-label">Preferred Contact Method</label>
-            <select class="form-select @error('preferred_contact') is-invalid @enderror"
-                    id="preferred_contact" name="preferred_contact">
-                <option value="email" @selected((old('preferred_contact') ?? $property->preferred_contact ?? '') == 'email')>Email</option>
-                <option value="phone" @selected((old('preferred_contact') ?? $property->preferred_contact ?? '') == 'phone')>Phone</option>
-                <option value="both" @selected((old('preferred_contact') ?? $property->preferred_contact ?? '') == 'both')>Both</option>
-            </select>
-            @error('preferred_contact')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-        </div>
-    </div>
-
-    <!-- Property Images -->
-    <div class="col-md-6">
-        <h4 class="mb-3">Property Images</h4>
-
-        @if(isset($images) && $images->count() > 0)
-            <div class="mb-3">
-                <label class="form-label">Current Images</label>
-                <div class="d-flex flex-wrap gap-2">
-                    @foreach($images as $image)
-                        <div class="position-relative" style="width: 100px; height: 100px;">
-                            <img src="{{ asset( $image->path) }}" class="img-thumbnail h-100 w-100" alt="Property image">
-                            <button type="button" class="btn btn-danger btn-sm position-absolute top-0 end-0"
-                                    onclick="confirmImageDelete({{ $image->id }})">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-                    @endforeach
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="title">Title*</label>
+                        <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" value="{{ old('title', $landParcel->title ?? '') }}" required>
+                        @error('title')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description" rows="2">{{ old('description', $landParcel->description ?? '') }}</textarea>
+                        @error('description')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="land_type">Land Type*</label>
+                        <select class="form-control @error('land_type') is-invalid @enderror" id="land_type" name="land_type" required>
+                            <option value="">Select Type</option>
+                            <option value="residential" {{ old('land_type', $landParcel->land_type ?? '') == 'residential' ? 'selected' : '' }}>Residential</option>
+                            <option value="commercial" {{ old('land_type', $landParcel->land_type ?? '') == 'commercial' ? 'selected' : '' }}>Commercial</option>
+                            <option value="agricultural" {{ old('land_type', $landParcel->land_type ?? '') == 'agricultural' ? 'selected' : '' }}>Agricultural</option>
+                            <option value="industrial" {{ old('land_type', $landParcel->land_type ?? '') == 'industrial' ? 'selected' : '' }}>Industrial</option>
+                        </select>
+                        @error('land_type')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="ownership_type">Ownership Type*</label>
+                        <select class="form-control @error('ownership_type') is-invalid @enderror" id="ownership_type" name="ownership_type" required>
+                            <option value="">Select Type</option>
+                            <option value="freehold" {{ old('ownership_type', $landParcel->ownership_type ?? '') == 'freehold' ? 'selected' : '' }}>Freehold</option>
+                            <option value="leasehold" {{ old('ownership_type', $landParcel->ownership_type ?? '') == 'leasehold' ? 'selected' : '' }}>Leasehold</option>
+                            <option value="government" {{ old('ownership_type', $landParcel->ownership_type ?? '') == 'government' ? 'selected' : '' }}>Government</option>
+                        </select>
+                        @error('ownership_type')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
             </div>
-        @endif
-
-        <div class="form-group mb-3">
-            <label for="property_images" class="form-label">Upload New Images</label>
-            <input type="file"
-                   class="form-control @error('property_images') is-invalid @enderror @error('property_images.*') is-invalid @enderror"
-                   id="property_images" name="property_images[]" multiple accept="image/*">
-            @error('property_images')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-            @error('property_images.*')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
-            <small class="text-muted">Upload multiple images (JPEG, PNG, max 5MB each)</small>
         </div>
 
-        <!-- Additional Features -->
-        <div class="form-group mb-3">
-            <label for="property_features" class="form-label">Additional Features</label>
-
-            <!-- Hidden input to store all features as JSON -->
-            <input type="hidden" name="features" id="featuresJson"
-                   value="{{ isset($property) ? $property->features : (is_array(old('features')) ? old('features') : '[]') }}">
-
-            <!-- Container for displaying added features -->
-            <div id="featuresContainer" class="mb-3">
-                @if(isset($property) && $property->features)
-                    @foreach(json_decode(json_decode($property->features)) as $feature)
-                        <span class="badge bg-primary me-2 mb-2 feature-badge">
-                    {{ $feature }}
-                    <button type="button" class="btn-close btn-close-white ms-1"
-                            onclick="removeFeature('{{ addslashes($feature) }}')"></button>
-                </span>
-                    @endforeach
-                @elseif(is_array(old('features')))
-                    @foreach(old('features') as $feature)
-                        <span class="badge bg-primary me-2 mb-2 feature-badge">
-                    {{ $feature }}
-                    <button type="button" class="btn-close btn-close-white ms-1"
-                            onclick="removeFeature('{{ addslashes($feature) }}')"></button>
-                </span>
-                    @endforeach
-                @endif
+        <div class="col-12 col-md-6">
+            <!-- Location Details Card -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Location Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="district">District*</label>
+                        <input type="text" class="form-control @error('district') is-invalid @enderror" id="district" name="district" value="{{ old('district', $landParcel->district ?? '') }}" required>
+                        @error('district')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="municipality">Municipality*</label>
+                        <input type="text" class="form-control @error('municipality') is-invalid @enderror" id="municipality" name="municipality" value="{{ old('municipality', $landParcel->municipality ?? '') }}" required>
+                        @error('municipality')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="ward_no">Ward No*</label>
+                        <input type="text" class="form-control @error('ward_no') is-invalid @enderror" id="ward_no" name="ward_no" value="{{ old('ward_no', $landParcel->ward_no ?? '') }}" required>
+                        @error('ward_no')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="kitta_no">Kitta No*</label>
+                        <input type="text" class="form-control @error('kitta_no') is-invalid @enderror" id="kitta_no" name="kitta_no" value="{{ old('kitta_no', $landParcel->kitta_no ?? '') }}" required>
+                        @error('kitta_no')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="dhoor">Dhoor (Traditional Measurement)</label>
+                        <input type="text" class="form-control @error('dhoor') is-invalid @enderror" id="dhoor" name="dhoor" value="{{ old('dhoor', $landParcel->dhoor ?? '') }}">
+                        @error('dhoor')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location Address</label>
+                        <input type="text" class="form-control @error('location') is-invalid @enderror" id="location" name="location" value="{{ old('location', $landParcel->location ?? '') }}">
+                        @error('location')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="map_coordinates">Map Coordinates</label>
+                        <input type="text" class="form-control @error('map_coordinates') is-invalid @enderror" id="map_coordinates" name="map_coordinates"
+                               placeholder="e.g., 27.7172° N, 85.3240° E" value="{{ old('map_coordinates', $landParcel->map_coordinates ?? '') }}">
+                        @error('map_coordinates')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
             </div>
-
-            <!-- Input for adding new features -->
-            <div class="input-group">
-                <input type="text" id="featureInput" class="form-control" placeholder="Add a feature (e.g. garage, pool)">
-                <button class="btn btn-primary" type="button" onclick="addFeature()">Add</button>
-            </div>
-
-            @error('features')
-            <div class="text-danger small mt-1">{{ $message }}</div>
-            @enderror
         </div>
     </div>
 
-    <div class="form-group mb-3">
-        <label for="additional_info" class="form-label">Additional Information</label>
-        <textarea class="form-control @error('additional_info') is-invalid @enderror" id="additional_info"
-                  name="additional_info" rows="2">{{ old('additional_info') ?? $property->additional_info ?? '' }}</textarea>
-        @error('additional_info')
-        <div class="invalid-feedback">{{ $message }}</div>
-        @enderror
-    </div>
-
-    <!-- Terms and Submit -->
-    <div class="col-12">
-        <div class="form-check mb-3">
-            <input class="form-check-input @error('agree_terms') is-invalid @enderror" type="checkbox"
-                   id="agree_terms" name="agree_terms" @checked(old('agree_terms')) required>
-            <label class="form-check-label" for="agree_terms">
-                I agree to the terms and conditions
-            </label>
-            @error('agree_terms')
-            <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+    <!-- Area and Valuation Section -->
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Area Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="total_area">Total Area (sq.metre)*</label>
+                        <input type="number" step="0.01" class="form-control @error('total_area') is-invalid @enderror" id="total_area" name="total_area"
+                               value="{{ old('total_area', $landParcel->total_area ?? '') }}" required>
+                        @error('total_area')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">
-            <span id="submitText">{{ isset($property) ? 'Update Property' : 'Register Property' }}</span>
-            <span id="submitSpinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
-        </button>
+        <div class="col-12 col-md-6">
+            <!-- Financial Details Card -->
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Valuation Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="government_value">Government Value*</label>
+                        <input type="number" step="0.01" class="form-control @error('government_value') is-invalid @enderror" id="government_value"
+                               name="government_value" value="{{ old('government_value', $landParcel->government_value ?? '') }}" required>
+                        @error('government_value')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="market_value">Market Value</label>
+                        <input type="number" step="0.01" class="form-control @error('market_value') is-invalid @enderror" id="market_value" name="market_value" value="{{ old('market_value', $landParcel->market_value ?? '') }}">
+                        @error('market_value')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="thali_amount">Thali Amount</label>
+                        <input type="number" step="0.01" class="form-control @error('thali_amount') is-invalid @enderror" id="thali_amount" name="thali_amount" value="{{ old('thali_amount', $landParcel->thali_amount ?? '') }}">
+                        @error('thali_amount')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div id="formMessage" class="mt-3"></div>
+    <!-- Transaction Details Section -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Transaction Details</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="purchase_date">Purchase Date*</label>
+                                <input type="date" class="form-control @error('purchase_date') is-invalid @enderror" id="purchase_date" name="purchase_date"
+                                       value="{{ old('purchase_date', isset($landParcel->purchase_date) ? $landParcel->purchase_date : '') }}" required>
+
+                                @error('purchase_date')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="purchase_price">Purchase Price*</label>
+                                <input type="number" step="0.01" class="form-control @error('purchase_price') is-invalid @enderror" id="purchase_price"
+                                       name="purchase_price" value="{{ old('purchase_price', $landParcel->purchase_price ?? '') }}" required>
+                                @error('purchase_price')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="purchase_from">Purchased From*</label>
+                        <input type="text" class="form-control @error('purchase_from') is-invalid @enderror" id="purchase_from" name="purchase_from" value="{{ old('purchase_from', $landParcel->purchase_from ?? '') }}" required>
+                        @error('purchase_from')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="registration_number">Registration Number</label>
+                        <input type="text" class="form-control @error('registration_number') is-invalid @enderror" id="registration_number" name="registration_number" value="{{ old('registration_number', $landParcel->registration_number ?? '') }}">
+                        @error('registration_number')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-check mb-3">
+                        <!-- Hidden input to send 0 if checkbox is unchecked -->
+                        <input type="hidden" name="has_loan" value="0">
+
+                        <!-- Checkbox input to send 1 if checked -->
+                        <input class="form-check-input" type="checkbox" id="has_loan" name="has_loan" value="1"
+                            {{ old('has_loan', $landParcel->has_loan ?? false) ? 'checked' : '' }}>
+                        <label class="form-check-label" for="has_loan">
+                            Has Loan?
+                        </label>
+                    </div>
+
+                    <div class="row" id="loan-details" style="display: none;">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="loan_amount">Loan Amount</label>
+                                <input type="number" step="0.01" class="form-control @error('loan_amount') is-invalid @enderror" id="loan_amount"
+                                       name="loan_amount" value="{{ old('loan_amount', $landParcel->loan_amount ?? '') }}">
+                                @error('loan_amount')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="loan_institution">Loan Institution</label>
+                                <input type="text" class="form-control @error('loan_institution') is-invalid @enderror" id="loan_institution" name="loan_institution" value="{{ old('loan_institution', $landParcel->loan_institution ?? '') }}">
+                                @error('loan_institution')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Tax and Charges</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="government_tax">Government Tax*</label>
+                                <input type="number" step="0.01" class="form-control @error('government_tax') is-invalid @enderror" id="government_tax"
+                                       name="government_tax" value="{{ old('government_tax', $landParcel->government_tax ?? '') }}" required>
+                                @error('government_tax')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="form-group">
+                                <label for="non_government_charges">Non-Government Charges*</label>
+                                <input type="number" step="0.01" class="form-control @error('non_government_charges') is-invalid @enderror" id="non_government_charges"
+                                       name="non_government_charges" value="{{ old('non_government_charges', $landParcel->non_government_charges ?? '') }}" required>
+                                @error('non_government_charges')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tax_remarks">Tax Remarks</label>
+                        <textarea class="form-control @error('tax_remarks') is-invalid @enderror" id="tax_remarks" name="tax_remarks" rows="2">{{ old('tax_remarks', $landParcel->tax_remarks ?? '') }}</textarea>
+                        @error('tax_remarks')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Supporting Document (PDF, JPG, PNG)</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input @error('tax_files') is-invalid @enderror" name="tax_files"
+                                   accept=".pdf,.jpg,.jpeg,.png">
+                            <label class="custom-file-label">Choose file</label>
+                        </div>
+                        @error('tax_files')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                        @if(isset($landParcel) && $landParcel->tax_files)
+                            <small class="text-muted">Current file: {{ $landParcel->tax_files }}</small>
+                        @endif
+
+                        <!-- Display existing documents -->
+                        @if(isset($images) && $images->count() > 0)
+                            <div class="mt-3">
+                                <h6>Existing Documents:</h6>
+                                <div class="row">
+                                    @foreach($images as $image)
+                                        @if($image->type=='tax')
+                                            <div class="col-md-3 mb-3">
+                                                <div class="document-thumbnail">
+                                                    @if(in_array(pathinfo($image->image_name, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png', 'gif']))
+                                                        <img src="{{ asset($image->image_name) }}" class="img-thumbnail" alt="Document Image">
+                                                    @else
+                                                        <div class="document-placeholder">
+                                                            <i class="fas fa-file-pdf fa-3x"></i>
+                                                        </div>
+                                                    @endif
+                                                    <div class="document-actions mt-2">
+                                                        <a href="{{ asset($image->image_name) }}" target="_blank" class="btn btn-sm btn-primary">
+                                                            <i class="fas fa-eye"></i> View
+                                                        </a>
+                                                        <button type="button" class="btn btn-sm btn-danger delete-document" data-id="{{ $image->id }}">
+                                                            <i class="fas fa-trash"></i> Delete
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endif
+
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endif
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document Upload Section -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Document Upload</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Upload Supporting Documents (PDF, JPG, JPEG, PNG)</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input @error('documents') is-invalid @enderror" id="documents" name="documents" multiple
+                                   accept=".pdf,.jpg,.jpeg,.png">
+                            <label class="custom-file-label" for="documents">Choose files</label>
+                        </div>
+                        @error('documents')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <!-- Display existing documents -->
+                    @if(isset($images) && $images->count() > 0)
+                        <div class="mt-3">
+                            <h6>Existing Documents:</h6>
+                            <div class="row">
+                                @foreach($images as $image)
+                                    @if($image->type=='purchase')
+                                        <div class="col-md-3 mb-3">
+                                            <div class="document-thumbnail">
+                                                @if(in_array(pathinfo($image->image_name, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png', 'gif']))
+                                                    <img src="{{ asset($image->image_name) }}" class="img-thumbnail" alt="Document Image">
+                                                @else
+                                                    <div class="document-placeholder">
+                                                        <i class="fas fa-file-pdf fa-3x"></i>
+                                                    </div>
+                                                @endif
+                                                <div class="document-actions mt-2">
+                                                    <a href="{{ asset($image->image_name) }}" target="_blank" class="btn btn-sm btn-primary">
+                                                        <i class="fas fa-eye"></i> View
+                                                    </a>
+                                                    <button type="button" class="btn btn-sm btn-danger delete-document" data-id="{{ $image->id }}">
+                                                        <i class="fas fa-trash"></i> Delete
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
+
+                    <!-- Preview of newly uploaded files -->
+                    <div class="uploaded-files-preview mt-3">
+                        <h6>Selected Files:</h6>
+                        <ul class="list-group file-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Additional Information</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="remarks">Remarks</label>
+                        <textarea class="form-control @error('remarks') is-invalid @enderror" id="remarks" name="remarks" rows="3">{{ old('remarks', $landParcel->remarks ?? '') }}</textarea>
+                        @error('remarks')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-check">
+                        <!-- Hidden input to ensure '0' is submitted when unchecked -->
+                        <input type="hidden" name="is_approved" value="0">
+
+                        <!-- Checkbox to submit '1' when checked -->
+                        <input class="form-check-input" type="checkbox" id="is_approved" name="is_approved" value="1"
+                            {{ old('is_approved', $landParcel->is_approved ?? false) ? 'checked' : '' }}>
+                        <label class="form-check-label" for="is_approved">
+                            Is Approved
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Submission -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary btn-lg">{{ isset($landParcel) ? 'Update' : 'Save' }} Land Parcel</button>
+            <button type="reset" class="btn btn-secondary btn-lg ml-2">Reset Form</button>
+            @if(isset($landParcel))
+                <a href="{{ route('admin.properties') }}" class="btn btn-outline-danger btn-lg ml-2">Cancel</a>
+            @endif
+        </div>
     </div>
 </div>
+
+<!-- JavaScript for dynamic fields -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Toggle loan details
+        const hasLoanCheckbox = document.getElementById('has_loan');
+        const loanDetails = document.getElementById('loan-details');
+
+        function toggleLoanDetails() {
+            loanDetails.style.display = hasLoanCheckbox.checked ? 'flex' : 'none';
+        }
+
+        hasLoanCheckbox.addEventListener('change', toggleLoanDetails);
+        toggleLoanDetails(); // Initialize on page load
+
+        // File input label update
+        const fileInputs = document.querySelectorAll('.custom-file-input');
+        fileInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                const label = this.nextElementSibling;
+                const files = this.files;
+                if (files.length > 0) {
+                    if (files.length === 1) {
+                        label.textContent = files[0].name;
+                    } else {
+                        label.textContent = files.length + ' files selected';
+                    }
+                } else {
+                    label.textContent = 'Choose file';
+                }
+            });
+        });
+
+        // Preview selected files
+        const documentsInput = document.getElementById('documents');
+        const fileList = document.querySelector('.file-list');
+
+        if (documentsInput) {
+            documentsInput.addEventListener('change', function() {
+                fileList.innerHTML = '';
+                Array.from(this.files).forEach(file => {
+                    const listItem = document.createElement('li');
+                    listItem.className = 'list-group-item d-flex justify-content-between align-items-center';
+                    listItem.innerHTML = `
+                        ${file.name}
+                        <span class="badge badge-primary badge-pill">${(file.size / 1024 / 1024).toFixed(2)} MB</span>
+                    `;
+                    fileList.appendChild(listItem);
+                });
+            });
+        }
+
+        // Handle document deletion
+        const deleteButtons = document.querySelectorAll('.delete-document');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                if (confirm('Are you sure you want to delete this document?')) {
+                    const documentId = this.getAttribute('data-id');
+                    fetch(`/admin/properties/delete-document/${documentId}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                this.closest('.col-md-3').remove();
+                            }
+                        })
+                        .catch(error => console.error('Error:', error));
+                }
+            });
+        });
+    });
+</script>
+
+

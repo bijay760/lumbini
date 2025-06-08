@@ -1,13 +1,30 @@
 @extends('admin.layouts.app')
 @section('title', 'Properties Edit | Lumbini Innovate')
 @section('content')
+    <style>
+        .document-thumbnail {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .document-placeholder {
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #dc3545;
+        }
+        .document-actions {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
     <div class="container-fluid py-3">
         <div class="mb-4 card-header">
             <h4 class="mb-0 text-muted" style="font-size: 12px;">
                 <a href="" class="text-decoration-none text-muted">Properties</a>
             </h4>
         </div>
-        <form id="propertyRegistrationForm" method="POST" action="{{ route('admin.properties.update',['id'=>$property->id]) }}"
+        <form id="propertyRegistrationForm" method="POST" action="{{ route('admin.properties.update',['id'=>$landParcel->id]) }}"
               enctype="multipart/form-data">
             @csrf
             @include('admin.properties.form')
