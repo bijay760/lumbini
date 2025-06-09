@@ -9,7 +9,7 @@
         </div>
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="mb-0">Property List</h5>
+                <h5 class="mb-0">Plots List</h5>
                 <div>
                     <a href="{{route('admin.plots.create')}}" class="btn btn-sm btn-primary">
                         <i class="fas fa-plus"></i> Add Plots
@@ -57,7 +57,6 @@
                         </tbody>
                     </table>
                 </div>
-
                 <!-- Pagination -->
                 @if($plots->hasPages())
                     <div class="mt-3 d-flex justify-content-center">
