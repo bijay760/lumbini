@@ -42,6 +42,7 @@
                             <th>Kitta</th>
                             <th>Dhoor</th>
                             <th>Sq.meter</th>
+                            <th>Sq.meter(Rem.)</th>
                             <th>G.Value</th>
                             <th>T.Amount</th>
                             <th>Pu.Date</th>
@@ -59,6 +60,7 @@
                             <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
                             <td style="padding: 3px; font-size: 15px; text-align:center;"><b>{{$totalDhoor}}</b></td>
                             <td style="padding: 3px; font-size: 15px; text-align:center;"><b>{{$totalSqMeter}}</b></td>
+                            <td style="padding: 3px; font-size: 15px; text-align:center;"><b>{{$total_available}}</b></td>
                             <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
                             <td style="padding: 3px; font-size: 15px; text-align:center;"><b>{{$totalThaliAmount}}</b></td>
                             <td style="padding: 3px; font-size: 15px; text-align:center;"></td>
@@ -77,6 +79,7 @@
                                 <td style="text-align: center;">{{ $landParcel->kitta_no }}</td>
                                 <td style="text-align: center;">{{ $landParcel->dhoor }}</td>
                                 <td style="text-align: center;">{{ $landParcel->total_area }}</td>
+                                <td style="text-align: center;">{{ $landParcel->available_area }}</td>
                                 <td>{{ $landParcel->goverment_value??'-'}}</td>
                                 <td style="text-align: center;">{{ $landParcel->thali_amount}}</td>
                                 <td>{{ _date($landParcel->purchase_date)}}</td>

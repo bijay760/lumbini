@@ -75,6 +75,9 @@ Route::middleware('check.whitelist')->group(function () {
         Route::get('plots',[PlotsController::class, 'index'])->name('admin.plots');
         Route::get('plots/create',[PlotsController::class, 'create'])->name('admin.plots.create');
         Route::post('plots/store',[PlotsController::class, 'store'])->name('admin.plots.store');
+        Route::post('plots/update/{id}',[PlotsController::class, 'update'])->name('admin.plots.update');
+        Route::get('plots/edit/{id}',[PlotsController::class, 'edit'])->name('admin.plots.edit');
+        Route::delete('plots/delete/{id}', [PlotsController::class, 'destroy'])->name('admin.plots.destroy');
 
     });
 });

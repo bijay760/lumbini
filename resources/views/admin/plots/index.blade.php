@@ -48,7 +48,32 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @forelse($plots as $property)
+                        @forelse($plots as $plot)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $plot->title }}</td>
+                                <td>{{ $plot->plot_number }}</td>
+                                <td>{{ $plot->landParcel->title ?? 'N/A' }}</td>
+                                <td>{{ $plot->area }}</td>
+                                <td>{{ $plot->total_price }}</td>
+                                <td>{{ $plot->remarks }}</td>
+                                <td>{{ $plot->status }}</td>
+                                <td>
+                                    <div class="d-flex" style="gap:12px;">
+                                        <a href="{{route('admin.plots.edit',['id'=>$plot->id])}}"
+                                           class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <form action="{{ route('admin.plots.destroy', ['id' => $plot->id]) }}" method="POST" style="display: inline-block;" onsubmit="return confirm('Are you sure?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
                         @empty
                             <tr>
                                 <td colspan="9" class="text-center">No Plots found</td>

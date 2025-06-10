@@ -37,10 +37,11 @@ class LandParcelController extends Controller
         $totalDhoor = $landParcels->sum('dhoor');
         $totalSqMeter = $landParcels->sum('total_area');
         $totalThaliAmount = $landParcels->sum('thali_amount');
+        $total_available = $landParcels->sum('available_area');
 
         $landTypes = LandParcel::distinct()->pluck('land_type');
 
-        return view('admin.properties.index', compact('totalDhoor','totalSqMeter','totalThaliAmount','landParcels', 'landTypes'));
+        return view('admin.properties.index', compact('total_available','totalDhoor','totalSqMeter','totalThaliAmount','landParcels', 'landTypes'));
     }
 
     public function create()
@@ -50,7 +51,9 @@ class LandParcelController extends Controller
 
     public function store(Request $request)
     {
-        $landParcel = LandParcel::create($request->all());
+        $data=$request->all();
+        $data['available_area']=$data['total_area'];
+        $landParcel = LandParcel::create($data);
         if ($landParcel) {
             if ($request->hasFile('tax_files')) {
                 $image = $request->file('tax_files');

@@ -13,7 +13,7 @@ class Plot extends Model
     protected $fillable = [
         'land_parcel_id', 'parent_plot_id', 'plot_number', 'area',
         'dimensions', 'facing_direction', 'status', 'price_per_unit',
-        'total_price', 'is_subdividable', 'is_subdivided', 'features', 'remarks'
+        'total_price', 'is_subdividable', 'is_subdivided', 'features', 'remarks','title'
     ];
 
     protected $casts = [
@@ -24,8 +24,9 @@ class Plot extends Model
 
     public function landParcel()
     {
-        return $this->belongsTo(LandParcel::class);
+        return $this->belongsTo(LandParcel::class, 'land_parcel_id');
     }
+
 
     public function parentPlot()
     {

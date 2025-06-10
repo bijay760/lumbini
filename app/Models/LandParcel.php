@@ -18,12 +18,13 @@ class LandParcel extends Model
         'loan_amount', 'loan_institution', 'government_tax',
         'non_government_charges', 'tax_remarks', 'registration_number',
         'land_type', 'ownership_type', 'is_subdivided', 'total_plots',
-        'area_used', 'remarks', 'is_approved'
+        'area_used', 'remarks', 'is_approved','available_area'
     ];
 
     protected $casts = [
         'purchase_date' => 'date',
         'total_area' => 'decimal:2',
+        'available_area' => 'decimal:2',
         'government_value' => 'decimal:2',
         'market_value' => 'decimal:2',
         'thali_amount' => 'decimal:2',
