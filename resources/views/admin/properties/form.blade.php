@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-12 col-md-6">
             <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-gray text-black">
                     <h5 class="mb-0">Basic Information</h5>
                 </div>
 
@@ -36,29 +36,6 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="ownership_type">Ownership Type*</label>
-                        <select class="form-control @error('ownership_type') is-invalid @enderror" id="ownership_type" name="ownership_type" required>
-                            <option value="">Select Type</option>
-                            <option value="freehold" {{ old('ownership_type', $landParcel->ownership_type ?? '') == 'freehold' ? 'selected' : '' }}>Freehold</option>
-                            <option value="leasehold" {{ old('ownership_type', $landParcel->ownership_type ?? '') == 'leasehold' ? 'selected' : '' }}>Leasehold</option>
-                            <option value="government" {{ old('ownership_type', $landParcel->ownership_type ?? '') == 'government' ? 'selected' : '' }}>Government</option>
-                        </select>
-                        @error('ownership_type')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-            <!-- Location Details Card -->
-            <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Location Details</h5>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
                         <label for="district">District*</label>
                         <input type="text" class="form-control @error('district') is-invalid @enderror" id="district" name="district" value="{{ old('district', $landParcel->district ?? '') }}" required>
                         @error('district')
@@ -74,22 +51,41 @@
                     </div>
                     <div class="form-group">
                         <label for="ward_no">Ward No*</label>
-                        <input type="text" class="form-control @error('ward_no') is-invalid @enderror" id="ward_no" name="ward_no" value="{{ old('ward_no', $landParcel->ward_no ?? '') }}" required>
+                        <input type="number" class="form-control @error('ward_no') is-invalid @enderror" id="ward_no" name="ward_no" value="{{ old('ward_no', $landParcel->ward_no ?? '') }}" required>
                         @error('ward_no')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6">
+            <!-- Location Details Card -->
+            <div class="card mb-4">
+                <div class="card-header bg-gray text-black">
+                    <h5 class="mb-0">Location Details</h5>
+                </div>
+                <div class="card-body">
+
                     <div class="form-group">
                         <label for="kitta_no">Kitta No*</label>
-                        <input type="text" class="form-control @error('kitta_no') is-invalid @enderror" id="kitta_no" name="kitta_no" value="{{ old('kitta_no', $landParcel->kitta_no ?? '') }}" required>
+                        <input type="number" class="form-control @error('kitta_no') is-invalid @enderror" id="kitta_no" name="kitta_no" value="{{ old('kitta_no', $landParcel->kitta_no ?? '') }}" required>
                         @error('kitta_no')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="dhoor">Dhoor (Traditional Measurement)</label>
-                        <input type="text" class="form-control @error('dhoor') is-invalid @enderror" id="dhoor" name="dhoor" value="{{ old('dhoor', $landParcel->dhoor ?? '') }}">
+                        <input type="number" class="form-control @error('dhoor') is-invalid @enderror" id="dhoor" name="dhoor" value="{{ old('dhoor', $landParcel->dhoor ?? '') }}">
                         @error('dhoor')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label for="total_area">Sq.Meter</label>
+                        <input type="number" class="form-control @error('total_area') is-invalid @enderror" id="total_area" name="total_area" value="{{ old('total_area', $landParcel->total_area ?? '') }}">
+                        @error('total_area')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
@@ -108,56 +104,10 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Area and Valuation Section -->
-    <div class="row">
-        <div class="col-12 col-md-6">
-            <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Area Details</h5>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="total_area">Total Area (sq.metre)*</label>
-                        <input type="number" step="0.01" class="form-control @error('total_area') is-invalid @enderror" id="total_area" name="total_area"
-                               value="{{ old('total_area', $landParcel->total_area ?? '') }}" required>
-                        @error('total_area')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-            <!-- Financial Details Card -->
-            <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Valuation Details</h5>
-                </div>
-                <div class="card-body">
-                    <div class="form-group">
-                        <label for="government_value">Government Value*</label>
-                        <input type="number" step="0.01" class="form-control @error('government_value') is-invalid @enderror" id="government_value"
-                               name="government_value" value="{{ old('government_value', $landParcel->government_value ?? '') }}" required>
-                        @error('government_value')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="market_value">Market Value</label>
-                        <input type="number" step="0.01" class="form-control @error('market_value') is-invalid @enderror" id="market_value" name="market_value" value="{{ old('market_value', $landParcel->market_value ?? '') }}">
-                        @error('market_value')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
                     <div class="form-group">
                         <label for="thali_amount">Thali Amount</label>
-                        <input type="number" step="0.01" class="form-control @error('thali_amount') is-invalid @enderror" id="thali_amount" name="thali_amount" value="{{ old('thali_amount', $landParcel->thali_amount ?? '') }}">
+                        <input type="number" class="form-control @error('thali_amount') is-invalid @enderror" id="thali_amount" name="thali_amount"
+                               placeholder="12380" value="{{ old('thali_amount', $landParcel->thali_amount ?? '') }}">
                         @error('thali_amount')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -166,12 +116,11 @@
             </div>
         </div>
     </div>
-
     <!-- Transaction Details Section -->
     <div class="row">
         <div class="col-12">
             <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-gray text-black">
                     <h5 class="mb-0">Transaction Details</h5>
                 </div>
                 <div class="card-body">
@@ -180,8 +129,7 @@
                             <div class="form-group">
                                 <label for="purchase_date">Purchase Date*</label>
                                 <input type="date" class="form-control @error('purchase_date') is-invalid @enderror" id="purchase_date" name="purchase_date"
-                                       value="{{ old('purchase_date', isset($landParcel->purchase_date) ? $landParcel->purchase_date : '') }}" required>
-
+                                       value="{{ old('purchase_date', isset($landParcel->purchase_date) ? \Carbon\Carbon::parse($landParcel->purchase_date)->format('Y-m-d') : '') }}" required>
                                 @error('purchase_date')
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -205,197 +153,231 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
-                    <div class="form-group">
-                        <label for="registration_number">Registration Number</label>
-                        <input type="text" class="form-control @error('registration_number') is-invalid @enderror" id="registration_number" name="registration_number" value="{{ old('registration_number', $landParcel->registration_number ?? '') }}">
-                        @error('registration_number')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-check mb-3">
-                        <!-- Hidden input to send 0 if checkbox is unchecked -->
-                        <input type="hidden" name="has_loan" value="0">
-
-                        <!-- Checkbox input to send 1 if checked -->
-                        <input class="form-check-input" type="checkbox" id="has_loan" name="has_loan" value="1"
-                            {{ old('has_loan', $landParcel->has_loan ?? false) ? 'checked' : '' }}>
-                        <label class="form-check-label" for="has_loan">
-                            Has Loan?
-                        </label>
-                    </div>
-
-                    <div class="row" id="loan-details" style="display: none;">
-                        <div class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label for="loan_amount">Loan Amount</label>
-                                <input type="number" step="0.01" class="form-control @error('loan_amount') is-invalid @enderror" id="loan_amount"
-                                       name="loan_amount" value="{{ old('loan_amount', $landParcel->loan_amount ?? '') }}">
-                                @error('loan_amount')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label for="loan_institution">Loan Institution</label>
-                                <input type="text" class="form-control @error('loan_institution') is-invalid @enderror" id="loan_institution" name="loan_institution" value="{{ old('loan_institution', $landParcel->loan_institution ?? '') }}">
-                                @error('loan_institution')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="row">
+    <!-- Expenses Section -->
+    <div class="row mb-3">
         <div class="col-12">
             <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Tax and Charges</h5>
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Expenses</h5>
+                    <button type="button" class="btn btn-sm btn-secondary" id="add-expense">
+                        <i class="fas fa-plus"></i> Add Expense
+                    </button>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label for="government_tax">Government Tax*</label>
-                                <input type="number" step="0.01" class="form-control @error('government_tax') is-invalid @enderror" id="government_tax"
-                                       name="government_tax" value="{{ old('government_tax', $landParcel->government_tax ?? '') }}" required>
-                                @error('government_tax')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <div class="form-group">
-                                <label for="non_government_charges">Non-Government Charges*</label>
-                                <input type="number" step="0.01" class="form-control @error('non_government_charges') is-invalid @enderror" id="non_government_charges"
-                                       name="non_government_charges" value="{{ old('non_government_charges', $landParcel->non_government_charges ?? '') }}" required>
-                                @error('non_government_charges')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                                @enderror
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="tax_remarks">Tax Remarks</label>
-                        <textarea class="form-control @error('tax_remarks') is-invalid @enderror" id="tax_remarks" name="tax_remarks" rows="2">{{ old('tax_remarks', $landParcel->tax_remarks ?? '') }}</textarea>
-                        @error('tax_remarks')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label>Supporting Document (PDF, JPG, PNG)</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input @error('tax_files') is-invalid @enderror" name="tax_files"
-                                   accept=".pdf,.jpg,.jpeg,.png">
-                            <label class="custom-file-label">Choose file</label>
-                        </div>
-                        @error('tax_files')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                        @if(isset($landParcel) && $landParcel->tax_files)
-                            <small class="text-muted">Current file: {{ $landParcel->tax_files }}</small>
-                        @endif
-
-                        <!-- Display existing documents -->
-                        @if(isset($images) && $images->count() > 0)
-                            <div class="mt-3">
-                                <h6>Existing Documents:</h6>
-                                <div class="row">
-                                    @foreach($images as $image)
-                                        @if($image->type=='tax')
-                                            <div class="col-md-3 mb-3">
-                                                <div class="document-thumbnail">
-                                                    @if(in_array(pathinfo($image->image_name, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png', 'gif']))
-                                                        <img src="{{ asset($image->image_name) }}" class="img-thumbnail" alt="Document Image">
-                                                    @else
-                                                        <div class="document-placeholder">
-                                                            <i class="fas fa-file-pdf fa-3x"></i>
-                                                        </div>
-                                                    @endif
-                                                    <div class="document-actions mt-2">
-                                                        <a href="{{ asset($image->image_name) }}" target="_blank" class="btn btn-sm btn-primary">
-                                                            <i class="fas fa-eye"></i> View
-                                                        </a>
-                                                        <button type="button" class="btn btn-sm btn-danger delete-document" data-id="{{ $image->id }}">
-                                                            <i class="fas fa-trash"></i> Delete
-                                                        </button>
-                                                    </div>
-                                                </div>
+                    <div id="expenses-container">
+                        @if(isset($expenses) && count($expenses) > 0)
+                            @foreach($expenses as $index => $expense)
+                                <div class="expense-item mb-4 border p-3" data-index="{{ $index }}">
+                                    <input type="hidden" name="expenses[{{ $index }}][id]" value="{{ $expense->id }}">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Date*</label>
+                                                <input type="date" class="form-control" name="expenses[{{ $index }}][date]"
+                                                       value="{{ old('expenses.'.$index.'.date', \Carbon\Carbon::parse($expense->date)->format('Y-m-d')) }}" required>
                                             </div>
-                                        @endif
-
-                                    @endforeach
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Subject*</label>
+                                                <input type="text" class="form-control" name="expenses[{{ $index }}][subject]"
+                                                       value="{{ old('expenses.'.$index.'.subject', $expense->subject) }}" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Amount*</label>
+                                                <input type="number" step="0.01" class="form-control" name="expenses[{{ $index }}][amount]"
+                                                       value="{{ old('expenses.'.$index.'.amount', $expense->amount) }}" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label>Remarks</label>
+                                                <input type="text" class="form-control" name="expenses[{{ $index }}][remarks]"
+                                                       value="{{ old('expenses.'.$index.'.remarks', $expense->remarks) }}">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1 d-flex align-items-end">
+                                            <button type="button" class="btn btn-danger btn-sm remove-expense">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Document (JPG, PNG, PDF, JPEG)</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" name="expenses[{{ $index }}][document]"
+                                                           accept=".jpg,.jpeg,.png,.pdf">
+                                                    <label class="custom-file-label">Choose file</label>
+                                                </div>
+                                                @if($expense->file_path)
+                                                    <small class="text-muted mt-1 d-block">
+                                                        Current file:
+                                                        <a href="{{ asset($expense->file_path) }}" target="_blank">
+                                                            {{ basename($expense->file_path) }}
+                                                        </a>
+                                                    </small>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @else
+                            <!-- Template for new expense (hidden by default) -->
+                            <div class="expense-item mb-4 border p-3" data-index="0" style="display: none;">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Date*</label>
+                                            <input type="date" class="form-control" name="expenses[0][date]">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Subject*</label>
+                                            <input type="text" class="form-control" name="expenses[0][subject]">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label>Amount*</label>
+                                            <input type="number" step="0.01" class="form-control" name="expenses[0][amount]">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Remarks</label>
+                                            <input type="text" class="form-control" name="expenses[0][remarks]">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 d-flex align-items-end">
+                                        <button type="button" class="btn btn-danger btn-sm remove-expense">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Document (JPG, PNG, PDF, JPEG)</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" name="expenses[0][document]"
+                                                       accept=".jpg,.jpeg,.png,.pdf">
+                                                <label class="custom-file-label">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         @endif
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Document Upload Section -->
-    <div class="row">
+    <!-- Legal Documents Section -->
+    <div class="row mb-3">
         <div class="col-12">
             <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Document Upload</h5>
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Legal Documents</h5>
+                    <button type="button" class="btn btn-sm btn-secondary" id="add-legal-doc">
+                        <i class="fas fa-plus"></i> Add Document
+                    </button>
                 </div>
                 <div class="card-body">
-                    <div class="form-group">
-                        <label>Upload Supporting Documents (PDF, JPG, JPEG, PNG)</label>
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input @error('documents') is-invalid @enderror" id="documents" name="documents" multiple
-                                   accept=".pdf,.jpg,.jpeg,.png">
-                            <label class="custom-file-label" for="documents">Choose files</label>
-                        </div>
-                        @error('documents')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-
-                    <!-- Display existing documents -->
-                    @if(isset($images) && $images->count() > 0)
-                        <div class="mt-3">
-                            <h6>Existing Documents:</h6>
-                            <div class="row">
-                                @foreach($images as $image)
-                                    @if($image->type=='purchase')
-                                        <div class="col-md-3 mb-3">
-                                            <div class="document-thumbnail">
-                                                @if(in_array(pathinfo($image->image_name, PATHINFO_EXTENSION), ['jpg', 'jpeg', 'png', 'gif']))
-                                                    <img src="{{ asset($image->image_name) }}" class="img-thumbnail" alt="Document Image">
-                                                @else
-                                                    <div class="document-placeholder">
-                                                        <i class="fas fa-file-pdf fa-3x"></i>
-                                                    </div>
-                                                @endif
-                                                <div class="document-actions mt-2">
-                                                    <a href="{{ asset($image->image_name) }}" target="_blank" class="btn btn-sm btn-primary">
-                                                        <i class="fas fa-eye"></i> View
-                                                    </a>
-                                                    <button type="button" class="btn btn-sm btn-danger delete-document" data-id="{{ $image->id }}">
-                                                        <i class="fas fa-trash"></i> Delete
-                                                    </button>
-                                                </div>
+                    <div id="legal-docs-container">
+                        @if(isset($legal_documents) && count($legal_documents) > 0)
+                            @foreach($legal_documents as $index => $document)
+                                <div class="legal-doc-item mb-4 border p-3" data-index="{{ $index }}">
+                                    <input type="hidden" name="legal_documents[{{ $index }}][id]" value="{{ $document->id }}">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Document Type*</label>
+                                                <input type="text" class="form-control" name="legal_documents[{{ $index }}][type]"
+                                                       value="{{ old('legal_documents.'.$index.'.type', $document->title) }}" required>
                                             </div>
                                         </div>
-                                    @endif
-
-                                @endforeach
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Description</label>
+                                                <textarea class="form-control" name="legal_documents[{{ $index }}][description]">{{ old('legal_documents.'.$index.'.description', $document->description) }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 d-flex align-items-end">
+                                            <button type="button" class="btn btn-danger btn-sm remove-legal-doc">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Upload Document (JPG, PNG, PDF, JPEG)*</label>
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" name="legal_documents[{{ $index }}][document]"
+                                                           accept=".jpg,.jpeg,.png,.pdf" {{ $document->file_path ? '' : 'required' }}>
+                                                    <label class="custom-file-label">Choose file</label>
+                                                </div>
+                                                @if($document->file_path)
+                                                    <small class="text-muted mt-1 d-block">
+                                                        Current file:
+                                                        <a href="{{ asset($document->file_path) }}" target="_blank">
+                                                            {{ basename($document->file_path) }}
+                                                        </a>
+                                                    </small>
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @else
+                            <!-- Template for new legal document (hidden by default) -->
+                            <div class="legal-doc-item mb-4 border p-3" data-index="0" style="display: none;">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Document Type*</label>
+                                            <input type="text" class="form-control" name="legal_documents[0][type]" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea class="form-control" name="legal_documents[0][description]"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 d-flex align-items-end">
+                                        <button type="button" class="btn btn-danger btn-sm remove-legal-doc">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Upload Document (JPG, PNG, PDF, JPEG)*</label>
+                                            <div class="custom-file">
+                                                <input type="file" class="custom-file-input" name="legal_documents[0][document]"
+                                                       accept=".jpg,.jpeg,.png,.pdf">
+                                                <label class="custom-file-label">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    @endif
-
-                    <!-- Preview of newly uploaded files -->
-                    <div class="uploaded-files-preview mt-3">
-                        <h6>Selected Files:</h6>
-                        <ul class="list-group file-list"></ul>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -406,7 +388,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card mb-4">
-                <div class="card-header bg-primary text-white">
+                <div class="card-header bg-gray text-black">
                     <h5 class="mb-0">Additional Information</h5>
                 </div>
                 <div class="card-body">
@@ -416,17 +398,6 @@
                         @error('remarks')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
-                    </div>
-                    <div class="form-check">
-                        <!-- Hidden input to ensure '0' is submitted when unchecked -->
-                        <input type="hidden" name="is_approved" value="0">
-
-                        <!-- Checkbox to submit '1' when checked -->
-                        <input class="form-check-input" type="checkbox" id="is_approved" name="is_approved" value="1"
-                            {{ old('is_approved', $landParcel->is_approved ?? false) ? 'checked' : '' }}>
-                        <label class="form-check-label" for="is_approved">
-                            Is Approved
-                        </label>
                     </div>
                 </div>
             </div>
@@ -519,6 +490,138 @@
                         .catch(error => console.error('Error:', error));
                 }
             });
+        });
+    });
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Expenses functionality
+        const expensesContainer = document.getElementById('expenses-container');
+        const addExpenseBtn = document.getElementById('add-expense');
+
+        // Add new expense
+        addExpenseBtn.addEventListener('click', function () {
+            const expenseItems = document.querySelectorAll('.expense-item');
+            const lastIndex = expenseItems.length > 0 ?
+                parseInt(expenseItems[expenseItems.length - 1].getAttribute('data-index')) : -1;
+            const newIndex = lastIndex + 1;
+
+            // Clone the template (first item)
+            const template = expensesContainer.querySelector('.expense-item');
+            const newExpense = template.cloneNode(true);
+            newExpense.setAttribute('data-index', newIndex);
+            newExpense.style.display = 'block';
+
+            // Update all the names in the inputs
+            newExpense.querySelectorAll('input, textarea, select').forEach(element => {
+                if (element.name) {
+                    element.name = element.name.replace('[0]', `[${newIndex}]`);
+                    element.value = '';
+                }
+            });
+
+            // Update file input label
+            newExpense.querySelectorAll('.custom-file-input').forEach(input => {
+                input.nextElementSibling.textContent = 'Choose file';
+            });
+
+            expensesContainer.appendChild(newExpense);
+        });
+
+        // Remove expense
+        expensesContainer.addEventListener('click', function (e) {
+            if (e.target.classList.contains('remove-expense')) {
+                const expenseItem = e.target.closest('.expense-item');
+                if (document.querySelectorAll('.expense-item').length > 1) {
+                    expenseItem.remove();
+                } else {
+                    // If it's the last one, just clear the values
+                    expenseItem.querySelectorAll('input, textarea').forEach(element => {
+                        element.value = '';
+                    });
+                    expenseItem.querySelectorAll('.custom-file-input').forEach(input => {
+                        input.nextElementSibling.textContent = 'Choose file';
+                    });
+                }
+            }
+        });
+
+        // Legal Documents functionality
+        const legalDocsContainer = document.getElementById('legal-docs-container');
+        const addLegalDocBtn = document.getElementById('add-legal-doc');
+
+        // Add new legal document
+        addLegalDocBtn.addEventListener('click', function () {
+            const legalDocItems = document.querySelectorAll('.legal-doc-item');
+            const lastIndex = legalDocItems.length > 0 ?
+                parseInt(legalDocItems[legalDocItems.length - 1].getAttribute('data-index')) : -1;
+            const newIndex = lastIndex + 1;
+
+            // Clone the template (first item)
+            const template = legalDocsContainer.querySelector('.legal-doc-item');
+            const newLegalDoc = template.cloneNode(true);
+            newLegalDoc.setAttribute('data-index', newIndex);
+            newLegalDoc.style.display = 'block';
+
+            // Update all the names in the inputs
+            newLegalDoc.querySelectorAll('input, textarea, select').forEach(element => {
+                if (element.name) {
+                    element.name = element.name.replace('[0]', `[${newIndex}]`);
+                    element.value = '';
+                }
+            });
+
+            // Update file input label
+            newLegalDoc.querySelectorAll('.custom-file-input').forEach(input => {
+                input.nextElementSibling.textContent = 'Choose file';
+            });
+
+            legalDocsContainer.appendChild(newLegalDoc);
+        });
+
+        // Remove legal document
+        legalDocsContainer.addEventListener('click', function (e) {
+            if (e.target.classList.contains('remove-legal-doc')) {
+                const legalDocItem = e.target.closest('.legal-doc-item');
+                if (document.querySelectorAll('.legal-doc-item').length > 1) {
+                    legalDocItem.remove();
+                } else {
+                    // If it's the last one, just clear the values
+                    legalDocItem.querySelectorAll('input, textarea').forEach(element => {
+                        element.value = '';
+                    });
+                    legalDocItem.querySelectorAll('.custom-file-input').forEach(input => {
+                        input.nextElementSibling.textContent = 'Choose file';
+                    });
+                }
+            }
+        });
+
+        // File input label update for both sections
+        const fileInputs = document.querySelectorAll('.custom-file-input');
+        fileInputs.forEach(input => {
+            input.addEventListener('change', function () {
+                const label = this.nextElementSibling;
+                const files = this.files;
+                if (files.length > 0) {
+                    label.textContent = files[0].name;
+                } else {
+                    label.textContent = 'Choose file';
+                }
+            });
+        });
+
+        // Initialize existing items
+        document.querySelectorAll('.expense-item').forEach(item => {
+            if (item.style.display !== 'none') {
+                item.style.display = 'block';
+            }
+        });
+
+        document.querySelectorAll('.legal-doc-item').forEach(item => {
+            if (item.style.display !== 'none') {
+                item.style.display = 'block';
+            }
         });
     });
 </script>

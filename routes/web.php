@@ -66,9 +66,15 @@ Route::middleware('check.whitelist')->group(function () {
         Route::get('properties/create', [LandParcelController::class, 'create'])->name('admin.properties.create');
         Route::Post('properties/store', [LandParcelController::class, 'store'])->name('admin.properties.store');
         Route::DELETE('properties/delete/{id}', [LandParcelController::class, 'delete'])->name('admin.properties.delete');
+        Route::DELETE('properties/sub/delete/{id}', [LandParcelController::class, 'sub_delete'])->name('admin.properties.sub.delete');
         Route::DELETE('properties/delete-document/{id}', [LandParcelController::class, 'deleteDocument'])->name('admin.properties.deleteDocument');
         Route::get('properties/edit/{id}', [LandParcelController::class, 'edit'])->name('admin.properties.edit');
+        Route::get('properties/sub/edit/{id}', [LandParcelController::class, 'sub_edit'])->name('admin.properties.sub.edit');
         Route::post('properties/update/{id}', [LandParcelController::class, 'update'])->name('admin.properties.update');
+        Route::post('properties/sub/update/{id}', [LandParcelController::class, 'sub_update'])->name('admin.properties.sub.update');
+        Route::get('properties/merge', [LandParcelController::class, 'merge'])->name('admin.properties.merge');
+        Route::POST('properties/mergeStore', [LandParcelController::class, 'mergeStore'])->name('admin.properties.mergeStore');
+        Route::get('properties/child-properties/{id}', [LandParcelController::class, 'child_properties'])->name('admin.properties.child_properties');
 
 
         // Plots relalated routes
