@@ -39,7 +39,7 @@
                     <h1 class="mb-4 fw-bold display-4">Lumbini Innovate Pvt. Ltd.</h1>
 
                     <p class="lead mb-4 text-justify ">
-                        <b>Your journey to the perfect property starts here.</b><br>
+                        <b>Your journey to the perfect property starts here..</b><br>
                         At Lumbini Innovate Pvt. Ltd. we believe that every home has a story
                         and we're here to help you write yours. Whether you're looking to buy your dream house,
                         sell your current property, or rent a space that fits your lifestyle, our dedicated team
