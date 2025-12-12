@@ -1,0 +1,26 @@
+{
+    "name": "Lumbani Innovate - Real Estate Solutions",
+    "short_name": "Lumbani Innovate",
+    "description": "Complete real estate solution in Nepal. Property listings, land deals, home buying/selling, and innovative property management services.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#20254D",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/backend/assets/images/login-images/LHF.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/backend/assets/images/login-images/logo (3).png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["business", "real-estate", "property"],
+    "lang": "en-US",
+    "scope": "/",
+    "dir": "ltr"
+}

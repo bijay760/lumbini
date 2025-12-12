@@ -6,39 +6,40 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\Admin\LandParcel\LandParcelController;
 use App\Http\Controllers\Admin\Properties\PropertiesController;
 use App\Http\Controllers\Admin\Login\AdminLoginController;
 use App\Http\Controllers\Admin\Dashboard\DashboardController;
 
+// SEO-Friendly Public Routes
+Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/about-us', [PageController::class, 'aboutUs'])->name('about-us');
+Route::get('/our-projects', [PageController::class, 'projects'])->name('projects');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/booking', [PageController::class, 'booking'])->name('booking');
+Route::get('/land-register', [PageController::class, 'landRegister'])->name('land-register');
+Route::get('/blog', [PageController::class, 'blog'])->name('blog');
+
+// Additional SEO-friendly routes
+Route::get('/services', [PageController::class, 'services'])->name('services');
+Route::get('/properties-for-sale', [PageController::class, 'propertiesForSale'])->name('properties-for-sale');
+Route::get('/properties-for-rent', [PageController::class, 'propertiesForRent'])->name('properties-for-rent');
+Route::get('/investment-opportunities', [PageController::class, 'investments'])->name('investments');
+
 // Property Registration Routes
-//Route::get('/property/register', [PropertyController::class, 'create'])->name('property.register');
-Route::get('booking', [PropertyController::class, 'index'])->name('booking');
 Route::post('/buy-sale', [PropertyController::class, 'store'])->name('properties.store');
-Route::Post('/store',[ContactController::class,'store'])->name('contact.store');
+Route::Post('/store', [ContactController::class, 'store'])->name('contact.store');
 Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe');
-Route::get('sitemap.xml', [SitemapController::class, 'index']);
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-Route::get('/our-projects', function () {
-    return view('projects');
-})->name('projects');
-
-Route::get('/about-us', function () {
-    return view('about-us');
-})->name('about-us');
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
-Route::get('/land-register', function () {
-    return view('land-register');
-})->name('land-register');
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+// SEO Routes
+Route::get('sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+Route::get('robots.txt', function () {
+    return response()->view('seo.robots')->header('Content-Type', 'text/plain');
+})->name('robots');
+Route::get('manifest.json', function () {
+    return response()->file(public_path('manifest.json'));
+})->name('manifest');
 
 
 
@@ -48,7 +49,7 @@ Route::get('/blog', function () {
 Route::middleware('check.whitelist')->group(function () {
     Route::get('/admin', [AdminLoginController::class, 'index'])->name('admin.login_form');
     Route::POST('/admin-login', [AdminLoginController::class, 'login'])->name('admin.login');
-    Route::prefix('admin')->middleware('admin.auth')->group(function() {
+    Route::prefix('admin')->middleware('admin.auth')->group(function () {
         // Dashboard Related Routes
         Route::post('logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
         Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
@@ -78,13 +79,12 @@ Route::middleware('check.whitelist')->group(function () {
 
 
         // Plots relalated routes
-        Route::get('plots',[PlotsController::class, 'index'])->name('admin.plots');
-        Route::get('plots/create',[PlotsController::class, 'create'])->name('admin.plots.create');
-        Route::post('plots/store',[PlotsController::class, 'store'])->name('admin.plots.store');
-        Route::post('plots/update/{id}',[PlotsController::class, 'update'])->name('admin.plots.update');
-        Route::get('plots/edit/{id}',[PlotsController::class, 'edit'])->name('admin.plots.edit');
+        Route::get('plots', [PlotsController::class, 'index'])->name('admin.plots');
+        Route::get('plots/create', [PlotsController::class, 'create'])->name('admin.plots.create');
+        Route::post('plots/store', [PlotsController::class, 'store'])->name('admin.plots.store');
+        Route::post('plots/update/{id}', [PlotsController::class, 'update'])->name('admin.plots.update');
+        Route::get('plots/edit/{id}', [PlotsController::class, 'edit'])->name('admin.plots.edit');
         Route::delete('plots/delete/{id}', [PlotsController::class, 'destroy'])->name('admin.plots.destroy');
-
     });
 });
 
@@ -92,4 +92,3 @@ Route::middleware('check.whitelist')->group(function () {
 Route::fallback(function () {
     return view('404');
 });
-
