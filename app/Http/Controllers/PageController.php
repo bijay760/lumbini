@@ -124,7 +124,7 @@ class PageController extends Controller
             'og_description' => 'Schedule a consultation with our real estate professionals and find the perfect property solution for your needs.'
         ];
 
-        return view('booking', compact('properties', 'seoData'));
+        return view('Booking', compact('properties', 'seoData'));
     }
 
     /**
