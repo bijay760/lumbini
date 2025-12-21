@@ -11,11 +11,32 @@ class PlotSale extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'plot_id', 'customer_id', 'agent_id', 'sale_number', 'sale_date',
-        'sale_price', 'discount', 'total_amount', 'paid_amount', 'due_amount',
-        'payment_type', 'installment_period', 'down_payment', 'payment_status',
-        'sale_status', 'contract_number', 'contract_date', 'handover_date',
-        'commission_rate', 'commission_amount', 'terms_conditions', 'remarks'
+        'plot_id',
+        'customer_id',
+        'agent_id',
+        'sale_number',
+        'sale_date',
+        'customer_name',
+        'customer_phone',
+        'customer_email',
+        'customer_address',
+        'sale_price',
+        'discount',
+        'total_amount',
+        'paid_amount',
+        'due_amount',
+        'payment_type',
+        'installment_period',
+        'down_payment',
+        'payment_status',
+        'sale_status',
+        'contract_number',
+        'contract_date',
+        'handover_date',
+        'commission_rate',
+        'commission_amount',
+        'terms_conditions',
+        'remarks'
     ];
 
     protected $casts = [
@@ -56,5 +77,4 @@ class PlotSale extends Model
     {
         return $this->morphMany(Document::class, 'documentable');
     }
-
 }

@@ -12,7 +12,7 @@
 @section('content')
     <div class="container py-5">
         <h1 class="text-center mb-5">Our Real Estate Projects</h1>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <!-- Project 1 - -->
                 <div class="card mb-4">
@@ -338,7 +338,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Contact CTA -->
         <div class="text-lg-center text-sm-left py-5 mt-4 bg-light rounded">

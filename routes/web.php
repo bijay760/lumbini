@@ -64,6 +64,9 @@ Route::middleware('check.whitelist')->group(function () {
 
         //Property related Routes
         Route::get('properties', [LandParcelController::class, 'index'])->name('admin.properties');
+        Route::get('properties/view/{id}', [LandParcelController::class, 'view'])->name('admin.properties.view');
+        Route::get('properties/plotting/{id}', [LandParcelController::class, 'plotting'])->name('admin.properties.plotting');
+        Route::post('properties/plotting/store/{id}', [LandParcelController::class, 'plottingStore'])->name('admin.properties.plotting.store');
         Route::get('properties/create', [LandParcelController::class, 'create'])->name('admin.properties.create');
         Route::Post('properties/store', [LandParcelController::class, 'store'])->name('admin.properties.store');
         Route::DELETE('properties/delete/{id}', [LandParcelController::class, 'delete'])->name('admin.properties.delete');
@@ -85,6 +88,11 @@ Route::middleware('check.whitelist')->group(function () {
         Route::post('plots/update/{id}', [PlotsController::class, 'update'])->name('admin.plots.update');
         Route::get('plots/edit/{id}', [PlotsController::class, 'edit'])->name('admin.plots.edit');
         Route::delete('plots/delete/{id}', [PlotsController::class, 'destroy'])->name('admin.plots.destroy');
+        Route::get('plots/view/{id}', [PlotsController::class, 'viewSale'])->name('admin.plots.view');
+        Route::get('plots/sell/{id}', [PlotsController::class, 'sell'])->name('admin.plots.sell');
+        Route::post('plots/sell/store/{id}', [PlotsController::class, 'sellStore'])->name('admin.plots.sell.store');
+        Route::get('plots/payment/{id}', [PlotsController::class, 'payment'])->name('admin.plots.payment');
+        Route::post('plots/payment/store/{id}', [PlotsController::class, 'paymentStore'])->name('admin.plots.payment.store');
     });
 });
 
