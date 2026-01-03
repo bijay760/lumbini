@@ -218,24 +218,24 @@
 
             <!-- Hidden input to store all features as JSON -->
             <input type="hidden" name="features" id="featuresJson"
-                value="{{ isset($property) ? $property->features : (is_array(old('features')) ? old('features') : '[]') }}">
+                value="{{ isset($property) && $property->features ? json_encode(json_decode(json_decode($property->features))) : (is_array(old('features')) ? json_encode(old('features')) : '[]') }}">
 
             <!-- Container for displaying added features -->
             <div id="featuresContainer" class="mb-3">
                 @if(isset($property) && $property->features)
-                @foreach(json_decode(json_decode($property->features)) as $feature)
-                <span class="badge bg-primary me-2 mb-2 feature-badge">
+                @foreach(json_decode(json_decode($property->features)) as $index => $feature)
+                <span class="badge bg-primary text-white me-2 mb-2 feature-badge">
                     {{ $feature }}
-                    <button type="button" class="btn-close btn-close-white ms-1"
-                        onclick="removeFeature('{{ addslashes($feature) }}')"></button>
+                    <span class="ms-1" style="cursor: pointer; font-weight: bold;"
+                        onclick="removeFeatureByIndex({{ $index }})">×</span>
                 </span>
                 @endforeach
                 @elseif(is_array(old('features')))
-                @foreach(old('features') as $feature)
-                <span class="badge bg-primary me-2 mb-2 feature-badge">
+                @foreach(old('features') as $index => $feature)
+                <span class="badge bg-primary text-white me-2 mb-2 feature-badge">
                     {{ $feature }}
-                    <button type="button" class="btn-close btn-close-white ms-1"
-                        onclick="removeFeature('{{ addslashes($feature) }}')"></button>
+                    <span class="ms-1" style="cursor: pointer; font-weight: bold;"
+                        onclick="removeFeatureByIndex({{ $index }})">×</span>
                 </span>
                 @endforeach
                 @endif

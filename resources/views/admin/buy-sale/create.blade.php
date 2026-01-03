@@ -36,8 +36,8 @@
             }
         };
 
-        window.removeFeature = function(feature) {
-            window.features = window.features.filter(f => f !== feature);
+        window.removeFeatureByIndex = function(index) {
+            window.features.splice(index, 1);
             updateFeaturesDisplay();
         };
 
@@ -49,11 +49,11 @@
             jsonInput.value = JSON.stringify(window.features);
 
             // Update visual display
-            container.innerHTML = window.features.map(f => `
-            <span class="badge bg-primary me-2 mb-2 feature-badge">
+            container.innerHTML = window.features.map((f, index) => `
+            <span class="badge bg-primary text-white me-2 mb-2 feature-badge">
                 ${f.replace(/</g, '&lt;').replace(/>/g, '&gt;')}
-                <button type="button" class="btn-close btn-close-white ms-1"
-                        onclick="removeFeature('${f.replace(/'/g, "\\'")}')"></button>
+                <span class="ms-1" style="cursor: pointer; font-weight: bold;"
+                        onclick="removeFeatureByIndex(${index})">×</span>
             </span>
         `).join('');
         }
@@ -88,6 +88,33 @@
                 }
             });
         }
+
+        // Image deletion function
+        window.confirmImageDelete = function(imageId) {
+            if (confirm('Are you sure you want to delete this image?')) {
+                fetch(`/admin/property-images/${imageId}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Remove the image element from DOM
+                            const imageElement = document.querySelector(`[onclick="confirmImageDelete(${imageId})"]`).closest('.position-relative');
+                            imageElement.remove();
+                        } else {
+                            alert('Error deleting image: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred while deleting the image.');
+                    });
+            }
+        };
     });
 </script>
 

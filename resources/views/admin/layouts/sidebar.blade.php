@@ -8,26 +8,26 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('admin/dashboard') || request()->is('admin/dashboard/*') ? ' active' : '' }}"
-                   href="{{route('admin.dashboard')}}">
+                    href="{{route('admin.dashboard')}}">
                     <i class="fas fa-tachometer-alt"></i> Dashboard
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('admin/buy-sale') || request()->is('admin/buy-sale/*') ? ' active' : '' }}"
-                   href="{{route('admin.buy-sale')}}">
-                    <i class="fas fa-handshake"></i></i> BuySale List
-                    {{--                        <i class="fas fa-landmark"></i> BuySale List--}}
+                    href="{{route('admin.buy-sale')}}">
+                    <i class="fas fa-handshake"></i></i> Adv buy-sale
+                    {{-- <i class="fas fa-landmark"></i> BuySale List--}}
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? ' active' : '' }}"
-                   href="{{route('admin.properties')}}">
+                    href="{{route('admin.properties')}}">
                     <i class="fas fa-landmark"></i> Properties
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('admin/plots') || request()->is('admin/plots/*') ? ' active' : '' }}"
-                   href="{{route('admin.plots')}}">
+                    href="{{route('admin.plots')}}">
                     <i class="fas fa-map-marked-alt"></i> Plots
                 </a>
             </li>
@@ -40,25 +40,25 @@
             <ul class="nav flex-column mobile-nav">
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('admin/dashboard') || request()->is('admin/dashboard/*') ? ' active' : '' }}"
-                       href="{{route('admin.dashboard')}}">
+                        href="{{route('admin.dashboard')}}">
                         <i class="fas fa-tachometer-alt"></i> Dashboard
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('admin/buy-sale') || request()->is('admin/buy-sale/*') ? ' active' : '' }}"
-                       href="{{route('admin.buy-sale')}}">
-                        <i class="fas fa-handshake"></i>BuySale List
+                        href="{{route('admin.buy-sale')}}">
+                        <i class="fas fa-handshake"></i>Adv buy-sale
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? ' active' : '' }}"
-                       href="{{route('admin.properties')}}">
+                        href="{{route('admin.properties')}}">
                         <i class="fas fa-landmark"></i>Properties
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->is('admin/plots') || request()->is('admin/plots/*') ? ' active' : '' }}"
-                       href="{{route('admin.plots')}}">
+                        href="{{route('admin.plots')}}">
                         <i class="fas fa-map-marked-alt"></i>Plots
                     </a>
                 </li>

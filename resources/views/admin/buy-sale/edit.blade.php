@@ -20,11 +20,13 @@
 
         // Get existing features from hidden input
         const featuresJson = document.getElementById('featuresJson').value;
+        console.log('Raw featuresJson:', featuresJson);
 
         // Safely parse existing features
         try {
             const parsedFeatures = JSON.parse(featuresJson);
             window.features = Array.isArray(parsedFeatures) ? parsedFeatures : [];
+            console.log('Parsed features:', window.features);
         } catch (e) {
             console.error('Error parsing features:', e);
             window.features = [];
@@ -52,12 +54,14 @@
         };
 
         // Remove feature function
-        window.removeFeature = function(feature) {
+        window.removeFeatureByIndex = function(index) {
             // Ensure we're working with an array
             if (!Array.isArray(window.features)) {
                 window.features = [];
+                return;
             }
-            window.features = window.features.filter(f => f !== feature);
+            // Remove the feature at the specific index
+            window.features.splice(index, 1);
             updateFeaturesDisplay();
         };
 
@@ -75,7 +79,7 @@
             jsonInput.value = JSON.stringify(window.features);
 
             // Update visual display
-            container.innerHTML = window.features.map(f => {
+            container.innerHTML = window.features.map((f, index) => {
                 const escapedFeature = f.toString()
                     .replace(/&/g, '&amp;')
                     .replace(/</g, '&lt;')
@@ -84,10 +88,10 @@
                     .replace(/'/g, '&#039;');
 
                 return `
-                <span class="badge bg-primary me-2 mb-2 feature-badge">
+                <span class="badge bg-primary text-white me-2 mb-2 feature-badge">
                     ${escapedFeature}
-                    <button type="button" class="btn-close btn-close-white ms-1"
-                            onclick="removeFeature('${escapedFeature.replace(/'/g, "\\'")}')"></button>
+                    <span class="ms-1" style="cursor: pointer; font-weight: bold;"
+                            onclick="removeFeatureByIndex(${index})">×</span>
                 </span>
             `;
             }).join('');
@@ -123,6 +127,33 @@
                 }
             });
         }
+
+        // Image deletion function
+        window.confirmImageDelete = function(imageId) {
+            if (confirm('Are you sure you want to delete this image?')) {
+                fetch(`/admin/property-images/${imageId}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Remove the image element from DOM
+                            const imageElement = document.querySelector(`[onclick="confirmImageDelete(${imageId})"]`).closest('.position-relative');
+                            imageElement.remove();
+                        } else {
+                            alert('Error deleting image: ' + data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred while deleting the image.');
+                    });
+            }
+        };
     });
 </script>
 
