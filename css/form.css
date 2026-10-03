@@ -646,7 +646,7 @@ main .home-intro .intro span h6 {
     bottom: 0;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background: url("https://media.istockphoto.com/photos/business-network-concept-customer-support-shaking-hands-picture-id1256603011?b=1&amp;k=20&amp;m=1256603011&amp;s=170667a&amp;w=0&amp;h=qAWHyHa53OtejTsSOx-xEPoVWA9p-uG2jpxEkzAK7Wg=")
+    background: url('/images/partner-about.jpg')
         no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -1070,9 +1070,7 @@ main .home-intro .intro span h6 {
 }
 header.masthead {
     position: relative;
-    background-color: #343a40;
-    background: url("https://www.canr.msu.edu/contentAsset/image/25a972ec-e75d-4585-958b-8990c3d001b3/fileAsset/filter/Resize,Jpeg/resize_w/750/jpeg_q/80")
-        no-repeat center center;
+    background: linear-gradient(rgba(32, 37, 77, 0.85), rgba(28, 52, 92, 0.85)), url('/backend/assets/images/bg.png') no-repeat center center;
     background-size: cover;
     padding-top: 8rem;
     padding-bottom: 8rem;
@@ -1257,7 +1255,7 @@ header.masthead .img-box {
 .bod .col-lg-6.bg:before {
     content: "";
     position: absolute;
-    background: url("https://www.gharsansarnepal.com/image/1629181749Things%20to%20consider%20before%20buying%20land%20in%20Kathmandu.jpg") no-repeat center center;
+    background: url('/images/land-buying.jpg') no-repeat center center;
     height: 100%;
     width: 100%;
     top: 0;
